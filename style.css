@@ -1,0 +1,299 @@
+* {
+    overflow-x: hidden;
+    margin: 0;
+	padding: 0;
+}
+
+#alert {
+    display: none;
+}
+
+.category {
+    width: 100%;
+    padding: 20px;
+    border: solid 1px black;
+}
+
+#main {
+    padding: 20px;
+    width: 100%;
+    border: solid 1px black;
+    text-align: center;
+}
+
+#stats {
+    display: none;
+}
+
+#collection {
+    display: none;
+}
+
+#setting {
+    display: none;
+}
+
+#cards {
+    display: none;
+}
+
+#bank {
+    display: none;
+}
+
+#items {
+    display: none;
+}
+
+#pass {
+    display: none;
+}
+
+.box {
+    overflow: hidden;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    border: 2px solid rgb(0, 0, 0);
+    z-index: 0;
+}
+
+#block {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+#stick {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+
+#ecube {
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+
+#wand {
+    position: absolute;
+    top: 600px;
+    left: 25%;
+    right: 75%;
+    transform: translateX(-25%);
+    opacity: 0.5;
+}
+
+#sword {
+    position: absolute;
+    top: 600px;
+    left: 75%;
+    right: 25%;
+    transform: translateX(-75%);
+    opacity: 0.5;
+}
+
+#dcwand {
+    position: absolute;
+    top: 800px;
+    left: 25%;
+    right: 75%;
+    transform: translateX(-25%);
+    opacity: 0.5;
+}
+
+#bwand {
+    position: absolute;
+    top: 800px;
+    left: 15%;
+    right: 75%;
+    transform: translateX(-15%);
+    opacity: 0.5;
+}
+
+#twand {
+    position: absolute;
+    top: 1000px;
+    left: 25%;
+    right: 75%;
+    transform: translateX(-25%);
+    opacity: 0.5;
+}
+
+#dsword {
+    position: absolute;
+    top: 800px;
+    left: 75%;
+    right: 25%;
+    transform: translateX(-75%);
+    opacity: 0.5;
+}
+
+#tsword {
+    position: absolute;
+    top: 1000px;
+    left: 75%;
+    right: 25%;
+    transform: translateX(-75%);
+    opacity: 0.5;
+}
+
+#lastsword {
+    position: absolute;
+    top: 1200px;
+    left: 75%;
+    right: 25%;
+    transform: translateX(-75%);
+    opacity: 0.5;
+}
+
+#lastwand {
+    position: absolute;
+    top: 1200px;
+    left: 25%;
+    right: 75%;
+    transform: translateX(-25%);
+    opacity: 0.5;
+}
+
+.bought {
+    opacity: 1 !important;
+}
+
+.process {
+    position: absolute;
+    left: 0;
+}
+
+#p1 {
+    top: 287.5px;
+}
+#p2 {
+    top: 350px;
+}
+#p3 {
+    top: 500px;
+}
+#p4 {
+    top: 700px;
+}
+#p5 {
+    top: 900px;
+}
+#p6 {
+    top: 1100px;
+}
+
+.tooltip {
+    overflow: hidden;
+    position: fixed;
+    bottom: -40px;
+    left: 50%;
+    right: 50%;
+    width: 500px;
+    height: 200px;
+    border: solid 2px rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+} .tooltip img {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+#block_tooltip {
+    display: none;
+} #block:hover + #block_tooltip {
+    display: block;
+}
+
+#stick_tooltip {
+    display: none;
+} #stick:hover + #stick_tooltip {
+    display: block;
+}
+
+#ecube_tooltip {
+    display: none;
+} #ecube:hover + #ecube_tooltip {
+    display: block;
+}
+
+#wand_tooltip {
+    display: none; 
+} #wand:hover + #wand_tooltip {
+    display: block;
+}
+
+#sword_tooltip {
+    display: none;  
+} #sword:hover + #sword_tooltip {
+    display: block;
+}
+
+#dcwand_tooltip {
+    display: none;
+} #dcwand:hover + #dcwand_tooltip {
+    display: block;
+}
+
+#bwand_tooltip {
+    display: none;
+} #bwand:hover + #bwand_tooltip {
+    display: block;
+}
+
+#dsword_tooltip {
+    display: none;
+} #dsword:hover + #dsword_tooltip {
+    display: block;
+}
+
+#tsword_tooltip {
+    display: none;
+} #tsword:hover + #tsword_tooltip {
+    display: block;
+}
+
+#twand_tooltip {
+    display: none;
+} #twand:hover + #twand_tooltip {
+    display: block;
+}
+
+#lastsword_tooltip {
+    display: none;
+} #lastsword:hover + #lastsword_tooltip {
+    display: block;
+}
+
+#lastwand_tooltip {
+    display: none;
+} #lastwand:hover + #lastwand_tooltip {
+    display: block;
+}
+
+.level {
+    text-align: center;
+    border: solid 1px rgb(0, 0, 0);
+}
+
+#l0 {
+    background-color: yellow;
+}
+
+.lup {
+    background-color: yellow;
+}
