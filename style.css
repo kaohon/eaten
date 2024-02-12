@@ -166,32 +166,101 @@
     opacity: 0.5;
 }
 
+#ar {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+
+#sg {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+
+#smg {
+    position: absolute;
+    top: 200px;
+    left: 60%;
+    right: 40%;
+    transform: translateX(-40%);
+    opacity: 0.5;
+}
+
+#rev {
+    position: absolute;
+    top: 200px;
+    left: 30%;
+    right: 70%;
+    transform: translateX(-70%);
+    opacity: 0.5;
+}
+
+#sr {
+    position: absolute;
+    top: 200px;
+    left: 70%;
+    right: 30%;
+    transform: translateX(-30%);
+    opacity: 0.5;
+}
+
+#bow {
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    right: 80%;
+    transform: translateX(-80%);
+    opacity: 0.5;
+}
+
+#granade_luncher {
+    position: absolute;
+    top: 200px;
+    left: 80%;
+    right: 20%;
+    transform: translateX(-20%);
+    opacity: 0.5;
+}
+
+#knife {
+    position: absolute;
+    top: 200px;
+    left: 10%;
+    right: 90%;
+    transform: translateX(-90%);
+    opacity: 0.5;
+}
+
 .bought {
     opacity: 1 !important;
 }
 
-.process {
-    position: absolute;
-    left: 0;
+#collection-series {
+    padding: 10px;
+    width: 100%;
+    border-bottom: solid 1px black;
+    text-align: center;
 }
 
-#p1 {
-    top: 287.5px;
+.collection_tree {
+    width: 100%;
+    padding: 10px;
+    border: solid 1px black;
 }
-#p2 {
-    top: 350px;
+
+#ct_02 {
+    display: none;
 }
-#p3 {
-    top: 500px;
-}
-#p4 {
-    top: 700px;
-}
-#p5 {
-    top: 900px;
-}
-#p6 {
-    top: 1100px;
+
+#ct_demo {
+    display: none;
 }
 
 .tooltip {
@@ -213,75 +282,123 @@
     border: 2px solid rgb(0, 0, 0);
 }
 
-#block_tooltip {
+#block_tt {
     display: none;
-} #block:hover + #block_tooltip {
+} #block:hover + #block_tt {
     display: block;
 }
 
-#stick_tooltip {
+#stick_tt {
     display: none;
-} #stick:hover + #stick_tooltip {
+} #stick:hover + #stick_tt {
     display: block;
 }
 
-#ecube_tooltip {
+#ecube_tt {
     display: none;
-} #ecube:hover + #ecube_tooltip {
+} #ecube:hover + #ecube_tt {
     display: block;
 }
 
-#wand_tooltip {
+#wand_tt {
     display: none; 
-} #wand:hover + #wand_tooltip {
+} #wand:hover + #wand_tt {
     display: block;
 }
 
-#sword_tooltip {
+#sword_tt {
     display: none;  
-} #sword:hover + #sword_tooltip {
+} #sword:hover + #sword_tt {
     display: block;
 }
 
-#dcwand_tooltip {
+#dcwand_tt {
     display: none;
-} #dcwand:hover + #dcwand_tooltip {
+} #dcwand:hover + #dcwand_tt {
     display: block;
 }
 
-#bwand_tooltip {
+#bwand_tt {
     display: none;
-} #bwand:hover + #bwand_tooltip {
+} #bwand:hover + #bwand_tt {
     display: block;
 }
 
-#dsword_tooltip {
+#dsword_tt {
     display: none;
-} #dsword:hover + #dsword_tooltip {
+} #dsword:hover + #dsword_tt {
     display: block;
 }
 
-#tsword_tooltip {
+#tsword_tt {
     display: none;
-} #tsword:hover + #tsword_tooltip {
+} #tsword:hover + #tsword_tt {
     display: block;
 }
 
-#twand_tooltip {
+#twand_tt {
     display: none;
-} #twand:hover + #twand_tooltip {
+} #twand:hover + #twand_tt {
     display: block;
 }
 
-#lastsword_tooltip {
+#lastsword_tt {
     display: none;
-} #lastsword:hover + #lastsword_tooltip {
+} #lastsword:hover + #lastsword_tt {
     display: block;
 }
 
-#lastwand_tooltip {
+#lastwand_tt {
     display: none;
-} #lastwand:hover + #lastwand_tooltip {
+} #lastwand:hover + #lastwand_tt {
+    display: block;
+}
+
+#ar_tt {
+    display: none;
+} #ar:hover + #ar_tt {
+    display: block;
+}
+
+#sg_tt {
+    display: none;
+} #sg:hover + #sg_tt {
+    display: block;
+}
+
+#smg_tt {
+    display: none;
+} #smg:hover + #smg_tt {
+    display: block;
+}
+
+#rev_tt {
+    display: none;
+} #rev:hover + #rev_tt {
+    display: block;
+}
+
+#sr_tt {
+    display: none;
+} #sr:hover + #sr_tt {
+    display: block;
+}
+
+#bow_tt {
+    display: none;
+} #bow:hover + #bow_tt {
+    display: block;
+}
+
+#granade_luncher_tt {
+    display: none;
+} #granade_luncher:hover + #granade_luncher_tt {
+    display: block;
+}
+
+#knife_tt {
+    display: none;
+} #knife:hover + #knife_tt {
     display: block;
 }
 
