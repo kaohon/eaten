@@ -105,7 +105,7 @@ function bwandfunc() {
   } else if (dcwand_if == "false") {
     alert("先にダブルキューブ・キャンディワンドを取得してください!");
   } else {
-    bwand = "true";
+    bwand_if = "true";
     bwand.classList.add("bought");
     candy -= 180000;
     bwand.removeEventListener("click", bwandfunc);
@@ -120,7 +120,7 @@ function twandfunc() {
   } else if (bwand_if == "false") {
     alert("先にダブルキューブ・キャンディワンドを取得してください!");
   } else {
-    twand = "true";
+    twand_if = "true";
     twand.classList.add("bought");
     candy -= 260000;
     twand.removeEventListener("click", twandfunc);
@@ -135,7 +135,7 @@ function lastwandfunc() {
   } else if (bwand_if == "false") {
     alert("先に超絶キャンディワンド改・ターボを取得してください!");
   } else {
-    lastwand = "true";
+    lastwand_if = "true";
     lastwand.classList.add("bought");
     candy -= 660000;
     lastwand.removeEventListener("click", lastwandfunc);
