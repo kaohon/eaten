@@ -86,6 +86,16 @@ stats_open.addEventListener("click", function () {
     pass.style.display = "none";
   });
 
+  candy.addEventListener("click", function () {
+      items_open.style.display = "block";
+      collection_open.style.display = "block";
+      setting_open.style.display = "block";
+      stats_open.style.display = "block";
+      cards_open.style.display = "block";
+      bank_open.style.display = "block";
+      pass_open.style.display = "block";
+  });
+
   ct_01_open.addEventListener("click", function () {
     ct_01.style.display = "block";
     ct_02.style.display = "none";

@@ -11,15 +11,52 @@
 .category {
     width: 100%;
     padding: 20px;
-    border: solid 1px black;
+    border: solid 1px rgb(243, 243, 243);
 }
 
 @media screen and (max-width:1000px) {
     .category {
         white-space: nowrap;
-        width: 100%;
+        width: 150px;
         padding: 20px;
         border: solid 1px black;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #items_open {
+        display: none;
+        position: absolute;
+        margin-top: 100px;
+    }
+    #collection_open {
+        display: none;
+        position: absolute;
+        margin-top: 200px;
+    }
+    #setting_open {
+        display: none;
+        position: absolute;
+        margin-top: 300px;
+    }
+    #stats_open {
+        display: none;
+        position: absolute;
+        margin-top: 400px;
+    }
+    #cards_open {
+        display: none;
+        position: absolute;
+        margin-top: 500px;
+    }
+    #bank_open {
+        display: none;
+        position: absolute;
+        margin-top: 600px;
+    }
+    #pass_open {
+        display: none;
+        position: absolute;
+        margin-top: 700px;
     }
 }
 
