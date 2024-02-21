@@ -2,7 +2,21 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <script src="serviceWorker.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register("/path/to/js/serviceWorker.js")
+                    .then(function (registration) {
+                        console.log("serviceWorker registed.");
+                    }).catch(function (error) {
+                    console.warn("serviceWorker error.", error);
+                });
+            }
+});
+        </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eatcandy - 進化は終わらない</title>
 </head>
@@ -22,7 +36,9 @@
         キャンディを捨てる <button  id="eatcandy_button">全部</button> <button id="eatcandy_custom">カスタム</button>
     </main>
     <main id="bank">
-        キャンディを貯金する 現在の貯蔵:<span id="candy_storage"></span><br>
+        <progress id="bank_level" value="0" max="7"></progress>
+        <span id="progress_word">レベル進行度:0/7</span>
+        <br>キャンディを貯金する 現在の貯蔵:<span id="candy_storage"></span><br>
         <span id="in_storage">預金</span>
         <span id="out_storage">出金</span>
         <br>キャンディを預金することで、様々な特典を得ることが出来ます。
@@ -36,9 +52,8 @@
     </main>
     <main id="stats">
         プレイ時間:<span id="elapsedhour"></span>時間<span id="elapsedmin"></span>分<span id="elapsedsec"></span>秒
-        <br>プレイ時間をシェアする <a id="lineshare" target="_blank" rel="nofollow noopener noreferrer">LINEでシェア</a>
-        <br>総生産キャンディ:
-        <br>
+        <p>プレイ時間をシェアする <a id="lineshare" target="_blank" rel="nofollow noopener noreferrer">LINEでシェア</a></p>
+        <p>総生産キャンディ:</p>
     </main>
     <main id="collection">
         <section id="collection-series">
@@ -50,111 +65,111 @@
         <!--雑魚-->
         <!--01-->
         <p id="block" class="box"><img src="img/candy.png">
-            </p><span id="block_tt" class="tooltip">キャンディ 所持済み
-                <br>何のひねりもないただのアイテム。<img src="img/candy.png"></span>
+            </p><div id="block_tt" class="tooltip">キャンディ 所持済み
+                <p>何のひねりもないただのアイテム。<img src="img/candy.png"></p></div>
         <!--//01-->
         <!--02-->
         <p id="stick" class="box"><img src="img/stick.png">
-            </p><span id="stick_tt" class="tooltip">キャンディスティック 10000キャンディ
-                <br>キャンディを加工し、研磨をしたもの。<img src="img/stick.png"></span>
+            </p><div id="stick_tt" class="tooltip">キャンディスティック 10000キャンディ
+                <p>キャンディを加工し、研磨をしたもの。<img src="img/stick.png"></p></div>
         <!--//02-->
         <!--03-->
         <p id="ecube" class="box"><img src="img/energycube.png">
-            </p><span id="ecube_tt" class="tooltip">エナジーキューブ 50000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br>キャンディを凝縮し、無限のエネルギーを放出できるようにしたアイテム。価値が非常に高い。<img src="img/energycube.png"></span>
+            </p><div id="ecube_tt" class="tooltip">エナジーキューブ 50000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p>キャンディを凝縮し、無限のエネルギーを放出できるようにしたアイテム。価値が非常に高い。<img src="img/energycube.png"></p></div>
         <!--//03-->
         <!--//雑魚-->
 
         <!--キャンディワンド-->
         <!--03-->
         <p id="wand" class="box"><img src="img/wand.png">
-            </p><span id="wand_tt" class="tooltip">キャンディワンド 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br>無限のエネルギーで魔法攻撃をしていた武器。<img src="img/wand.png"></span>
+            </p><div id="wand_tt" class="tooltip">キャンディワンド 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p>無限のエネルギーで魔法攻撃をしていた武器。<img src="img/wand.png"></p></div>
         <!--//03-->
         <!--04-->
         <p id="dcwand" class="box"><img src="img/doublecubewand.png">
-            </p><span id="dcwand_tt" class="tooltip">ダブルキューブ・キャンディワンド 110000キャンディ
-                <br>キャンディ秒間生産量が+0.2
-                <br>キャンディワンドが進化し、エナジーキューブが2つ搭載されていた武器。<img src="img/doublecubewand.png"></span>
+            </p><div id="dcwand_tt" class="tooltip">ダブルキューブ・キャンディワンド 110000キャンディ
+                <p>キャンディ秒間生産量が+0.2</p>
+                <p>キャンディワンドが進化し、エナジーキューブが2つ搭載されていた武器。<img src="img/doublecubewand.png"></p></div>
         <p id="bwand" class="box"><img src="img/wandboomerang.png">
-            </p><span id="bwand_tt" class="tooltip">キャンディワンド・ブーメラン 180000キャンディ
-                <br>キャンディ秒間生産量が+0.3
-                <br>ダブルキューブ・キャンディワンドが進化し、エナジーキューブが3つ搭載され、魔法攻撃と物理攻撃の両方を可能とした武器。<img src="img/wandboomerang.png"></span>
+            </p><div id="bwand_tt" class="tooltip">キャンディワンド・ブーメラン 180000キャンディ
+                <p>キャンディ秒間生産量が+0.3</p>
+                <p>ダブルキューブ・キャンディワンドが進化し、エナジーキューブが3つ搭載され、魔法攻撃と物理攻撃の両方を可能とした武器。<img src="img/wandboomerang.png"></p></div>
         <!--//04-->
         <!--05-->
         <p id="twand" class="box"><img src="img/turbowand.png">
-            </p><span id="twand_tt" class="tooltip">超絶キャンディワンド改・ターボ 260000キャンディ
-                <br>キャンディ秒間生産量が+0.4
-                <br>キャンディワンドの頂点。<img src="img/turbowand.png"></span>
+            </p><div id="twand_tt" class="tooltip">超絶キャンディワンド改・ターボ 260000キャンディ
+                <p>キャンディ秒間生産量が+0.4</p>
+                <p>キャンディワンドの頂点。<img src="img/turbowand.png"></p></div>
         <!--//05-->
         <!--06--> 
         <p id="lastwand" class="box"><img src="img/worldlastturbowand.png">
-            </p><span id="lastwand_tt" class="tooltip">ワールドエンド・キャンディワンド 660000キャンディ
-                <br>キャンディ秒間生産量が+0.8
-                <br>もう一方の選択肢が解放される。
-                <br>世界の終わりに...<img src="img/worldlastturbowand.png"></span>
+            </p><div id="lastwand_tt" class="tooltip">ワールドエンド・キャンディワンド 660000キャンディ
+                <p>キャンディ秒間生産量が+0.8</p>
+                <p>もう一方の選択肢が解放される。</p>
+                <p>世界の終わりに...<img src="img/worldlastturbowand.png"></p></div>
         <!--//06-->
 
         <!--キャンディソード-->
         <!--03-->
         <p id="sword" class="box"><img src="img/sword.png">
-            </p><span id="sword_tt" class="tooltip">キャンディソード 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br>無限のエネルギーで物理攻撃をしていた武器。<img src="img/sword.png"></span>
+            </p><div id="sword_tt" class="tooltip">キャンディソード 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p>無限のエネルギーで物理攻撃をしていた武器。<img src="img/sword.png"></p></div>
         <!--//03-->
         <!--04-->
             <p id="dsword" class="box"><img src="img/dualsword.png">
-            </p><span id="dsword_tt" class="tooltip">デュアル・キャンディソード 120000キャンディ
-                <br>キャンディ秒間生産量が+0.2
-                <br>キャンディソードが進化し、二刀流となった武器。<img src="img/dualsword.png"></span>
+            </p><div id="dsword_tt" class="tooltip">デュアル・キャンディソード 120000キャンディ
+                <p>キャンディ秒間生産量が+0.2</p>
+                <p>キャンディソードが進化し、二刀流となった武器。<img src="img/dualsword.png"></p></div>
         <!--//04-->
         <!--05-->
         <p id="tsword" class="box"><img src="img/turbosword.png">
-            </p><span id="tsword_tt" class="tooltip">超絶キャンディソード改・ターボ 220000キャンディ
-                <br>キャンディ秒間生産量が+0.4
-                <br>キャンディソードの頂点。<img src="img/turbosword.png"></span>
+            </p><div id="tsword_tt" class="tooltip">超絶キャンディソード改・ターボ 220000キャンディ
+                <p>キャンディ秒間生産量が+0.4</p>
+                <p>キャンディソードの頂点。<img src="img/turbosword.png"></p></div>
         <!--//05-->
         <!--06-->
         <p id="lastsword" class="box"><img src="img/worldlastturbosword.png">
-            </p><span id="lastsword_tt" class="tooltip">ワールドエンド・キャンディソード 860000キャンディ
-                <br>キャンディ秒間生産量が+1.6
-                <br>もう一方の選択肢が解放される。
-                <br>世界の終わりに...<img src="img/worldlastturbosword.png"></span>
+            </p><div id="lastsword_tt" class="tooltip">ワールドエンド・キャンディソード 860000キャンディ
+                <p>キャンディ秒間生産量が+1.6</p>
+                <p>もう一方の選択肢が解放される。</p>
+                <p>世界の終わりに...<img src="img/worldlastturbosword.png"></p></div>
         <!--//06-->
     </section>
     <section id="ct_02">
         <!--キャンディガン-->
         <!--03-->
         <p id="ar" class="box"><img src="img/ar.png">
-            </p><span id="ar_tt" class="tooltip">キャンディ・アサルトライフル 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/ar.png"></span>
+            </p><div id="ar_tt" class="tooltip">キャンディ・アサルトライフル 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/ar.png"></p></div>
         <p id="smg" class="box"><img src="img/smg.png">
-            </p><span id="smg_tt" class="tooltip">キャンディ・サブマシンガン 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/smg.png"></span>
+            </p><div id="smg_tt" class="tooltip">キャンディ・サブマシンガン 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/smg.png"></p></div>
         <p id="rev" class="box"><img src="img/rev.png">
-            </p><span id="rev_tt" class="tooltip">キャンディ・リボルバー 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/rev.png"></span>
+            </p><div id="rev_tt" class="tooltip">キャンディ・リボルバー 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/rev.png"></p></div>
         <p id="sr" class="box"><img src="img/sr.png">
-            </p><span id="sr_tt" class="tooltip">キャンディ・スナイパーライフル 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/sr.png"></span>
+            </p><div id="sr_tt" class="tooltip">キャンディ・スナイパーライフル 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/sr.png"></p></div>
         <p id="bow" class="box"><img src="img/bow.png">
-            </p><span id="bow_tt" class="tooltip">キャンディ・ボウ 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/bow.png"></span>
+            </p><div id="bow_tt" class="tooltip">キャンディ・ボウ 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/bow.png"></p></div>
         <p id="granade_luncher" class="box"><img src="img/granade_luncher.png">
-            </p><span id="granade_luncher_tt" class="tooltip">キャンディ・グレネードランチャー 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/granade_luncher.png"></span>
+            </p><div id="granade_luncher_tt" class="tooltip">キャンディ・グレネードランチャー 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/granade_luncher.png"></p></div>
         <p id="knife" class="box"><img src="img/knife.png">
-            </p><span id="knife_tt" class="tooltip">キャンディ・ナイフ 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/knife.png"></span>
+            </p><div id="knife_tt" class="tooltip">キャンディ・ナイフ 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/knife.png"></p></div>
         
         <!--//03-->
         <!--04-->
@@ -168,39 +183,39 @@
         <!--キャンディガン-->
         <!--03-->
         <p id="smg_core" class="box"><img src="img/smg_core.png">
-            </p><span id="smg_core_tt" class="tooltip">サブマシンガン・コア 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/smg_core.png"></span>
+            </p><div id="smg_core_tt" class="tooltip">サブマシンガン・コア 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/smg_core.png"></p></div>
         <!--//03-->
         <!--04-->
         <p id="mp5" class="box"><img src="img/mp5.png">
-            </p><span id="mp5_tt" class="tooltip">キャンディ・サブマシンガン(MP5) 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/mp5.png"></span>
+            </p><div id="mp5_tt" class="tooltip">キャンディ・サブマシンガン(MP5) 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/mp5.png"></p></div>
         <p id="uzi" class="box"><img src="img/uzi.png">
-            </p><span id="uzi_tt" class="tooltip">キャンディ・サブマシンガン(Uzi) 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/uzi.png"></span>
+            </p><div id="uzi_tt" class="tooltip">キャンディ・サブマシンガン(Uzi) 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/uzi.png"></p></div>
         <p id="mac10" class="box"><img src="img/mac10.png">
-            </p><span id="mac10_tt" class="tooltip">キャンディ・サブマシンガン(MAC-10) 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/mac10.png"></span>
+            </p><div id="mac10_tt" class="tooltip">キャンディ・サブマシンガン(MAC-10) 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/mac10.png"></p></div>
         <p id="ppsh41" class="box"><img src="img/ppsh41.png">
-            </p><span id="ppsh41_tt" class="tooltip">キャンディ・サブマシンガン(PPSh-41) 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/ppsh41.png"></span>
+            </p><div id="ppsh41_tt" class="tooltip">キャンディ・サブマシンガン(PPSh-41) 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/ppsh41.png"></p></div>
         <p id="thompson" class="box"><img src="img/thompson.png">
-            </p><span id="thompson_tt" class="tooltip">キャンディ・サブマシンガン(Thompson) 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/thompson.png"></span>
+            </p><div id="thompson_tt" class="tooltip">キャンディ・サブマシンガン(Thompson) 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/thompson.png"></p></div>
         <p id="p90" class="box"><img src="img/p90.png">
-            </p><span id="p90_tt" class="tooltip">キャンディ・サブマシンガン(P90) 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/p90.png"></span>
+            </p><div id="p90_tt" class="tooltip">キャンディ・サブマシンガン(P90) 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/p90.png"></p></div>
         <p id="vector" class="box"><img src="img/vector.png">
-            </p><span id="vector_tt" class="tooltip">キャンディ・サブマシンガン(Vector) 60000キャンディ
-                <br>キャンディ秒間生産量が+0.1
-                <br><img src="img/vector.png"></span>
+            </p><div id="vector_tt" class="tooltip">キャンディ・サブマシンガン(Vector) 60000キャンディ
+                <p>キャンディ秒間生産量が+0.1</p>
+                <p><img src="img/vector.png"></p></div>
         <!--//04-->
         <!--05-->
         <!--//05-->

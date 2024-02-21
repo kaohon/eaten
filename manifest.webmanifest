@@ -1,0 +1,13 @@
+{
+    "name": "Eatcandy - 進化は終わらない",
+    "short_name": "Eatcandy",
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "img/candy.png",
+        "sizes": "75x75"
+      }
+    ]
+  }

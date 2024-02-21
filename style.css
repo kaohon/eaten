@@ -494,3 +494,19 @@
 .lup {
     background-color: yellow;
 }
+
+#bank_level {
+    position: absolute;
+    width: 70%;
+    height: 20px;
+    border-radius: 0%;
+    transform: skewX(40deg) translateX(-50%);
+    border: solid 1px #000;
+    left: 50%;
+}
+
+#progress_word {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}

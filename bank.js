@@ -25,3 +25,32 @@ in_storage.addEventListener("click", function () {
       candy_storage.innerHTML = invalue;
     }
   });
+
+  if (candy_storage.innerHTML >= "10000") {
+    bank_level.value = 1;
+    progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
+  } 
+  if (candy_storage.innerHTML >= "100000") {
+    bank_level.value = 2;
+    progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
+  } 
+  if (candy_storage.innerHTML >= "1000000") {
+    bank_level.value = 3;
+    progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
+  } 
+  if (candy_storage.innerHTML >= "10000000") {
+    bank_level.value = 4;
+    progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
+  } 
+  if (candy_storage.innerHTML >= "100000000") {
+    bank_level.value = 5;
+    progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
+  } 
+  if (candy_storage.innerHTML >= "1000000000") {
+    bank_level.value = 6;
+    progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
+  } 
+  if (candy_storage.innerHTML >= "10000000000") {
+    bank_level.value = 7;
+    progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
+  }
