@@ -1,12 +1,15 @@
 var candyhtml = document.getElementById("candy");
+var cpshtml = document.getElementById("cps");
 
 let invalue = 0;
 let candy = 0;
 let count = 0;
+let cps = 1.0;
 const countUp = () => {
     console.log(candy++);
     console.log(count++);
     candyhtml.innerHTML = candy + " キャンディー";
+    cpshtml.innerHTML = cps;
 
     counthour = Math.floor(count / 60 / 60);
     countmin = Math.floor(count / 60) - Math.floor(count / 60 / 60) * 60;
@@ -30,37 +33,37 @@ const countUp = () => {
   const countday1 = () => {
     day1 = candy;
   }
-  setInterval(countday1, 60000);
+  setTimeout(countday1, 60000);
 
   const countday2 = () => {
     day2 = candy;
   }
-  setInterval(countday2, 120000);
+  setTimeout(countday2, 120000);
 
   const countday3 = () => {
     day3 = candy;
   }
-  setInterval(countday3, 180000);
+  setTimeout(countday3, 180000);
 
   const countday4 = () => {
     day4 = candy;
   }
-  setInterval(countday4, 240000);
+  setTimeout(countday4, 240000);
 
   const countday5 = () => {
     day5 = candy;
   }
-  setInterval(countday5, 300000);
+  setTimeout(countday5, 300000);
 
   const countday6 = () => {
     day6 = candy;
   }
-  setInterval(countday6, 360000);
+  setTimeout(countday6, 360000);
 
   const countday7 = () => {
     day7 = candy;
   }
-  setInterval(countday7, 420000);
+  setTimeout(countday7, 420000);
 
   let ctx = document.getElementById('ex_chart');  
   let ctx2 = document.getElementById('ex_chart2');  
@@ -155,6 +158,7 @@ function ecubefunc() {
     ecube_if = "true";
     ecube.classList.add("bought");
     candy -= 50000;
+    cps += 0.1;
     ecube.removeEventListener("click", ecubefunc);
     setInterval(collectioneffect, 10000);
   }
@@ -172,6 +176,7 @@ function wandfunc() {
     wand_if = "pretrue";
     wand.classList.add("bought");
     candy -= 60000;
+    cps += 0.1;
     wand.removeEventListener("click", wandfunc);
     setInterval(collectioneffect, 10000);
   }
@@ -187,6 +192,7 @@ function dcwandfunc() {
     dcwand_if = "true";
     dcwand.classList.add("bought");
     candy -= 110000;
+    cps += 0.2;
     dcwand.removeEventListener("click", dcwandfunc);
     setInterval(collectioneffect, 5000);
   }
@@ -202,8 +208,9 @@ function bwandfunc() {
     bwand_if = "true";
     bwand.classList.add("bought");
     candy -= 180000;
+    cps += 0.32;
     bwand.removeEventListener("click", bwandfunc);
-    setInterval(collectioneffect, 3333);
+    setInterval(collectioneffect, 3125);
   }
 }
 
@@ -217,6 +224,7 @@ function twandfunc() {
     twand_if = "true";
     twand.classList.add("bought");
     candy -= 260000;
+    cps += 0.4;
     twand.removeEventListener("click", twandfunc);
     setInterval(collectioneffect, 2500);
   }
@@ -233,6 +241,7 @@ function lastwandfunc() {
     lastwand_if = "true";
     lastwand.classList.add("bought");
     candy -= 660000;
+    cps += 0.8;
     lastwand.removeEventListener("click", lastwandfunc);
     setInterval(collectioneffect, 1250);
   }
@@ -250,6 +259,7 @@ function swordfunc() {
     sword_if = "pretrue";
     sword.classList.add("bought");
     candy -= 60000;
+    cps += 0.1;
     sword.removeEventListener("click", swordfunc);
     setInterval(collectioneffect, 10000);
   }
@@ -265,6 +275,7 @@ function dswordfunc() {
     dsword_if = "true";
     dsword.classList.add("bought");
     candy -= 120000;
+    cps += 0.2;
     dsword.removeEventListener("click", dswordfunc);
     setInterval(collectioneffect, 5000);
   }
@@ -280,6 +291,7 @@ function tswordfunc() {
     tsword_if = "true";
     tsword.classList.add("bought");
     candy -= 220000;
+    cps += 0.4;
     tsword.removeEventListener("click", tswordfunc);
     setInterval(collectioneffect, 2500);
   }
@@ -296,6 +308,7 @@ function lastswordfunc() {
     lastsword_if = "true";
     lastsword.classList.add("bought");
     candy -= 860000;
+    cps += 1.6;
     lastsword.removeEventListener("click", lastswordfunc);
     setInterval(collectioneffect, 625);
   }

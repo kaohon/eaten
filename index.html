@@ -26,7 +26,7 @@
         <span class="category" id="collection_open">コレクションツリー</span>
         <span class="category" id="setting_open">設定</span>
         <span class="category" id="eatcandy_open" hidden>Eatcandy</span>
-        <span id="candy">0 キャンディ</span>
+        <span id="candy"></span>
         <span class="category" id="stats_open">統計</span>
         <span class="category" id="cards_open">カード</span>
         <span class="category" id="bank_open">銀行</span>
@@ -54,6 +54,7 @@
         プレイ時間:<span id="elapsedhour"></span>時間<span id="elapsedmin"></span>分<span id="elapsedsec"></span>秒
         <p>プレイ時間をシェアする <a id="lineshare" target="_blank" rel="nofollow noopener noreferrer">LINEでシェア</a></p>
         <p>総生産キャンディ:</p>
+        <p>キャンディ秒間生産量:<span id="cps"></span></p>
 
         <script src=" https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>       <style>
             #ex_chart {max-width:640px;max-height:480px;}
@@ -281,7 +282,7 @@
     <main id="items">
         ランダムカードセット(3枚) 300000キャンディ (2セットまで)
         <br>カード選択ボックス(1枚) 150000キャンディ (3個まで)
-        <br>コレクションツリー Part2 75000キャンディ (Part1コンプリートで無料)
+        <br>コレクションツリー Part2 75000キャンディ (Part1コンプリートで自動解除) <span class="buy"></span>
     </main>
     <main id="pass">
         [プレシーズン] BETA-Season 1 1/10 開始予定

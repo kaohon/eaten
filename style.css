@@ -75,22 +75,16 @@
         margin: auto;
     }
     #ct_02_open {
-        display: flex;
+        display: none;
         text-align: center;
         width: fit-content;
         margin: auto;
     }
     #ct_demo_open {
-        display: flex;
+        display: none;
         text-align: center;
         width: fit-content;
         margin: auto;
-    }
-
-    #ct_01 {
-        top: 30px;
-    }
-    #ct_02 {
     }
 }
 
@@ -333,6 +327,13 @@
     width: 100%;
     padding: 10px;
     border: solid 1px black;
+}
+
+#ct_02_open {
+    visibility: hidden;
+}
+#ct_demo_open {
+    visibility: hidden;
 }
 
 #ct_02 {
