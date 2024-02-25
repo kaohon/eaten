@@ -54,6 +54,14 @@
         プレイ時間:<span id="elapsedhour"></span>時間<span id="elapsedmin"></span>分<span id="elapsedsec"></span>秒
         <p>プレイ時間をシェアする <a id="lineshare" target="_blank" rel="nofollow noopener noreferrer">LINEでシェア</a></p>
         <p>総生産キャンディ:</p>
+
+        <script src=" https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>       <style>
+            #ex_chart {max-width:640px;max-height:480px;}
+            #ex_chart2 {max-width:640px;max-height:480px;}
+            </style>
+        <canvas id="ex_chart"></canvas>
+        <canvas id="ex_chart2"></canvas>
+
     </main>
     <main id="collection">
         <section id="collection-series">
@@ -317,6 +325,7 @@
         </table>
     </main>
     
+
     <script src="pass.js"></script>
     <script src="data.js"></script>
     <script src="bank.js"></script>

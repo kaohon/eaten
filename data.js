@@ -88,6 +88,15 @@ const autosave = () => {
       
     }
 
+    if (wand_str == "pretrue") {
+      wand_if = "pretrue";
+      wand.classList.add("bought");
+      wand.removeEventListener("click", wandfunc);
+      setInterval(collectioneffect, 10000);
+    } else {
+      
+    }
+
     if (wand_str == "true") {
       wand_if = "true";
       wand.classList.add("bought");
@@ -135,6 +144,15 @@ const autosave = () => {
 
     if (sword_str == "true") {
       sword_if = "true";
+      sword.classList.add("bought");
+      sword.removeEventListener("click", swordfunc);
+      setInterval(collectioneffect, 10000);
+    } else {
+      
+    }
+
+    if (sword_str == "pretrue") {
+      sword_if = "pretrue";
       sword.classList.add("bought");
       sword.removeEventListener("click", swordfunc);
       setInterval(collectioneffect, 10000);
