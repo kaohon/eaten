@@ -211,5 +211,5 @@ if (mediaQuery.matches) {
   });
 
   lineshare.addEventListener("click", function () {
-    window.location.href="https://line.me/R/msg/text/〇〇カンパニーの現在のキャンディ生産数は: " + candy;
+    window.location.href = "https://line.me/R/msg/text/Test01 現在のキャンディ生産数: " + candy + " キャンディ" + "%0a現在のプレイ時間: " + counthour + " 時間 " + countmin + " 分 " + countsec + " 秒 ";
   });
