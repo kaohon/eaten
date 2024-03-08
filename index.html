@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <script src="serviceWorker.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="manifest-style.css">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" type="text/css" href="css/epoch.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,8 @@
 </head>
 <body>
     <main id="main">
+        <span class="category" id="achivement_open">実績</span>
+        <span class="category" id="rank_open">ランク</span>
         <span class="category" id="items_open">アイテムショップ</span>
         <span class="category" id="collection_open">コレクションツリー</span>
         <span class="category" id="setting_open">設定</span>
@@ -31,16 +34,17 @@
         <span id="in_storage">預金</span>
         <span id="out_storage">出金</span>
         <br>キャンディを預金することで、様々な特典を得ることが出来ます。
-        <br>レベル1(預金10000↑):預金したキャンディに利息が発生(10日おきに預金額の1.2倍)
-        <br>レベル2(預金100000↑):預金したキャンディに利息が発生(10日おきに預金額の1.4倍)
-        <br>レベル3(預金1000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.6倍)
-        <br>レベル4(預金10000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.7倍)
-        <br>レベル5(預金100000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.8倍)
-        <br>レベル6(預金1000000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.9倍)
-        <br>レベル7(預金10000000000↑):預金したキャンディに利息が発生(10日おきに預金額の2.0倍)
+        <br>レベル1(預金10000↑):預金したキャンディに利息が発生(10日おきに預金額の1.1倍)
+        <br>レベル2(預金100000↑):預金したキャンディに利息が発生(10日おきに預金額の1.2倍)
+        <br>レベル3(預金1000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.3倍)
+        <br>レベル4(預金10000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.4倍)
+        <br>レベル5(預金100000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.5倍)
+        <br>レベル6(預金1000000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.6倍)
+        <br>レベル7(預金10000000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.7倍)
     </main>
     <main id="stats">
-        プレイ時間:<span id="elapsedhour"></span>時間<span id="elapsedmin"></span>分<span id="elapsedsec"></span>秒
+        レベル:<span id="levelhtml"></span>
+        <p>プレイ時間:<span id="elapsedhour"></span>時間<span id="elapsedmin"></span>分<span id="elapsedsec"></span>秒</p>
         <p>プレイ時間をシェアする <a id="lineshare" target="_blank" rel="nofollow noopener noreferrer">LINEでシェア</a></p>
         <p>総生産キャンディ:</p>
         <p>キャンディ秒間生産量:<span id="cps"></span></p>
@@ -152,6 +156,10 @@
             </p><div id="rev_tt" class="tooltip">キャンディ・リボルバー 60000キャンディ
                 <p>キャンディ秒間生産量が+0.1</p>
                 <p><img src="img/rev.png"></p></div>
+        <p id="sg" class="box"><img src="img/sg.png">
+                </p><div id="sg_tt" class="tooltip">キャンディ・ショットガン 60000キャンディ
+                    <p>キャンディ秒間生産量が+0.1</p>
+                    <p><img src="img/sg.png"></p></div>
         <p id="sr" class="box"><img src="img/sr.png">
             </p><div id="sr_tt" class="tooltip">キャンディ・スナイパーライフル 60000キャンディ
                 <p>キャンディ秒間生産量が+0.1</p>
@@ -269,13 +277,27 @@
         <!--<span id="alert">自動セーブしました。(30秒毎)</span>-->
     </main>
     <main id="items">
-        ランダムカードセット(3枚) 300000キャンディ (2セットまで)
-        <br>カード選択ボックス(1枚) 150000キャンディ (3個まで)
-        <br>コレクションツリー Part2 75000キャンディ (Part1コンプリートで自動解除) <span class="buy"></span>
+        ランダムカードセット(3枚) 
+        <div class="standard-button">購入
+            <p class="button-subtitle">300000キャンディ</p>
+            <p class="button-subtitle">(2セットまで)</p>
+        </div>
+        <br>カード選択ボックス(1枚)
+        <div class="standard-button">購入
+            <p class="button-subtitle">150000キャンディ</p>
+            <p class="button-subtitle">(3個まで)</p>
+        </div>
+        <br>コレクションツリー Part2
+        <div class="standard-button">購入
+            <p class="button-subtitle">75000キャンディ</p>
+            <p class="button-subtitle">(Part1コンプリートで自動解除)</p>
+        </div>
     </main>
     <main id="pass">
         [プレシーズン] BETA-Season 1 1/10 開始予定
-        <br>プレミアムパスを購入:100000キャンディ
+        <div class="standard-button">プレミアムパスを購入
+            <p class="button-subtitle">100000キャンディ</p>
+        </div>
         <br>プレミアムパス限定:レベルx100倍のキャンディがレベルアップ時に銀行振込される
         <br>レベル30↑は1000キャンディが15レベルごとに獲得できる
         <table>
@@ -314,8 +336,24 @@
             </td>
         </table>
     </main>
-    
+    <main id="rank">
+        <!--Circuitシステム(C1ブロンズ ➞ C1シルバー ➞ C1ゴールド ➞ C1プラチナ ➞ C1ダイヤモンド ➞ C1マスター ➞ C2ブロンズ ......)-->
+        ランク Circuit 1 ブロンズ3
+        ブロンズ:15時間毎にランクアップ
+        シルバー:20時間毎にランクアップ
+        ゴールド:25時間毎にランクアップ
+        プラチナ:30時間毎にランクアップ
+        ダイヤモンド:35時間毎にランクアップ
+        マスター:40時間毎にランクアップ
+        Circuit 1 ブロンズ3 ➞ ブロンズ2 ➞ ブロンズ1 ➞ Circuit 1 シルバー3
+    </main>
+    <main id="achivement">
+        <span id="a01" class="achivement"></span>
+        <span id="a02" class="achivement"></span>
+        <span id="a03" class="achivement"></span>
+    </main>
 
+    <script src="level.js"></script>
     <script src="pass.js"></script>
     <script src="data.js"></script>
     <script src="bank.js"></script>

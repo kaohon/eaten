@@ -42,7 +42,7 @@ const autosave = () => {
     localStorage.setItem("lastsword_if", lastsword_if);
   }
 
-  window.onload = function(){
+  window.onload = function() {
     var candy_str = localStorage.getItem("candyvalue");
     var count_str = localStorage.getItem("elapsedtime");
     var sec_str = localStorage.getItem("elapsedsec");
