@@ -1,189 +1,133 @@
-stats_open.addEventListener("click", function () {
+const headerElements = document.querySelectorAll("#collection, #stats, #setting, #cards, #bank, #items, #pass, #rank, #eatcandy");
+
+  stats_open.addEventListener("click", function () {
+    headerElements.forEach(element => {
+      element.style.display = "none";
+    });
     stats.style.display = "block";
-    collection.style.display = "none";
-    setting.style.display = "none";
-    cards.style.display = "none";
-    bank.style.display = "none";
-    items.style.display = "none";
-    pass.style.display = "none";
-    eatcandy.style.display = "none";
   });
   
   collection_open.addEventListener("click", function () {
+    headerElements.forEach(element => {
+      element.style.display = "none";
+    });
     collection.style.display = "block";
-    stats.style.display = "none";
-    setting.style.display = "none";
-    cards.style.display = "none";
-    bank.style.display = "none";
-    items.style.display = "none";
-    pass.style.display = "none";
-    eatcandy.style.display = "none";
   });
   
   setting_open.addEventListener("click", function () {
+    headerElements.forEach(element => {
+      element.style.display = "none";
+    });
     setting.style.display = "block";
-    stats.style.display = "none";
-    collection.style.display = "none";
-    cards.style.display = "none";
-    bank.style.display = "none";
-    items.style.display = "none";
-    pass.style.display = "none";
-    eatcandy.style.display = "none";
   });
   
   cards_open.addEventListener("click", function () {
+    headerElements.forEach(element => {
+        element.style.display = "none";
+    });
     cards.style.display = "block";
-    stats.style.display = "none";
-    collection.style.display = "none";
-    setting.style.display = "none";
-    bank.style.display = "none";
-    items.style.display = "none";
-    pass.style.display = "none";
-    eatcandy.style.display = "none";
   });
   
   bank_open.addEventListener("click", function () {
+    headerElements.forEach(element => {
+        element.style.display = "none";
+    });
     bank.style.display = "block";
-    stats.style.display = "none";
-    collection.style.display = "none";
-    setting.style.display = "none";
-    cards.style.display = "none";
-    items.style.display = "none";
-    pass.style.display = "none";
-    eatcandy.style.display = "none";
   });
 
   items_open.addEventListener("click", function () {
+    headerElements.forEach(element => {
+        element.style.display = "none";
+    });
     items.style.display = "block";
-    stats.style.display = "none";
-    collection.style.display = "none";
-    setting.style.display = "none";
-    bank.style.display = "none";
-    cards.style.display = "none";
-    pass.style.display = "none";
-    eatcandy.style.display = "none";
   });
 
   pass_open.addEventListener("click", function () {
+    headerElements.forEach(element => {
+        element.style.display = "none";
+    });
     pass.style.display = "block";
-    stats.style.display = "none";
-    collection.style.display = "none";
-    setting.style.display = "none";
-    cards.style.display = "none";
-    bank.style.display = "none";
-    items.style.display = "none";
-    eatcandy.style.display = "none";
+  });
+
+  rank_open.addEventListener("click", function () {
+    headerElements.forEach(element => {
+      element.style.display = "none";
+  });
+    rank.style.display = "block";
   });
 
   eatcandy_open.addEventListener("click", function () {
+    headerElements.forEach(element => {
+        element.style.display = "none";
+    });
     eatcandy.style.display = "block";
-    stats.style.display = "none";
-    collection.style.display = "none";
-    setting.style.display = "none";
-    cards.style.display = "none";
-    bank.style.display = "none";
-    items.style.display = "none";
-    pass.style.display = "none";
   });
 
-  const mediaQuery = window.matchMedia('(max-width:1360px)')
+const mediaQuery = window.matchMedia('(max-width:1360px)');
+const headerElementsopen = document.querySelectorAll("#items_open, #collection_open, #setting_open, #stats_open, #cards_open, #bank_open, #pass_open, #rank_open");
 
 if (mediaQuery.matches) {
   candy.addEventListener("click", function () {
     if (items_open.style.display == "none"){
-      items_open.style.display = "block";
-      collection_open.style.display = "block";
-      setting_open.style.display = "block";
-      stats_open.style.display = "block";
-      cards_open.style.display = "block";
-      bank_open.style.display = "block";
-      pass_open.style.display = "block";
-      stats.style.display = "none";
-      collection.style.display = "none";
-      setting.style.display = "none";
-      cards.style.display = "none";
-      bank.style.display = "none";
-      items.style.display = "none";
-      pass.style.display = "none";
+      headerElementsopen.forEach(element => {
+        element.style.display = "block";
+      });
+      headerElements.forEach(element => {
+        element.style.display = "none";
+      });
     } else {
-      items_open.style.display = "none";
-      collection_open.style.display = "none";
-      setting_open.style.display = "none";
-      stats_open.style.display = "none";
-      cards_open.style.display = "none";
-      bank_open.style.display = "none";
-      pass_open.style.display = "none";
+      headerElementsopen.forEach(element => {
+        element.style.display = "none";
+      });
     }
   });
 
   items_open.addEventListener("click", function () {
-      items_open.style.display = "none";
-      collection_open.style.display = "none";
-      setting_open.style.display = "none";
-      stats_open.style.display = "none";
-      cards_open.style.display = "none";
-      bank_open.style.display = "none";
-      pass_open.style.display = "none";
+    headerElementsopen.forEach(element => {
+      element.style.display = "none";
+    });
   });
 
   collection_open.addEventListener("click", function () {
-    items_open.style.display = "none";
-    collection_open.style.display = "none";
-    setting_open.style.display = "none";
-    stats_open.style.display = "none";
-    cards_open.style.display = "none";
-    bank_open.style.display = "none";
-    pass_open.style.display = "none";
+    headerElementsopen.forEach(element => {
+      element.style.display = "none";
+    });
   });
 
   setting_open.addEventListener("click", function () {
-  items_open.style.display = "none";
-  collection_open.style.display = "none";
-  setting_open.style.display = "none";
-  stats_open.style.display = "none";
-  cards_open.style.display = "none";
-  bank_open.style.display = "none";
-  pass_open.style.display = "none";
+    headerElementsopen.forEach(element => {
+      element.style.display = "none";
+    });
   });
 
   stats_open.addEventListener("click", function () {
-    items_open.style.display = "none";
-    collection_open.style.display = "none";
-    setting_open.style.display = "none";
-    stats_open.style.display = "none";
-    cards_open.style.display = "none";
-    bank_open.style.display = "none";
-    pass_open.style.display = "none";
+    headerElementsopen.forEach(element => {
+      element.style.display = "none";
+    });
   });
 
   cards_open.addEventListener("click", function () {
-    items_open.style.display = "none";
-    collection_open.style.display = "none";
-    setting_open.style.display = "none";
-    stats_open.style.display = "none";
-    cards_open.style.display = "none";
-    bank_open.style.display = "none";
-    pass_open.style.display = "none";
+    headerElementsopen.forEach(element => {
+      element.style.display = "none";
+    });
   });
 
   bank_open.addEventListener("click", function () {
-    items_open.style.display = "none";
-    collection_open.style.display = "none";
-    setting_open.style.display = "none";
-    stats_open.style.display = "none";
-    cards_open.style.display = "none";
-    bank_open.style.display = "none";
-    pass_open.style.display = "none";
+    headerElementsopen.forEach(element => {
+      element.style.display = "none";
+    });
   });
 
   pass_open.addEventListener("click", function () {
-    items_open.style.display = "none";
-    collection_open.style.display = "none";
-    setting_open.style.display = "none";
-    stats_open.style.display = "none";
-    cards_open.style.display = "none";
-    bank_open.style.display = "none";
-    pass_open.style.display = "none";
+    headerElementsopen.forEach(element => {
+      element.style.display = "none";
+    });
+  });
+
+  rank_open.addEventListener("click", function () {
+    headerElementsopen.forEach(element => {
+      element.style.display = "none";
+    });
   });
 }
 
@@ -211,5 +155,5 @@ if (mediaQuery.matches) {
   });
 
   lineshare.addEventListener("click", function () {
-    window.location.href="https://line.me/R/msg/text/〇〇カンパニーの現在のキャンディ生産数は: " + candy;
+    window.location.href = "https://line.me/R/msg/text/現在のキャンディ生産数: " + candy + " キャンディ" + "%0a現在のプレイ時間: " + counthour + " 時間 " + countmin + " 分 " + countsec + " 秒 ";
   });

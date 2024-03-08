@@ -4,6 +4,16 @@
 	padding: 0;
 }
 
+.standard-button {
+    width: fit-content;
+    text-align: center;
+    border: solid 1px black;
+}
+.button-subtitle {
+    font-size: 14px;
+    text-align: center;
+}
+
 #alert {
     display: none;
 }
@@ -18,80 +28,6 @@
     width: 100%;
     padding: 20px;
     border: solid 1px black;
-}
-
-@media screen and (max-width:1360px) {
-    .category {
-        display: none;
-        white-space: nowrap;
-        width: 150px;
-        padding: 20px;
-        border: solid 1px black;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    #items_open {
-        display: none;
-        position: absolute;
-        margin-top: 100px;
-    }
-    #collection_open {
-        display: none;
-        position: absolute;
-        margin-top: 200px;
-    }
-    #setting_open {
-        display: none;
-        position: absolute;
-        margin-top: 300px;
-    }
-    #stats_open {
-        display: none;
-        position: absolute;
-        margin-top: 400px;
-    }
-    #cards_open {
-        display: none;
-        position: absolute;
-        margin-top: 500px;
-    }
-    #bank_open {
-        display: none;
-        position: absolute;
-        margin-top: 600px;
-    }
-    #pass_open {
-        display: none;
-        position: absolute;
-        margin-top: 700px;
-    }
-    #collection-series {
-        white-space: nowrap;
-    }
-    #ct_01_open {
-        display: flex;
-        text-align: center;
-        width: fit-content;
-        margin: auto;
-    }
-    #ct_02_open {
-        display: flex;
-        text-align: center;
-        width: fit-content;
-        margin: auto;
-    }
-    #ct_demo_open {
-        display: flex;
-        text-align: center;
-        width: fit-content;
-        margin: auto;
-    }
-
-    #ct_01 {
-        top: 30px;
-    }
-    #ct_02 {
-    }
 }
 
 #main {
@@ -258,8 +194,8 @@
 #sg {
     position: absolute;
     top: 200px;
-    left: 50%;
-    right: 50%;
+    left: 40%;
+    right: 60%;
     transform: translateX(-50%);
     opacity: 0.5;
 }
@@ -333,6 +269,13 @@
     width: 100%;
     padding: 10px;
     border: solid 1px black;
+}
+
+#ct_02_open {
+    visibility: hidden;
+}
+#ct_demo_open {
+    visibility: hidden;
 }
 
 #ct_02 {
