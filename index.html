@@ -2,11 +2,10 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <script src="serviceWorker.js"></script>
+    <link rel="stylesheet" href="achivement.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="manifest-style.css">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" type="text/css" href="css/epoch.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eatcandy - 進化は終わらない</title>
 </head>
@@ -17,15 +16,11 @@
         <span class="category" id="items_open">アイテムショップ</span>
         <span class="category" id="collection_open">コレクションツリー</span>
         <span class="category" id="setting_open">設定</span>
-        <span class="category" id="eatcandy_open" hidden>Eatcandy</span>
         <span id="candy"></span>
         <span class="category" id="stats_open">統計</span>
         <span class="category" id="cards_open">カード</span>
         <span class="category" id="bank_open">銀行</span>
         <span class="category" id="pass_open">シーズンパス</span>
-    </main>
-    <main id="eatcandy" hidden>
-        キャンディを捨てる <button  id="eatcandy_button">全部</button> <button id="eatcandy_custom">カスタム</button>
     </main>
     <main id="bank">
         <progress id="bank_level" value="0" max="7"></progress>
@@ -46,16 +41,8 @@
         レベル:<span id="levelhtml"></span>
         <p>プレイ時間:<span id="elapsedhour"></span>時間<span id="elapsedmin"></span>分<span id="elapsedsec"></span>秒</p>
         <p>プレイ時間をシェアする <a id="lineshare" target="_blank" rel="nofollow noopener noreferrer">LINEでシェア</a></p>
-        <p>総生産キャンディ:</p>
+        <p>総生産キャンディ:<span id="all_candy"></span></p>
         <p>キャンディ秒間生産量:<span id="cps"></span></p>
-
-        <script src=" https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>       <style>
-            #ex_chart {max-width:640px;max-height:480px;}
-            #ex_chart2 {max-width:640px;max-height:480px;}
-            </style>
-        <canvas id="ex_chart"></canvas>
-        <canvas id="ex_chart2"></canvas>
-
     </main>
     <main id="collection">
         <section id="collection-series">
@@ -176,7 +163,6 @@
             </p><div id="knife_tt" class="tooltip">キャンディ・ナイフ 60000キャンディ
                 <p>キャンディ秒間生産量が+0.1</p>
                 <p><img src="img/knife.png"></p></div>
-        
         <!--//03-->
         <!--04-->
         <!--//04-->
@@ -230,43 +216,33 @@
     </section>
     </main>
     <main id="cards">
-        カードを選択(3枚まで)
-            <br><img src="img/arcana_temp.png"><img src="img/arcana_temp.png"><img src="img/arcana_temp.png">
-        <p id="gradeup">
-            カテゴリ グレードアップ クールタイム Part1:10分 Part2:20分 Part3:30分<br>
-            <span class="arcana_1"><img src="img/arcana_1.png"></span>
-            <span class="arcana_2"><img src="img/arcana_2.png"></span>
-            <span class="arcana_3"><img src="img/arcana_3.png"></span>
-            <span class="arcana_1"><br>I グレードアップ Part1 カードの効果が1.5倍されるが、逆効果の確率が15%</span>
-            <span class="arcana_2"><br>II グレードアップ Part2 カードの効果が3倍されるが、逆効果の確率が33%</span>
-            <span class="arcana_3"><br>III グレードアップ Part3 カードの効果が6倍されるが、逆効果の確率が66%</span>
-        </p>
-        <p id="limitbreak">
-            カテゴリ 抑制解放 クールタイム Part1:10分 Part2:20分 Part3:30分<br>
-            <span class="arcana_4"><img src="img/arcana_4.png"></span>
-            <span class="arcana_5"><img src="img/arcana_5.png"></span>
-            <span class="arcana_6"><img src="img/arcana_6.png"></span>
-            <span class="arcana_4"><br>IIII 抑制解放 Part1 キャンディの生産量が3分間1.5倍</span>
-            <span class="arcana_5"><br>IIIII 抑制解放 Part2 キャンディの生産量が1分30秒間3倍</span>
-            <span class="arcana_6"><br>IIIIII 抑制解放 Part3 キャンディの生産量が30秒間6倍</span>
-        </p>
-        <p id="extension">
-            カテゴリ 効果時間延長 クールタイム Part1:なし Part2:2分30秒 Part3:5分<br>
-            <img src="img/arcana_7.png">
-            <img src="img/arcana_8.png">
-            <img src="img/arcana_9.png">
-            <br>IIIIIII 延長 Part1 全ての効果時間が1.25倍延長、しかしキャンディ生産量は0.75倍に
-            <br>IIIIIIII 延長 Part2 全ての効果時間が1.5倍延長、しかしキャンディ生産量は0.5倍に
-            <br>IIIIIIIII 延長 Part3 全ての効果時間が2倍延長、しかしキャンディ生産量は0.25倍に
-        </p>
-        <p id="drilling">
-            カテゴリ 錬成 クールタイム Part1:3分 Part2:6分 Part3:10分<br>
-            <img src="img/arcana_10.png">
-            <img src="img/arcana_11.png">
-            <img src="img/arcana_12.png">
-            <br>IIIIIIIIII 錬成 Part1 250キャンディを無から生成、しかしキャンディ生産量が1倍に
-            <br>IIIIIIIIIII 錬成 Part2 500キャンディを無から生成、しかしキャンディ生産量が0.75倍に
-            <br>IIIIIIIIIIII 錬成 Part3 1000キャンディを無から生成、しかしキャンディ生産量が0.5倍に
+        <p id="arcana_img">
+            カードを選択(3枚まで)
+            <br><img src="img/arcana_temp.png"> <img src="img/arcana_temp.png"> <img src="img/arcana_temp.png">
+            <br><img id="arcana_1" src="img/arcana_1.png">
+                <span id="arcana_1_tt" class="tooltip">I グレードアップ Part1<br>カードの効果が1.5倍されるが、逆効果の確率が15%<br>(クールタイム:10分)</span>
+            <img id="arcana_2" src="img/arcana_2.png">
+                <span id="arcana_2_tt" class="tooltip">II グレードアップ Part2<br>カードの効果が3倍されるが、逆効果の確率が33%<br>(クールタイム:20分)</span>
+            <img id="arcana_3" src="img/arcana_3.png">
+                <span id="arcana_3_tt" class="tooltip">Ⅲ グレードアップ Part3<br>カードの効果が6倍されるが、逆効果の確率が66%<br>(クールタイム:30分)</span>
+            <img id="arcana_4" src="img/arcana_4.png">
+                <span id="arcana_4_tt" class="tooltip">Ⅳ 抑制解放 Part1<br>キャンディの生産量が3分間1.5倍<br>(クールタイム:10分)</span>
+            <img id="arcana_5" src="img/arcana_5.png">
+                <span id="arcana_5_tt" class="tooltip">Ⅴ 抑制解放 Part2<br>キャンディの生産量が1分30秒間3倍<br>(クールタイム:20分)</span>
+            <img id="arcana_6" src="img/arcana_6.png">
+                <span id="arcana_6_tt" class="tooltip">Ⅵ 抑制解放 Part3<br>キャンディの生産量が30秒間6倍<br>(クールタイム:30分)</span>
+            <img id="arcana_7" src="img/arcana_7.png">
+                <span id="arcana_7_tt" class="tooltip">Ⅶ 延長 Part1<br>全ての効果時間が1.25倍延長、しかしキャンディ生産量は0.75倍に<br>(クールタイム:0秒)</span>
+            <img id="arcana_8" src="img/arcana_8.png">
+                <span id="arcana_8_tt" class="tooltip">Ⅷ 延長 Part2<br>全ての効果時間が1.5倍延長、しかしキャンディ生産量は0.5倍に<br>(クールタイム:2分30秒)</span>
+            <img id="arcana_9" src="img/arcana_9.png">
+                <span id="arcana_9_tt" class="tooltip">Ⅸ 延長 Part3<br>全ての効果時間が2倍延長、しかしキャンディ生産量は0.25倍に<br>(クールタイム:5分)</span>
+            <img id="arcana_10" src="img/arcana_10.png">
+                <span id="arcana_10_tt" class="tooltip">Ⅹ 錬成 Part1<br>250キャンディを無から生成、しかしキャンディ生産量が1倍に<br>(クールタイム:3分)</span>
+            <img id="arcana_11" src="img/arcana_11.png">
+                <span id="arcana_11_tt" class="tooltip">Ⅺ 錬成 Part2<br>500キャンディを無から生成、しかしキャンディ生産量が0.75倍に<br>(クールタイム:6分)</span>
+            <img id="arcana_12" src="img/arcana_12.png">
+                <span id="arcana_12_tt" class="tooltip">Ⅻ 錬成 Part3<br>1000キャンディを無から生成、しかしキャンディ生産量が0.5倍に<br>(クールタイム:10分)</span>
         </p>
     </main>
     <main id="setting">
@@ -277,7 +253,7 @@
         <!--<span id="alert">自動セーブしました。(30秒毎)</span>-->
     </main>
     <main id="items">
-        ランダムカードセット(3枚) 
+        ランダムカードセット(3枚)
         <div class="standard-button">購入
             <p class="button-subtitle">300000キャンディ</p>
             <p class="button-subtitle">(2セットまで)</p>
@@ -295,12 +271,12 @@
     </main>
     <main id="pass">
         [プレシーズン] BETA-Season 1 1/10 開始予定
-        <div class="standard-button">プレミアムパスを購入
+        <div id="premium_buy" class="standard-button">プレミアムパスを購入
             <p class="button-subtitle">100000キャンディ</p>
         </div>
         <br>プレミアムパス限定:レベルx100倍のキャンディがレベルアップ時に銀行振込される
         <br>レベル30↑は1000キャンディが15レベルごとに獲得できる
-        <table>
+        <table style="position: absolute; left: 50%; transform: translateX(-50%);">
             <td>
         <div id="l0" class="level">0 <p class="reward_n">S1 プレイ者(称号)</p><p class="reward_sp">カード1枚選択パック</p></div>
         <div id="l1" class="level">1</div>
@@ -346,11 +322,20 @@
         ダイヤモンド:35時間毎にランクアップ
         マスター:40時間毎にランクアップ
         Circuit 1 ブロンズ3 ➞ ブロンズ2 ➞ ブロンズ1 ➞ Circuit 1 シルバー3
+        <span id="b3" class="color_b">B3</span>
+        <span id="b2" class="color_b">B2</span>
+        <span id="b1" class="color_b">B1</span>
+        <span id="s3" class="color_s">S3</span>
+        <span id="s2" class="color_s">S2</span>
+        <span id="s1" class="color_s">S1</span>
     </main>
     <main id="achivement">
         <span id="a01" class="achivement"></span>
         <span id="a02" class="achivement"></span>
         <span id="a03" class="achivement"></span>
+        <!--season-->
+        <span id="s1_play" class="achivement">s1</span>シーズン1 プレイ
+        <span id="s1_complete" class="achivement">s1</span>シーズン1 バトルパスコンプリート
     </main>
 
     <script src="level.js"></script>
@@ -358,6 +343,7 @@
     <script src="data.js"></script>
     <script src="bank.js"></script>
     <script src="event.js"></script>
+    <script src="serviceworker.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

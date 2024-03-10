@@ -46,7 +46,12 @@
     #rank_open {
         display: none;
         position: absolute;
-        margin-top: 850px;
+        margin-top: 820px;
+    }
+    #achivement_open {
+        display: none;
+        position: absolute;
+        margin-top: 920px;
     }
     #collection-series {
         white-space: nowrap;
@@ -68,5 +73,19 @@
         text-align: center;
         width: fit-content;
         margin: auto;
+    }
+
+    .tooltip {
+    overflow: hidden;
+    position: fixed;
+    bottom: -40px;
+    left: 50%;
+    right: 50%;
+    width: 350px;
+    height: 200px;
+    border: solid 2px rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%);
+    z-index: 1;
     }
 }
