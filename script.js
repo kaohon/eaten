@@ -22,113 +22,19 @@ const countUp = () => {
   }
   setInterval(countUp, 1000);
 
-  day1 = 0;
-  day2 = 0;
-  day3 = 0;
-  day4 = 0;
-  day5 = 0;
-  day6 = 0;
-  day7 = 0;
+stick_if = false;
+ecube_if = false;
 
-  const countday1 = () => {
-    day1 = candy;
-  }
-  setTimeout(countday1, 60000);
+wand_if = false;
+dcwand_if = false;
+bwand_if = false;
+twand_if = false;
+lastwand_if = false;
 
-  const countday2 = () => {
-    day2 = candy;
-  }
-  setTimeout(countday2, 120000);
-
-  const countday3 = () => {
-    day3 = candy;
-  }
-  setTimeout(countday3, 180000);
-
-  const countday4 = () => {
-    day4 = candy;
-  }
-  setTimeout(countday4, 240000);
-
-  const countday5 = () => {
-    day5 = candy;
-  }
-  setTimeout(countday5, 300000);
-
-  const countday6 = () => {
-    day6 = candy;
-  }
-  setTimeout(countday6, 360000);
-
-  const countday7 = () => {
-    day7 = candy;
-  }
-  setTimeout(countday7, 420000);
-
-  let ctx = document.getElementById('ex_chart');  
-  let ctx2 = document.getElementById('ex_chart2');  
-
-  let chart = new Chart(ctx2, {
-    type: 'line',
-    data: { 
-      labels: ["7日前", "6日前", "5日前", "4日前", "3日前", "2日前", "1日前"],
-    datasets: [{
-        label: 'キャンディ数',
-        data: [],
-        borderColor: 'rgba(255, 100, 100, 1)'
-    },
-    ],
-    }
-});
-setInterval(function() {
-  chart.data.datasets[0].data = [
-      day7,
-      day6,
-      day5,
-      day4,
-      day3,
-      day2,
-      day1,
-  ];
-  chart.update();
-}, 1000);
-
-  let chart2 = new Chart(ctx, {
-    type: 'line',
-    data: { 
-      labels: ["7日前", "6日前", "5日前", "4日前", "3日前", "2日前", "1日前", "現在"],
-    datasets: [{
-    label: 'プレイ時間',
-    data: [],
-    borderColor: 'rgba(100, 100, 255, 1)'
-  },
-],
-}
-});
-setInterval(function() {
-chart2.data.datasets[0].data = [
-  counthour, 
-  counthour, 
-  counthour, 
-  counthour, 
-  counthour
-];
-chart2.update();
-}, 1000);
-
-stick_if = "false";
-ecube_if = "false";
-
-wand_if = "false";
-dcwand_if = "false";
-bwand_if = "false";
-twand_if = "false";
-lastwand_if = "false";
-
-sword_if = "false";
-dsword_if = "false";
-tsword_if = "false";
-lastsword_if = "false";
+sword_if = false;
+dsword_if = false;
+tsword_if = false;
+lastsword_if = false;
 
 var collectioneffect = () => {
   console.log(candy++);
@@ -140,7 +46,7 @@ function stickfunc() {
   if (candy < 10000) {
     alert("キャンディが不足しています!");
   } else {
-    stick_if = "true";
+    stick_if = true;
     stick.classList.add("bought");
     candy -= 10000;
     stick.removeEventListener("click", stickfunc);
@@ -152,10 +58,10 @@ ecube.addEventListener("click", ecubefunc);
 function ecubefunc() {
   if (candy < 50000) {
     alert("キャンディが不足しています!");
-  } else if (stick_if == "false") {
+  } else if (stick_if === false) {
     alert("先にキャンディスティックを取得してください!");
   } else {
-    ecube_if = "true";
+    ecube_if = true;
     ecube.classList.add("bought");
     candy -= 50000;
     cps += 0.1;
@@ -164,15 +70,15 @@ function ecubefunc() {
   }
 }
 
-wand.addEventListener("click", wandfunc); 
+wand.addEventListener("click", wandfunc);
 function wandfunc() {
   if (candy < 60000) {
     alert("キャンディが不足しています!");
-  } else if (ecube_if == "false") {
+  } else if (ecube_if === false) {
     alert("先にエナジーキューブを取得してください!");
-  } else if (sword_if == "pretrue") {
+  } else if (sword_if === "pretrue") {
     alert("キャンディワンドとキャンディソードはどちらかしか選択できません!");
-  } else if (lastsword_if == "true" || ecube_if == "true") {
+  } else if (lastsword_if === true || ecube_if === true) {
     wand_if = "pretrue";
     wand.classList.add("bought");
     candy -= 60000;
@@ -186,10 +92,10 @@ dcwand.addEventListener("click", dcwandfunc);
 function dcwandfunc() {
   if (candy < 110000) {
     alert("キャンディが不足しています!");
-  } else if (wand_if == "false") {
+  } else if (wand_if === false) {
     alert("先にキャンディワンドを取得してください!");
   } else {
-    dcwand_if = "true";
+    dcwand_if = true;
     dcwand.classList.add("bought");
     candy -= 110000;
     cps += 0.2;
@@ -202,10 +108,10 @@ bwand.addEventListener("click", bwandfunc);
 function bwandfunc() {
   if (candy < 180000) {
     alert("キャンディが不足しています!");
-  } else if (dcwand_if == "false") {
+  } else if (dcwand_if === false) {
     alert("先にダブルキューブ・キャンディワンドを取得してください!");
   } else {
-    bwand_if = "true";
+    bwand_if = true;
     bwand.classList.add("bought");
     candy -= 180000;
     cps += 0.32;
@@ -218,10 +124,10 @@ twand.addEventListener("click", twandfunc);
 function twandfunc() {
   if (candy < 260000) {
     alert("キャンディが不足しています!");
-  } else if (bwand_if == "false") {
+  } else if (dcwand_if === false) {
     alert("先にダブルキューブ・キャンディワンドを取得してください!");
   } else {
-    twand_if = "true";
+    twand_if = true;
     twand.classList.add("bought");
     candy -= 260000;
     cps += 0.4;
@@ -234,11 +140,11 @@ lastwand.addEventListener("click", lastwandfunc);
 function lastwandfunc() {
   if (candy < 660000) {
     alert("キャンディが不足しています!");
-  } else if (twand_if == "false") {
+  } else if (twand_if === false) {
     alert("先に超絶キャンディワンド改・ターボを取得してください!");
   } else {
-    wand_if = "true"
-    lastwand_if = "true";
+    wand_if = true;
+    lastwand_if = true;
     lastwand.classList.add("bought");
     candy -= 660000;
     cps += 0.8;
@@ -251,11 +157,11 @@ sword.addEventListener("click", swordfunc);
 function swordfunc() {
   if (candy < 60000) {
     alert("キャンディが不足しています!");
-  } else if (ecube_if == "false") {
+  } else if (ecube_if === false) {
     alert("先にエナジーキューブを取得してください!");
-  } else if (wand_if == "pretrue") {
+  } else if (wand_if === "pretrue") {
     alert("キャンディワンドとキャンディソードはどちらかしか選択できません!");
-  } else if (lastwand_if == "true" || ecube_if == "true") {
+  } else if (lastwand_if === true || ecube_if === true) {
     sword_if = "pretrue";
     sword.classList.add("bought");
     candy -= 60000;
@@ -269,10 +175,10 @@ dsword.addEventListener("click", dswordfunc);
 function dswordfunc() {
   if (candy < 120000) {
     alert("キャンディが不足しています!");
-  } else if (sword_if == "false") {
+  } else if (sword_if === false) {
     alert("先にキャンディソードを取得してください!");
   } else {
-    dsword_if = "true";
+    dsword_if = true;
     dsword.classList.add("bought");
     candy -= 120000;
     cps += 0.2;
@@ -285,10 +191,10 @@ tsword.addEventListener("click", tswordfunc);
 function tswordfunc() {
   if (candy < 220000) {
     alert("キャンディが不足しています!");
-  } else if (dsword_if == "false") {
+  } else if (dsword_if === false) {
     alert("先にデュアル・キャンディソードを取得してください!");
   } else {
-    tsword_if = "true";
+    tsword_if = true;
     tsword.classList.add("bought");
     candy -= 220000;
     cps += 0.4;
@@ -301,11 +207,11 @@ lastsword.addEventListener("click", lastswordfunc);
 function lastswordfunc() {
   if (candy < 860000) {
     alert("キャンディが不足しています!");
-  } else if (tsword_if == "false") {
+  } else if (tsword_if === false) {
     alert("先に超絶キャンディソード改・ターボを取得してください!");
   } else {
-    sword_if = "true";
-    lastsword_if = "true";
+    sword_if = true;
+    lastsword_if = true;
     lastsword.classList.add("bought");
     candy -= 860000;
     cps += 1.6;

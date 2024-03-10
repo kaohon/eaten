@@ -29,6 +29,14 @@ l28up = false;
 l29up = false;
 l30up = false;
 
+premium_buy.addEventListener("click", premium_buy_func);
+function premium_buy_func() {
+  if (candy < 100000) {
+    alert("キャンディが不足しています!");
+  } else {
+    premium = true;
+  }
+}
 
 const passlv = () => {
   if (counthour >= 10) {
@@ -154,16 +162,6 @@ const passlv = () => {
 }
 setInterval(passlv, 1000);
 
-
-if (l1up === true) {
-    l1.addEventListener("click", l1func);
-    function l1func() {
-        alert("解除");
-        l1reward = "true";
-    l1.removeEventListener("click", l1func);
-    }
-}
-
 if (l5up === true) {
   l5.addEventListener("click", l5func);
   function l5func() {
@@ -215,5 +213,10 @@ if (l30up === true) {
       candy += 3000;
       l30reward = "true";
   l30.removeEventListener("click", l30func);
+  }
+} else if (premium === true) {
+  l30.addEventListener("click", preml30);
+  function preml30() {
+    
   }
 }

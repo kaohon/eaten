@@ -71,135 +71,135 @@ const autosave = () => {
     countmin = min_str;
     counthour = hour_str;
     candy = candy_str;
-    if (stick_str == "true") {
-      stick_if = "true";
+    if (stick_str === "true") {
+      stick_if = true;
       stick.classList.add("bought");
       stick.removeEventListener("click", stickfunc);
     } else {
 
     }
 
-    if (ecube_str == "true") {
-      ecube_if = "true";
+    if (ecube_str === "true") {
+      ecube_if = true;
       cps += 0.1;
       ecube.classList.add("bought");
       ecube.removeEventListener("click", ecubefunc);
       setInterval(collectioneffect, 10000);
     } else {
-      
+
     }
 
-    if (wand_str == "pretrue") {
+    if (wand_str === "pretrue") {
       wand_if = "pretrue";
       cps += 0.1;
       wand.classList.add("bought");
       wand.removeEventListener("click", wandfunc);
       setInterval(collectioneffect, 10000);
     } else {
-      
+
     }
 
-    if (wand_str == "true") {
-      wand_if = "true";
+    if (wand_str === "true") {
+      wand_if = true;
       cps += 0.1;
       wand.classList.add("bought");
       wand.removeEventListener("click", wandfunc);
       setInterval(collectioneffect, 10000);
     } else {
-      
+
     }
 
-    if (dcwand_str == "true") {
-      dcwand_if = "true";
+    if (dcwand_str === "true") {
+      dcwand_if = true;
       cps += 0.2;
       dcwand.classList.add("bought");
       dcwand.removeEventListener("click", dcwandfunc);
       setInterval(collectioneffect, 5000);
     } else {
-      
+
     }
 
-    if (bwand_str == "true") {
-      bwand_if = "true";
+    if (bwand_str === "true") {
+      bwand_if = true;
       cps += 0.32;
       bwand.classList.add("bought");
       bwand.removeEventListener("click", bwandfunc);
       setInterval(collectioneffect, 3125);
     } else {
-      
+
     }
 
-    if (twand_str == "true") {
-      twand_if = "true";
+    if (twand_str === "true") {
+      twand_if = true;
       cps += 0.4;
       twand.classList.add("bought");
       twand.removeEventListener("click", twandfunc);
       setInterval(collectioneffect, 2500);
     } else {
-      
+
     }
-    
-    if (lastwand_str == "true") {
-        lastwand_if = "true";
+
+    if (lastwand_str === "true") {
+        lastwand_if = true;
         cps += 0.8;
         lastwand.classList.add("bought");
         lastwand.removeEventListener("click", lastwandfunc);
         setInterval(collectioneffect, 1250);
       } else {
-        
+
       }
 
-    if (sword_str == "true") {
-      sword_if = "true";
+    if (sword_str === "true") {
+      sword_if = true;
       cps += 0.1;
       sword.classList.add("bought");
       sword.removeEventListener("click", swordfunc);
       setInterval(collectioneffect, 10000);
     } else {
-      
+
     }
 
-    if (sword_str == "pretrue") {
+    if (sword_str === "pretrue") {
       sword_if = "pretrue";
       cps += 0.1;
       sword.classList.add("bought");
       sword.removeEventListener("click", swordfunc);
       setInterval(collectioneffect, 10000);
     } else {
-      
+
     }
 
-    if (dsword_str == "true") {
-        dsword_if = "true";
+    if (dsword_str === "true") {
+        dsword_if = true;
         cps += 0.2;
         dsword.classList.add("bought");
         dsword.removeEventListener("click", dswordfunc);
         setInterval(collectioneffect, 5000);
       } else {
-        
+
       }
 
-      if (tsword_str == "true") {
-        tsword_if = "true";
+      if (tsword_str === "true") {
+        tsword_if = true;
         cps += 0.4;
         tsword.classList.add("bought");
         tsword.removeEventListener("click", tswordfunc);
         setInterval(collectioneffect, 2500);
       } else {
-        
+
       }
 
-      if (lastsword_str == "true") {
-        lastsword_if = "true";
+      if (lastsword_str === "true") {
+        lastsword_if = true;
         cps += 1.6;
         lastsword.classList.add("bought");
         lastsword.removeEventListener("click", lastswordfunc);
         setInterval(collectioneffect, 625);
       } else {
-        
+
       }
 
-      if (lastsword_str == "true" && lastwand_str == "true") {
+      if (lastsword_str === "true" && lastwand_str === "true") {
         ct_02_open.style.visibility = "visible";
       } else {
 
@@ -208,10 +208,10 @@ const autosave = () => {
       const mediaQuery = window.matchMedia('(max-width:1360px)')
 
       if (mediaQuery.matches) {
-        if (lastsword_str == "true" && lastwand_str == "true") {
+        if (lastsword_str === "true" && lastwand_str === "true") {
           ct_02_open.style.display = "flex";
         } else {
-  
+
         }
       }
   }

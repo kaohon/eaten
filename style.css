@@ -30,73 +30,6 @@
     border: solid 1px black;
 }
 
-@media screen and (max-width:1360px) {
-    .category {
-        display: none;
-        white-space: nowrap;
-        width: 150px;
-        padding: 20px;
-        border: solid 1px black;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    #items_open {
-        display: none;
-        position: absolute;
-        margin-top: 100px;
-    }
-    #collection_open {
-        display: none;
-        position: absolute;
-        margin-top: 200px;
-    }
-    #setting_open {
-        display: none;
-        position: absolute;
-        margin-top: 300px;
-    }
-    #stats_open {
-        display: none;
-        position: absolute;
-        margin-top: 400px;
-    }
-    #cards_open {
-        display: none;
-        position: absolute;
-        margin-top: 500px;
-    }
-    #bank_open {
-        display: none;
-        position: absolute;
-        margin-top: 600px;
-    }
-    #pass_open {
-        display: none;
-        position: absolute;
-        margin-top: 700px;
-    }
-    #collection-series {
-        white-space: nowrap;
-    }
-    #ct_01_open {
-        display: flex;
-        text-align: center;
-        width: fit-content;
-        margin: auto;
-    }
-    #ct_02_open {
-        display: none;
-        text-align: center;
-        width: fit-content;
-        margin: auto;
-    }
-    #ct_demo_open {
-        display: none;
-        text-align: center;
-        width: fit-content;
-        margin: auto;
-    }
-}
 #main {
     padding: 20px;
     width: 100%;
@@ -129,6 +62,14 @@
 }
 
 #pass {
+    display: none;
+}
+
+#rank {
+    display: none;
+}
+
+#achivement {
     display: none;
 }
 
@@ -359,7 +300,7 @@
     bottom: -40px;
     left: 50%;
     right: 50%;
-    width: 500px;
+    width: 600px;
     height: 200px;
     border: solid 2px rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
@@ -519,4 +460,120 @@
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
+}
+
+#arcana_img {
+    text-align: center
+}
+
+#arcana_1_tt {
+    display: none;
+} #arcana_1:hover + #arcana_1_tt {
+    display: block;
+}
+
+#arcana_2_tt {
+    display: none;
+} #arcana_2:hover + #arcana_2_tt {
+    display: block;
+}
+
+#arcana_3_tt {
+    display: none;
+} #arcana_3:hover + #arcana_3_tt {
+    display: block;
+}
+
+#arcana_4_tt {
+    display: none;
+} #arcana_4:hover + #arcana_4_tt {
+    display: block;
+}
+
+#arcana_5_tt {
+    display: none;
+} #arcana_5:hover + #arcana_5_tt {
+    display: block;
+}
+
+#arcana_6_tt {
+    display: none;
+} #arcana_6:hover + #arcana_6_tt {
+    display: block;
+}
+
+#arcana_7_tt {
+    display: none;
+} #arcana_7:hover + #arcana_7_tt {
+    display: block;
+}
+
+#arcana_8_tt {
+    display: none;
+} #arcana_8:hover + #arcana_8_tt {
+    display: block;
+}
+
+#arcana_9_tt {
+    display: none;
+} #arcana_9:hover + #arcana_9_tt {
+    display: block;
+}
+
+#arcana_10_tt {
+    display: none;
+} #arcana_10:hover + #arcana_10_tt {
+    display: block;
+}
+
+#arcana_11_tt {
+    display: none;
+} #arcana_11:hover + #arcana_11_tt {
+    display: block;
+}
+
+#arcana_12_tt {
+    display: none;
+} #arcana_12:hover + #arcana_12_tt {
+    display: block;
+}
+
+.color_b {
+    position: absolute;
+    padding: 50px;
+    border: solid 3px rgb(0, 0, 0);
+    background-color: rgb(216, 123, 95);
+}
+
+#b3 {
+    left: 500px;
+}
+
+#b2 {
+    left: 800px;
+}
+
+#b1 {
+    left: 1100px;
+}
+
+#s3 {
+    left: 1400px;
+}
+
+#s2 {
+    left: 600px;
+    display: none;
+}
+
+#s1 {
+    right: 600px;
+    display: none;
+}
+
+.color_s {
+    position: absolute;
+    padding: 50px;
+    border: solid 3px rgb(0, 0, 0);
+    background-color: rgb(229 ,229, 224);
 }
