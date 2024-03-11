@@ -1,4 +1,4 @@
-const headerElements = document.querySelectorAll("#collection, #stats, #setting, #cards, #bank, #items, #pass, #rank, #achivement");
+const headerElements = document.querySelectorAll("#collection, #stats, #setting, #cards, #bank, #items, #pass, #rank");
 
   stats_open.addEventListener("click", function () {
     headerElements.forEach(element => {
