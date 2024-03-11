@@ -18,7 +18,7 @@ const countUp = () => {
     elapsedsec.innerHTML = countsec;
     elapsedmin.innerHTML = countmin;
     elapsedhour.innerHTML = counthour;
-    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}`);
+    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}`);
   }
   setInterval(countUp, 1000);
 
@@ -35,6 +35,10 @@ sword_if = false;
 dsword_if = false;
 tsword_if = false;
 lastsword_if = false;
+
+spear_if = false;
+bow_if = false;
+knife_if = false;
 
 var collectioneffect = () => {
   console.log(candy++);
@@ -217,5 +221,47 @@ function lastswordfunc() {
     cps += 1.6;
     lastsword.removeEventListener("click", lastswordfunc);
     setInterval(collectioneffect, 625);
+  }
+}
+
+spear.addEventListener("click", spearfunc);
+function spearfunc() {
+  if (candy < 180000) {
+    alert("キャンディが不足しています!");
+  } else {
+    spear_if = true;
+    spear.classList.add("bought");
+    candy -= 180000;
+    cps += 0.32;
+    spear.removeEventListener("click", spearfunc);
+    setInterval(collectioneffect, 3125);
+  }
+}
+
+bow.addEventListener("click", bowfunc);
+function bowfunc() {
+  if (candy < 300000) {
+    alert("キャンディが不足しています!");
+  } else {
+    bow_if = true;
+    bow.classList.add("bought");
+    candy -= 300000;
+    cps += 0.5;
+    bow.removeEventListener("click", bowfunc);
+    setInterval(collectioneffect, 2000);
+  }
+}
+
+knife.addEventListener("click", knifefunc);
+function knifefunc() {
+  if (candy < 180000) {
+    alert("キャンディが不足しています!");
+  } else {
+    knife_if = true;
+    knife.classList.add("bought");
+    candy -= 180000;
+    cps += 0.32;
+    knife.removeEventListener("click", knifefunc);
+    setInterval(collectioneffect, 3125);
   }
 }

@@ -56,15 +56,8 @@ const headerElements = document.querySelectorAll("#collection, #stats, #setting,
     rank.style.display = "block";
   });
 
-  achivement_open.addEventListener("click", function () {
-    headerElements.forEach(element => {
-      element.style.display = "none";
-  });
-    achivement.style.display = "block";
-  });
-
 const mediaQuery = window.matchMedia('(max-width:1360px)');
-const headerElementsopen = document.querySelectorAll("#items_open, #collection_open, #setting_open, #stats_open, #cards_open, #bank_open, #pass_open, #rank_open, #achivement_open");
+const headerElementsopen = document.querySelectorAll("#items_open, #collection_open, #setting_open, #stats_open, #cards_open, #bank_open, #pass_open, #rank_open");
 
 if (mediaQuery.matches) {
   candy.addEventListener("click", function () {
@@ -125,12 +118,6 @@ if (mediaQuery.matches) {
   });
 
   rank_open.addEventListener("click", function () {
-    headerElementsopen.forEach(element => {
-      element.style.display = "none";
-    });
-  });
-
-  achivement_open.addEventListener("click", function () {
     headerElementsopen.forEach(element => {
       element.style.display = "none";
     });

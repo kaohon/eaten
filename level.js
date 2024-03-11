@@ -10,5 +10,3 @@ const lvup = () => {
     }
   }
 };
-
-setInterval(lvup, 1000);

@@ -1,3 +1,4 @@
+l0up = true;
 l1up = false;
 l2up = false;
 l3up = false;
@@ -29,6 +30,7 @@ l28up = false;
 l29up = false;
 l30up = false;
 
+/*
 premium_buy.addEventListener("click", premium_buy_func);
 function premium_buy_func() {
   if (candy < 100000) {
@@ -37,6 +39,7 @@ function premium_buy_func() {
     premium = true;
   }
 }
+*/
 
 const passlv = () => {
   if (counthour >= 10) {
@@ -162,61 +165,77 @@ const passlv = () => {
 }
 setInterval(passlv, 1000);
 
-if (l5up === true) {
+counthour = elapsedhour.innerHTML;
+
+  if (l0up === true) {
+  l0.addEventListener("click", l0func);
+  function l0func() {
+      s1_play.style.display = "block";
+      l0reward = true;
+  l0.removeEventListener("click", l0func);
+  }
+}
+
+if (counthour >= 50) {
   l5.addEventListener("click", l5func);
   function l5func() {
       candy += 750;
-      l5reward = "true";
+      l5reward = true;
   l5.removeEventListener("click", l5func);
   }
 }
 
-if (l10up === true) {
+if (counthour >= 100) {
   l10.addEventListener("click", l10func);
   function l10func() {
       candy += 1000;
-      l10reward = "true";
+      l10reward = true;
   l10.removeEventListener("click", l10func);
   }
 }
 
-if (l15up === true) {
+if (counthour >= 150) {
   l15.addEventListener("click", l15func);
   function l15func() {
       candy += 1250;
-      l15reward = "true";
+      l15reward = true;
   l15.removeEventListener("click", l15func);
   }
 }
 
-if (l20up === true) {
+if (counthour >= 200) {
   l20.addEventListener("click", l20func);
   function l20func() {
       candy += 1500;
-      l20reward = "true";
+      l20reward = true;
   l20.removeEventListener("click", l20func);
   }
 }
 
-if (l25up === true) {
+if (counthour >= 250) {
   l25.addEventListener("click", l25func);
   function l25func() {
       candy += 1750;
-      l25reward = "true";
+      l25reward = true;
   l25.removeEventListener("click", l25func);
   }
 }
 
-if (l30up === true) {
+if (counthour >= 300) {
   l30.addEventListener("click", l30func);
   function l30func() {
       candy += 3000;
-      l30reward = "true";
-  l30.removeEventListener("click", l30func);
-  }
-} else if (premium === true) {
-  l30.addEventListener("click", preml30);
-  function preml30() {
-    
+      s1_complete.style.display = "block";
+      l30reward = true;
+      l30.removeEventListener("click", l30func);
   }
 }
+
+/*
+if (premium === true) {
+  l30.addEventListener("click", preml30);
+  function preml30() {
+    // プレミアムボーナスの処理
+  }
+}
+*/

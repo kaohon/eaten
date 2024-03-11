@@ -18,6 +18,9 @@ const autosave = () => {
     localStorage.setItem("dsword_if", dsword_if);
     localStorage.setItem("tsword_if", tsword_if);
     localStorage.setItem("lastsword_if", lastsword_if);
+    localStorage.setItem("spear_if", spear_if);
+    localStorage.setItem("bow_if", bow_if);
+    localStorage.setItem("knife_if", knife_if);
   }
   setInterval(autosave, 30000);
 
@@ -40,6 +43,9 @@ const autosave = () => {
     localStorage.setItem("dsword_if", dsword_if);
     localStorage.setItem("tsword_if", tsword_if);
     localStorage.setItem("lastsword_if", lastsword_if);
+    localStorage.setItem("spear_if", spear_if);
+    localStorage.setItem("bow_if", bow_if);
+    localStorage.setItem("knife_if", knife_if);
   }
 
   window.onload = function() {
@@ -60,6 +66,9 @@ const autosave = () => {
     var dsword_str = localStorage.getItem("dsword_if");
     var tsword_str = localStorage.getItem("tsword_if");
     var lastsword_str = localStorage.getItem("lastsword_if");
+    var spear_str = localStorage.getItem("spear_if");
+    var bow_str = localStorage.getItem("bow_if");
+    var knife_str = localStorage.getItem("knife_if");
     candyhtml.innerHTML = candy_str;
     elapsedsec.innerHTML = sec_str;
     elapsedmin.innerHTML = min_str;
@@ -199,6 +208,36 @@ const autosave = () => {
 
       }
 
+      if (spear_str === "true") {
+        spear_if = true;
+        cps += 0.32;
+        spear.classList.add("bought");
+        spear.removeEventListener("click", spearfunc);
+        setInterval(collectioneffect, 3125);
+      } else {
+
+      }
+
+      if (bow_str === "true") {
+        bow_if = true;
+        cps += 0.5;
+        bow.classList.add("bought");
+        bow.removeEventListener("click", bowfunc);
+        setInterval(collectioneffect, 2000);
+      } else {
+
+      }
+
+      if (knife_str === "true") {
+        knife_if = true;
+        cps += 0.32;
+        knife.classList.add("bought");
+        knife.removeEventListener("click", knifefunc);
+        setInterval(collectioneffect, 3125);
+      } else {
+
+      }
+
       if (lastsword_str === "true" && lastwand_str === "true") {
         ct_02_open.style.visibility = "visible";
       } else {
@@ -242,6 +281,9 @@ const autosave = () => {
     localStorage.removeItem("dsword_if");
     localStorage.removeItem("tsword_if");
     localStorage.removeItem("lastsword_if");
+    localStorage.removeItem("spear_if");
+    localStorage.removeItem("bow_if");
+    localStorage.removeItem("knife_if");
   }
 
 
@@ -277,6 +319,9 @@ const autosave = () => {
           dsword_if = data.split(/\r\n|\r|\n/)[14]
           tsword_if = data.split(/\r\n|\r|\n/)[15]
           lastsword_if = data.split(/\r\n|\r|\n/)[16]
+          spear_if = data.split(/\r\n|\r|\n/)[17]
+          bow_if = data.split(/\r\n|\r|\n/)[18]
+          knife_if = data.split(/\r\n|\r|\n/)[19]
         }
     }, false);
 });

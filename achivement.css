@@ -1,13 +1,17 @@
-#s1_play {
+.achivement {
 	position: absolute;
 	padding: 10px;
 	border: solid 1px rgb(0, 0, 0);
+	margin: 20px;
+}
+
+#s1_play {
+	display: none;
 	background-color: white;
 }
 
 #s1_complete {
-	position: absolute;
-	padding: 10px;
-	border: solid 1px rgb(0, 0, 0);
+	display: none;
 	background-color: yellow;
+	margin-left: 80px;
 }

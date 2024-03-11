@@ -238,9 +238,9 @@
 #bow {
     position: absolute;
     top: 200px;
-    left: 20%;
-    right: 80%;
-    transform: translateX(-80%);
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
     opacity: 0.5;
 }
 
@@ -256,9 +256,18 @@
 #knife {
     position: absolute;
     top: 200px;
-    left: 10%;
-    right: 90%;
-    transform: translateX(-90%);
+    left: 75%;
+    right: 25%;
+    transform: translateX(-75%);
+    opacity: 0.5;
+}
+
+#spear {
+    position: absolute;
+    top: 200px;
+    left: 25%;
+    right: 50%;
+    transform: translateX(-25%);
     opacity: 0.5;
 }
 
@@ -421,6 +430,12 @@
     display: block;
 }
 
+#spear_tt {
+    display: none;
+} #spear:hover + #spear_tt {
+    display: block;
+}
+
 #granade_luncher_tt {
     display: none;
 } #granade_luncher:hover + #granade_luncher_tt {
@@ -576,4 +591,16 @@
     padding: 50px;
     border: solid 3px rgb(0, 0, 0);
     background-color: rgb(229 ,229, 224);
+}
+
+#s1_play_tt {
+    display: none;
+} #s1_play:hover + #s1_play_tt {
+    display: block;
+}
+
+#s1_complete_tt {
+    display: none;
+} #s1_complete:hover + #s1_complete_tt {
+    display: block;
 }
