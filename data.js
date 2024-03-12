@@ -21,6 +21,7 @@ const autosave = () => {
     localStorage.setItem("spear_if", spear_if);
     localStorage.setItem("bow_if", bow_if);
     localStorage.setItem("knife_if", knife_if);
+    localStorage.setItem("feather_knife_if", feather_knife_if);
   }
   setInterval(autosave, 30000);
 
@@ -46,6 +47,7 @@ const autosave = () => {
     localStorage.setItem("spear_if", spear_if);
     localStorage.setItem("bow_if", bow_if);
     localStorage.setItem("knife_if", knife_if);
+    localStorage.setItem("feather_knife_if", feather_knife_if);
   }
 
   window.onload = function() {
@@ -69,6 +71,7 @@ const autosave = () => {
     var spear_str = localStorage.getItem("spear_if");
     var bow_str = localStorage.getItem("bow_if");
     var knife_str = localStorage.getItem("knife_if");
+    var feather_knife_str = localStorage.getItem("feather_knife_if");
     candyhtml.innerHTML = candy_str;
     elapsedsec.innerHTML = sec_str;
     elapsedmin.innerHTML = min_str;
@@ -238,6 +241,16 @@ const autosave = () => {
 
       }
 
+      if (feather_knife_str === "true") {
+        feather_knife_if = true;
+        cps += 0.6;
+        feather_knife.classList.add("bought");
+        feather_knife.removeEventListener("click", feather_knifefunc);
+        setInterval(collectioneffect, 1875);
+      } else {
+
+      }
+
       if (lastsword_str === "true" && lastwand_str === "true") {
         ct_02_open.style.visibility = "visible";
       } else {
@@ -284,6 +297,7 @@ const autosave = () => {
     localStorage.removeItem("spear_if");
     localStorage.removeItem("bow_if");
     localStorage.removeItem("knife_if");
+    localStorage.removeItem("feather_knife_if");
   }
 
 
@@ -322,6 +336,7 @@ const autosave = () => {
           spear_if = data.split(/\r\n|\r|\n/)[17]
           bow_if = data.split(/\r\n|\r|\n/)[18]
           knife_if = data.split(/\r\n|\r|\n/)[19]
+          feather_knife_if = data.split(/\r\n|\r|\n/)[20]
         }
     }, false);
 });

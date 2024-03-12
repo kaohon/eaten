@@ -18,7 +18,7 @@ const countUp = () => {
     elapsedsec.innerHTML = countsec;
     elapsedmin.innerHTML = countmin;
     elapsedhour.innerHTML = counthour;
-    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}`);
+    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}`);
   }
   setInterval(countUp, 1000);
 
@@ -39,6 +39,7 @@ lastsword_if = false;
 spear_if = false;
 bow_if = false;
 knife_if = false;
+feather_knife_if = false;
 
 var collectioneffect = () => {
   console.log(candy++);
@@ -263,5 +264,21 @@ function knifefunc() {
     cps += 0.32;
     knife.removeEventListener("click", knifefunc);
     setInterval(collectioneffect, 3125);
+  }
+}
+
+feather_knife.addEventListener("click", feather_knifefunc);
+function feather_knifefunc() {
+  if (candy < 360000) {
+    alert("キャンディが不足しています!");
+  } else if (knife_if === false) {
+    alert("先にキャンディ・ナイフを取得してください!");
+  } else {
+    feather_knife_if = true;
+    feather_knife.classList.add("bought");
+    candy -= 360000;
+    cps += 0.6;
+    feather_knife.removeEventListener("click", feather_knifefunc);
+    setInterval(collectioneffect, 1875);
   }
 }

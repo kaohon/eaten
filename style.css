@@ -271,6 +271,16 @@
     opacity: 0.5;
 }
 
+#feather_knife {
+    position: absolute;
+    top: 400px;
+    left: 75%;
+    right: 25%;
+    transform: translateX(-75%);
+    opacity: 0.5;
+}
+
+
 .bought {
     opacity: 1 !important;
 }
@@ -445,6 +455,12 @@
 #knife_tt {
     display: none;
 } #knife:hover + #knife_tt {
+    display: block;
+}
+
+#feather_knife_tt {
+    display: none;
+} #feather_knife:hover + #feather_knife_tt {
     display: block;
 }
 
