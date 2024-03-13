@@ -1,3 +1,21 @@
+let collection = document.getElementById("collection");
+let stats = document.getElementById("stats");
+let setting = document.getElementById("setting");
+let cards = document.getElementById("cards");
+let bank = document.getElementById("bank");
+let items = document.getElementById("items");
+let pass = document.getElementById("pass");
+let rank = document.getElementById("rank");
+
+let collection_open = document.getElementById("collection_open");
+let stats_open = document.getElementById("stats_open");
+let setting_open = document.getElementById("setting_open");
+let cards_open = document.getElementById("cards_open");
+let bank_open = document.getElementById("bank_open");
+let items_open = document.getElementById("items_open");
+let pass_open = document.getElementById("pass_open");
+let rank_open = document.getElementById("rank_open");
+
 const headerElements = document.querySelectorAll("#collection, #stats, #setting, #cards, #bank, #items, #pass, #rank");
 
   stats_open.addEventListener("click", function () {
@@ -124,23 +142,33 @@ if (mediaQuery.matches) {
   });
 }
 
+let ct_01_open = document.getElementById("ct_01_open");
+let ct_02_open = document.getElementById("ct_02_open");
+//let ct_demo_open = document.getElementById("ct_demo_open");
+
+let ct_01 = document.getElementById("ct_01");
+let ct_02 = document.getElementById("ct_02");
+//let ct_demo  = document.getElementById("ct_demo");
+
   ct_01_open.addEventListener("click", function () {
     ct_01.style.display = "block";
     ct_02.style.display = "none";
-    ct_demo.style.display = "none";
+    //ct_demo.style.display = "none";
   });
 
   ct_02_open.addEventListener("click", function () {
     ct_02.style.display = "block";
     ct_01.style.display = "none";
-    ct_demo.style.display = "none";
+    //ct_demo.style.display = "none";
   });
 
-  ct_demo_open.addEventListener("click", function () {
+  /*ct_demo_open.addEventListener("click", function () {
     ct_demo.style.display = "block";
     ct_02.style.display = "none";
     ct_01.style.display = "none";
-  });
+  });*/
+
+  let lineshare = document.getElementById("lineshare");
 
   lineshare.addEventListener("click", function () {
     window.location.href = "https://line.me/R/msg/text/現在のキャンディ生産数: " + candy + " キャンディ" + "%0a現在のプレイ時間: " + counthour + " 時間 " + countmin + " 分 " + countsec + " 秒 ";

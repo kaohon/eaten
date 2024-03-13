@@ -22,6 +22,13 @@ const autosave = () => {
     localStorage.setItem("bow_if", bow_if);
     localStorage.setItem("knife_if", knife_if);
     localStorage.setItem("feather_knife_if", feather_knife_if);
+    localStorage.setItem("l0reward", l0reward);
+    localStorage.setItem("l5reward", l5reward);
+    localStorage.setItem("l10reward", l10reward);
+    localStorage.setItem("l15reward", l15reward);
+    localStorage.setItem("l20reward", l20reward);
+    localStorage.setItem("l25reward", l25reward);
+    localStorage.setItem("l30reward", l30reward);
   }
   setInterval(autosave, 30000);
 
@@ -48,6 +55,13 @@ const autosave = () => {
     localStorage.setItem("bow_if", bow_if);
     localStorage.setItem("knife_if", knife_if);
     localStorage.setItem("feather_knife_if", feather_knife_if);
+    localStorage.setItem("l0reward", l0reward);
+    localStorage.setItem("l5reward", l5reward);
+    localStorage.setItem("l10reward", l10reward);
+    localStorage.setItem("l15reward", l15reward);
+    localStorage.setItem("l20reward", l20reward);
+    localStorage.setItem("l25reward", l25reward);
+    localStorage.setItem("l30reward", l30reward);
   }
 
   window.onload = function() {
@@ -72,6 +86,13 @@ const autosave = () => {
     var bow_str = localStorage.getItem("bow_if");
     var knife_str = localStorage.getItem("knife_if");
     var feather_knife_str = localStorage.getItem("feather_knife_if");
+    var l0reward_str = localStorage.getItem("l0reward");
+    var l5reward_str = localStorage.getItem("l5reward");
+    var l10reward_str = localStorage.getItem("l10reward");
+    var l15reward_str = localStorage.getItem("l15reward");
+    var l20reward_str = localStorage.getItem("l20reward");
+    var l25reward_str = localStorage.getItem("l25reward");
+    var l30reward_str = localStorage.getItem("l30reward");
     candyhtml.innerHTML = candy_str;
     elapsedsec.innerHTML = sec_str;
     elapsedmin.innerHTML = min_str;
@@ -251,6 +272,48 @@ const autosave = () => {
 
       }
 
+      if (l0reward_str === "true") {
+        l0reward = true;
+      } else {
+
+      }
+
+      if (l5reward_str === "true") {
+        l5reward = true;
+      } else {
+
+      }
+
+      if (l10reward_str === "true") {
+        l10reward = true;
+      } else {
+
+      }
+
+      if (l15reward_str === "true") {
+        l15reward = true;
+      } else {
+
+      }
+
+      if (l20reward_str === "true") {
+        l20reward = true;
+      } else {
+
+      }
+
+      if (l25reward_str === "true") {
+        l25reward = true;
+      } else {
+
+      }
+
+      if (l30reward_str === "true") {
+        l30reward = true;
+      } else {
+
+      }
+
       if (lastsword_str === "true" && lastwand_str === "true") {
         ct_02_open.style.visibility = "visible";
       } else {
@@ -272,8 +335,7 @@ const autosave = () => {
   var blob = new Blob(
     [text],
     { "type": "text/plain" })
-  var url = window.URL.createObjectURL(blob)
-  document.getElementById('link1').href = url
+      document.getElementById('link1').href = window.URL.createObjectURL(blob)
   }
 
   function reset() {
@@ -298,6 +360,13 @@ const autosave = () => {
     localStorage.removeItem("bow_if");
     localStorage.removeItem("knife_if");
     localStorage.removeItem("feather_knife_if");
+    localStorage.removeItem("l0reward");
+    localStorage.removeItem("l5reward");
+    localStorage.removeItem("l10reward");
+    localStorage.removeItem("l15reward");
+    localStorage.removeItem("l20reward");
+    localStorage.removeItem("l25reward");
+    localStorage.removeItem("l30reward");
   }
 
 
@@ -337,6 +406,13 @@ const autosave = () => {
           bow_if = data.split(/\r\n|\r|\n/)[18]
           knife_if = data.split(/\r\n|\r|\n/)[19]
           feather_knife_if = data.split(/\r\n|\r|\n/)[20]
+          l0reward = data.split(/\r\n|\r|\n/)[21]
+          l5reward = data.split(/\r\n|\r|\n/)[22]
+          l10reward = data.split(/\r\n|\r|\n/)[23]
+          l15reward = data.split(/\r\n|\r|\n/)[24]
+          l20reward = data.split(/\r\n|\r|\n/)[25]
+          l25reward = data.split(/\r\n|\r|\n/)[26]
+          l30reward = data.split(/\r\n|\r|\n/)[27]
         }
     }, false);
 });

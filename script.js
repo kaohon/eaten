@@ -5,6 +5,15 @@ let invalue = 0;
 let candy = 0;
 let count = 0;
 let cps = 1.0;
+
+let counthour;
+let countmin;
+let countsec;
+
+let elapsedsec = document.getElementById("elapsedsec");
+let elapsedmin = document.getElementById("elapsedmin");
+let elapsedhour = document.getElementById("elapsedhour");
+
 const countUp = () => {
     console.log(candy++);
     console.log(count++);
@@ -15,31 +24,48 @@ const countUp = () => {
     countmin = Math.floor(count / 60) - Math.floor(count / 60 / 60) * 60;
     countsec = count - (countmin * 60 + counthour * 60 * 60);
 
-    elapsedsec.innerHTML = countsec;
+    document.getElementById("elapsedsec").innerHTML = countsec;
     elapsedmin.innerHTML = countmin;
     elapsedhour.innerHTML = counthour;
-    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}`);
+    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}\n${l0reward}\n${l5reward}\n${l10reward}\n${l15reward}\n${l20reward}\n${l25reward}\n${l30reward}`);
   }
   setInterval(countUp, 1000);
 
-stick_if = false;
-ecube_if = false;
+let stick_if = false;
+let ecube_if = false;
 
-wand_if = false;
-dcwand_if = false;
-bwand_if = false;
-twand_if = false;
-lastwand_if = false;
+let wand_if = false;
+let dcwand_if = false;
+let bwand_if = false;
+let twand_if = false;
+let lastwand_if = false;
 
-sword_if = false;
-dsword_if = false;
-tsword_if = false;
-lastsword_if = false;
+let sword_if = false;
+let dsword_if = false;
+let tsword_if = false;
+let lastsword_if = false;
 
-spear_if = false;
-bow_if = false;
-knife_if = false;
-feather_knife_if = false;
+let spear_if = false;
+let bow_if = false;
+let knife_if = false;
+let feather_knife_if = false;
+
+let stick = document.getElementById("stick");
+let ecube = document.getElementById("ecube");
+let wand = document.getElementById("wand");
+let dcwand = document.getElementById("dcwand");
+let bwand = document.getElementById("bwand");
+let twand = document.getElementById("twand");
+let lastwand = document.getElementById("lastwand");
+let sword = document.getElementById("sword");
+let dsword = document.getElementById("dsword");
+let tsword = document.getElementById("tsword");
+let lastsword = document.getElementById("lastsword");
+let spear = document.getElementById("spear");
+let bow = document.getElementById("bow");
+let knife = document.getElementById("knife");
+let feather_knife = document.getElementById("feather_knife");
+
 
 var collectioneffect = () => {
   console.log(candy++);

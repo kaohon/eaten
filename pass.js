@@ -1,34 +1,68 @@
-l0up = true;
-l1up = false;
-l2up = false;
-l3up = false;
-l4up = false;
-l5up = false;
-l6up = false;
-l7up = false;
-l8up = false;
-l9up = false;
-l10up = false;
-l11up = false;
-l12up = false;
-l13up = false;
-l14up = false;
-l15up = false;
-l16up = false;
-l17up = false;
-l18up = false;
-l19up = false;
-l20up = false;
-l21up = false;
-l22up = false;
-l23up = false;
-l24up = false;
-l25up = false;
-l26up = false;
-l27up = false;
-l28up = false;
-l29up = false;
-l30up = false;
+let l0up = true;
+let l1up = false;
+let l2up = false;
+let l3up = false;
+let l4up = false;
+let l5up = false;
+let l6up = false;
+let l7up = false;
+let l8up = false;
+let l9up = false;
+let l10up = false;
+let l11up = false;
+let l12up = false;
+let l13up = false;
+let l14up = false;
+let l15up = false;
+let l16up = false;
+let l17up = false;
+let l18up = false;
+let l19up = false;
+let l20up = false;
+let l21up = false;
+let l22up = false;
+let l23up = false;
+let l24up = false;
+let l25up = false;
+let l26up = false;
+let l27up = false;
+let l28up = false;
+let l29up = false;
+let l30up = false;
+
+let l0 = document.getElementById("l0");
+let l1 = document.getElementById("l1");
+let l2 = document.getElementById("l2");
+let l3 = document.getElementById("l3");
+let l4 = document.getElementById("l4");
+let l5 = document.getElementById("l5");
+let l6 = document.getElementById("l6");
+let l7 = document.getElementById("l7");
+let l8 = document.getElementById("l8");
+let l9 = document.getElementById("l9");
+let l10 = document.getElementById("l10");
+let l11 = document.getElementById("l11");
+let l12 = document.getElementById("l12");
+let l13 = document.getElementById("l13");
+let l14 = document.getElementById("l14");
+let l15 = document.getElementById("l15");
+let l16 = document.getElementById("l16");
+let l17 = document.getElementById("l17");
+let l18 = document.getElementById("l18");
+let l19 = document.getElementById("l19");
+let l20 = document.getElementById("l20");
+let l21 = document.getElementById("l21");
+let l22 = document.getElementById("l22");
+let l23 = document.getElementById("l23");
+let l24 = document.getElementById("l24");
+let l25 = document.getElementById("l25");
+let l26 = document.getElementById("l26");
+let l27 = document.getElementById("l27");
+let l28 = document.getElementById("l28");
+let l29 = document.getElementById("l29");
+let l30 = document.getElementById("l30");
+
+counthour = elapsedhour.innerHTML;
 
 /*
 premium_buy.addEventListener("click", premium_buy_func);
@@ -40,7 +74,6 @@ function premium_buy_func() {
   }
 }
 */
-
 const passlv = () => {
   if (counthour >= 10) {
     l1.classList.add("lup");
@@ -59,6 +92,7 @@ const passlv = () => {
     l4up = true;
   }
   if (counthour >= 50) {
+    l5.addEventListener("click", l5func);
     l5.classList.add("lup");
     l5up = true;
   }
@@ -79,6 +113,7 @@ const passlv = () => {
     l9up = true;
   }
   if (counthour >= 100) {
+    l10.addEventListener("click", l10func);
     l10.classList.add("lup");
     l10up = true;
   }
@@ -99,6 +134,7 @@ const passlv = () => {
     l14up = true;
   }
   if (counthour >= 150) {
+    l15.addEventListener("click", l15func);
     l15.classList.add("lup");
     l15up = true;
   }
@@ -119,6 +155,7 @@ const passlv = () => {
     l19up = true;
   }
   if (counthour >= 200) {
+    l20.addEventListener("click", l20func);
     l20.classList.add("lup");
     l20up = true;
   }
@@ -139,6 +176,7 @@ const passlv = () => {
     l24up = true;
   }
   if (counthour >= 250) {
+    l25.addEventListener("click", l25func);
     l25.classList.add("lup");
     l25up = true;
   }
@@ -159,13 +197,20 @@ const passlv = () => {
     l29up = true;
   }
   if (counthour >= 300) {
+    l30.addEventListener("click", l30func);
     l30.classList.add("lup");
     l30up = true;
   }
 }
 setInterval(passlv, 1000);
 
-counthour = elapsedhour.innerHTML;
+let l0reward = false;
+let l5reward = false;
+let l10reward = false;
+let l15reward = false;
+let l20reward = false;
+let l25reward = false;
+let l30reward = false;
 
   if (l0up === true) {
   l0.addEventListener("click", l0func);
@@ -176,58 +221,46 @@ counthour = elapsedhour.innerHTML;
   }
 }
 
-if (counthour >= 50) {
-  l5.addEventListener("click", l5func);
-  function l5func() {
-      candy += 750;
-      l5reward = true;
-  l5.removeEventListener("click", l5func);
+const l5func = () => {
+if (l5up && !l5reward) {
+    candy += 750;
+    l5reward = true;
   }
 }
 
-if (counthour >= 100) {
-  l10.addEventListener("click", l10func);
-  function l10func() {
-      candy += 1000;
-      l10reward = true;
-  l10.removeEventListener("click", l10func);
+const l10func = () => {
+if (l10up && !l10reward) {
+    candy += 1000;
+    l10reward = true;
   }
 }
 
-if (counthour >= 150) {
-  l15.addEventListener("click", l15func);
-  function l15func() {
-      candy += 1250;
-      l15reward = true;
-  l15.removeEventListener("click", l15func);
+const l15func = () => {
+if (l15up && !l15reward) {
+    candy += 1250;
+    l15reward = true;
   }
 }
 
-if (counthour >= 200) {
-  l20.addEventListener("click", l20func);
-  function l20func() {
-      candy += 1500;
-      l20reward = true;
-  l20.removeEventListener("click", l20func);
+const l20func = () => {
+if (l20up && !l20reward) {
+    candy += 1500;
+    l20reward = true;
   }
 }
 
-if (counthour >= 250) {
-  l25.addEventListener("click", l25func);
-  function l25func() {
-      candy += 1750;
-      l25reward = true;
-  l25.removeEventListener("click", l25func);
+const l25func = () => {
+if (l25up && !l25reward) {
+    candy += 1750;
+    l25reward = true;
   }
 }
 
-if (counthour >= 300) {
-  l30.addEventListener("click", l30func);
-  function l30func() {
-      candy += 3000;
-      s1_complete.style.display = "block";
-      l30reward = true;
-      l30.removeEventListener("click", l30func);
+const l30func = () => {
+if (l30up && !l30reward) {
+    candy += 3000;
+    s1_complete.style.display = "block";
+    l30reward = true;
   }
 }
 
