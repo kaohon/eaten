@@ -217,6 +217,7 @@ let l30reward = false;
   function l0func() {
       s1_play.style.display = "block";
       l0reward = true;
+      l0.classList.add("acq");
   l0.removeEventListener("click", l0func);
   }
 }
@@ -225,6 +226,7 @@ const l5func = () => {
 if (l5up && !l5reward) {
     candy += 750;
     l5reward = true;
+    l5.classList.add("acq");
   }
 }
 
@@ -232,6 +234,7 @@ const l10func = () => {
 if (l10up && !l10reward) {
     candy += 1000;
     l10reward = true;
+    l10.classList.add("acq");
   }
 }
 
@@ -239,6 +242,7 @@ const l15func = () => {
 if (l15up && !l15reward) {
     candy += 1250;
     l15reward = true;
+    l15.classList.add("acq");
   }
 }
 
@@ -246,6 +250,7 @@ const l20func = () => {
 if (l20up && !l20reward) {
     candy += 1500;
     l20reward = true;
+    l20.classList.add("acq");
   }
 }
 
@@ -253,6 +258,7 @@ const l25func = () => {
 if (l25up && !l25reward) {
     candy += 1750;
     l25reward = true;
+    l25.classList.add("acq");
   }
 }
 
@@ -261,6 +267,7 @@ if (l30up && !l30reward) {
     candy += 3000;
     s1_complete.style.display = "block";
     l30reward = true;
+    l30.classList.add("acq");
   }
 }
 

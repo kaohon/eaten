@@ -8,3 +8,20 @@ EatcandyはNoimzipが個人で製作しているゲームです。1秒ごとに1
 ↓2023/12/30時点の初期テスト
 
 ![2023/12/30時点の初期テスト](./readme01.png)
+
+## 使用プログラミング言語・ライブラリ
+
+プログラミング言語
+・Javascript
+
+スタイルシート
+・CSS 
+
+マークアップ言語
+・HTML
+
+Javascript ライブラリ
+
+・Chart.js(過去)
+
+・Google tag (Google アナリティクス用)

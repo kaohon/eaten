@@ -477,6 +477,10 @@
     background-color: yellow;
 }
 
+.acq {
+    background-color: rgb(255,140,0) !important;
+}
+
 #bank_level {
     position: absolute;
     width: 70%;
