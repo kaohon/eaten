@@ -3,7 +3,7 @@
     "short_name": "Eatcandy",
     "theme_color": "#fff",
     "background_color": "#fff",
-    "display": "standalone",
+    "display": "fullscreen",
     "icons": [
       {
         "src": "img/candy.png",

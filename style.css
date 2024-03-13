@@ -21,7 +21,7 @@
 .category {
     width: 100%;
     padding: 20px;
-    border: solid 1px black;
+    border: solid 1px #000000;
 }
 
 #candy {
@@ -481,7 +481,7 @@
     position: absolute;
     width: 70%;
     height: 20px;
-    border-radius: 0%;
+    border-radius: 0;
     transform: skewX(40deg) translateX(-50%);
     border: solid 1px #000;
     left: 50%;
