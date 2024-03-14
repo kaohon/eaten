@@ -265,6 +265,7 @@ const autosave = () => {
       if (feather_knife_str === "true") {
         feather_knife_if = true;
         cps += 0.6;
+        ct_02_complete.style.display = "block";
         feather_knife.classList.add("bought");
         feather_knife.removeEventListener("click", feather_knifefunc);
         setInterval(collectioneffect, 1875);
@@ -325,6 +326,7 @@ const autosave = () => {
 
       if (lastsword_str === "true" && lastwand_str === "true") {
         ct_02_open.style.visibility = "visible";
+        ct_01_complete.style.display = "block";
       } else {
 
       }
@@ -334,6 +336,7 @@ const autosave = () => {
       if (mediaQuery.matches) {
         if (lastsword_str === "true" && lastwand_str === "true") {
           ct_02_open.style.display = "flex";
+          ct_01_complete.style.display = "block";
         } else {
 
         }

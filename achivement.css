@@ -5,13 +5,49 @@
 	margin: 20px;
 }
 
+#ct_01_complete {
+	display: none;
+	background-color: yellow;
+}
+
+#ct_02_complete {
+	display: none;
+	background-color: yellow;
+	margin-left: 100px;
+}
+
 #s1_play {
 	display: none;
 	background-color: white;
+	margin-left: 180px;
 }
 
 #s1_complete {
 	display: none;
 	background-color: yellow;
-	margin-left: 80px;
+	margin-left: 240px;
+}
+
+#ct_01_complete_tt {
+    display: none;
+} #ct_01_complete:hover + #ct_01_complete_tt {
+    display: block;
+}
+
+#ct_02_complete_tt {
+    display: none;
+} #ct_02_complete:hover + #ct_02_complete_tt {
+    display: block;
+}
+
+#s1_play_tt {
+    display: none;
+} #s1_play:hover + #s1_play_tt {
+    display: block;
+}
+
+#s1_complete_tt {
+    display: none;
+} #s1_complete:hover + #s1_complete_tt {
+    display: block;
 }
