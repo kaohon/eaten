@@ -16,16 +16,52 @@
 	margin-left: 100px;
 }
 
+#reach_b {
+	display: none;
+	background-color: rgb(183, 144, 128);
+	margin-left: 175px;
+}
+
+#reach_s {
+	display: none;
+	background-color: rgb(209, 209, 221);
+	margin-left: 225px;
+}
+
+#reach_g {
+	display: none;
+	background-color: rgb(249, 217, 158);
+	margin-left: 275px;
+}
+
+#reach_p {
+	display: none;
+	background-color: rgb(109, 252, 255);
+	margin-left: 325px;
+}
+
+#reach_d {
+	display: none;
+	background-color: rgb(37, 172, 255);
+	margin-left: 375px;
+}
+
+#reach_m {
+	display: none;
+	background-color: rgb(208, 125, 255);
+	margin-left: 425px;
+}
+
 #s1_play {
 	display: none;
 	background-color: white;
-	margin-left: 180px;
+	margin-left: 475px;
 }
 
 #s1_complete {
 	display: none;
 	background-color: yellow;
-	margin-left: 240px;
+	margin-left: 525px;
 }
 
 #ct_01_complete_tt {
@@ -37,6 +73,42 @@
 #ct_02_complete_tt {
     display: none;
 } #ct_02_complete:hover + #ct_02_complete_tt {
+    display: block;
+}
+
+#reach_b_tt {
+    display: none;
+} #reach_b:hover + #reach_b_tt {
+    display: block;
+}
+
+#reach_s_tt {
+    display: none;
+} #reach_s:hover + #reach_s_tt {
+    display: block;
+}
+
+#reach_g_tt {
+    display: none;
+} #reach_g:hover + #reach_g_tt {
+    display: block;
+}
+
+#reach_p_tt {
+    display: none;
+} #reach_p:hover + #reach_p_tt {
+    display: block;
+}
+
+#reach_d_tt {
+    display: none;
+} #reach_d:hover + #reach_d_tt {
+    display: block;
+}
+
+#reach_m_tt {
+    display: none;
+} #reach_m:hover + #reach_m_tt {
     display: block;
 }
 

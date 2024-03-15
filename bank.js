@@ -1,30 +1,41 @@
+// HTML要素の取得
+var in_storage = document.getElementById("in_storage");
+var out_storage = document.getElementById("out_storage");
+var candy_storage = document.getElementById("candy_storage");
+
+// 入金ボタンのクリックイベントリスナー
 in_storage.addEventListener("click", function () {
-    invalue = prompt("預金額を入力してください");
-    if (candy < invalue) {
-      alert("預金額は所持キャンディー数よりも少なくしてください。");
-    } else if (0 > invalue) {
-      alert("預金額は自然数にしてください。");
+    var invalue = parseInt(prompt("預金額を入力してください"));
+    if (isNaN(invalue) || invalue <= 0) {
+        alert("預金額は正の数値で入力してください。");
+    } else if (candy < invalue) {
+        alert("預金額は所持キャンディー数よりも少なくしてください。");
     } else {
-      candy -= invalue;
-      old_invalue = candy_storage.innerHTML;
-      invalue += +old_invalue;
-      candy_storage.innerHTML = invalue;
+        candy -= invalue;
+        var old_invalue = parseInt(candy_storage.innerHTML);
+        var new_invalue = invalue + old_invalue;
+        candy_storage.innerHTML = new_invalue;
+        localStorage.setItem("candyvalue", candy);
+        localStorage.setItem("storagevalue", new_invalue);
     }
-  });
-  
-  out_storage.addEventListener("click", function () {
-    outvalue = prompt("出金額を入力してください");
-    if (invalue < outvalue) {
-      alert("出金額は預金キャンディー数よりも少なくしてください。")
-    } else if (0 > outvalue) {
-      alert("出金額は自然数にしてください。");
+});
+
+// 出金ボタンのクリックイベントリスナー
+out_storage.addEventListener("click", function () {
+    var outvalue = parseInt(prompt("出金額を入力してください"));
+    var invalue = parseInt(candy_storage.innerHTML);
+    if (isNaN(outvalue) || outvalue <= 0) {
+        alert("出金額は正の数値で入力してください。");
+    } else if (invalue < outvalue) {
+        alert("出金額は預金キャンディー数よりも少なくしてください。");
     } else {
-      localStorage.removeItem("storagevalue");
-      candy += +outvalue;
-      invalue = invalue - outvalue;
-      candy_storage.innerHTML = invalue;
+        candy += outvalue;
+        var new_invalue = invalue - outvalue;
+        candy_storage.innerHTML = new_invalue;
+        localStorage.setItem("candyvalue", candy);
+        localStorage.setItem("storagevalue", new_invalue);
     }
-  });
+});
 
   if (candy_storage.innerHTML >= "10000") {
     bank_level.value = 1;

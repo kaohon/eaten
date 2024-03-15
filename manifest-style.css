@@ -8,6 +8,7 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
     #items_open {
         display: none;
         position: absolute;
@@ -76,16 +77,166 @@
     }
 
     .tooltip {
-    overflow: hidden;
-    position: fixed;
-    bottom: -40px;
-    left: 50%;
-    right: 50%;
-    width: 350px;
-    height: 200px;
-    border: solid 2px rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    transform: translate(-50%, -50%);
-    z-index: 1;
+        overflow: hidden;
+        position: fixed;
+        bottom: -40px;
+        left: 50%;
+        right: 50%;
+        width: 350px;
+        height: 200px;
+        border: solid 2px rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .color_b {
+        position: absolute;
+        top: 150px;
+        padding: 25px;
+        border: solid 3px rgb(0, 0, 0);
+    }
+
+    .color_s {
+        position: absolute;
+        top: 180px;
+        padding: 25px;
+        border: solid 3px rgb(0, 0, 0);
+    }
+
+    .color_g {
+        position: absolute;
+        padding: 25px;
+        top: 210px;
+        border: solid 3px rgb(0, 0, 0);
+    }
+
+    .color_p {
+        position: absolute;
+        padding: 25px;
+        top: 240px;
+        border: solid 3px rgb(0, 0, 0);
+    }
+
+    .color_d {
+        position: absolute;
+        padding: 25px;
+        top: 270px;
+        border: solid 3px rgb(0, 0, 0);
+    }
+
+    .color_m {
+        position: absolute;
+        padding: 25px;
+        top: 300px;
+        border: solid 3px rgb(0, 0, 0);
+    }
+
+     #b3 {
+        left: 15%;
+        transform: translateX(-15%);
+        opacity: 0.5;
+    }
+
+    #b2 {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+    }
+
+    #b1 {
+        left: 85%;
+        transform: translateX(-85%);
+        opacity: 0.5;
+    }
+
+    #s3 {
+        left: 15%;
+        transform: translateX(-15%);
+        opacity: 0.5;
+    }
+
+    #s2 {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+    }
+
+    #s1 {
+        left: 85%;
+        transform: translateX(-85%);
+        opacity: 0.5;
+    }
+
+    #g3 {
+        left: 15%;
+        transform: translateX(-15%);
+        opacity: 0.5;
+    }
+
+    #g2 {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+    }
+
+    #g1 {
+        left: 85%;
+        transform: translateX(-85%);
+        opacity: 0.5;
+    }
+
+    #p3 {
+        left: 15%;
+        transform: translateX(-15%);
+        opacity: 0.5;
+    }
+
+    #p2 {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+    }
+
+    #p1 {
+        left: 85%;
+        transform: translateX(-85%);
+        opacity: 0.5;
+    }
+
+    #d3 {
+        left: 15%;
+        transform: translateX(-15%);
+        opacity: 0.5;
+    }
+
+    #d2 {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+    }
+
+    #d1 {
+        left: 85%;
+        transform: translateX(-85%);
+        opacity: 0.5;
+    }
+
+    #m3 {
+        left: 15%;
+        transform: translateX(-15%);
+        opacity: 0.5;
+    }
+
+    #m2 {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+    }
+
+    #m1 {
+        left: 85%;
+        transform: translateX(-85%);
+        opacity: 0.5;
     }
 }

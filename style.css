@@ -577,7 +577,7 @@
     position: absolute;
     padding: 50px;
     border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(216, 123, 95);
+    background-color: rgb(183, 144, 128);
 }
 
 .color_s {
@@ -585,7 +585,7 @@
     margin-top: 200px;
     padding: 50px;
     border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(229 ,229, 224);
+    background-color: rgb(209, 209, 221);
 }
 
 .color_g {
@@ -594,7 +594,7 @@
     margin-top: 400px;
     top: 100px;
     border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(214,161,64);
+    background-color: rgb(214, 161, 64);
 }
 
 .color_p {
@@ -602,7 +602,7 @@
     padding: 50px;
     margin-top: 600px;
     border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(160, 178, 198);
+    background-color: rgb(109, 252, 255);
 }
 
 .color_d {
@@ -610,7 +610,7 @@
     padding: 50px;
     margin-top: 800px;
     border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(0, 0, 255);
+    background-color: rgb(37, 172, 255);
 }
 
 .color_m {
@@ -618,7 +618,7 @@
     padding: 50px;
     margin-top: 1000px;
     border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(158, 118, 180);
+    background-color: rgb(208, 125, 255);
 }
 
 #b3 {
