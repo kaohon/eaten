@@ -6,7 +6,6 @@ const autosave = () => {
     localStorage.setItem("elapsedsec", countsec);
     localStorage.setItem("elapsedmin", countmin);
     localStorage.setItem("elapsedhour", counthour);
-    localStorage.setItem("storagevalue", invalue);
     localStorage.setItem("stick_if", stick_if);
     localStorage.setItem("ecube_if", ecube_if);
     localStorage.setItem("wand_if", wand_if);
@@ -38,7 +37,6 @@ const autosave = () => {
     localStorage.setItem("elapsedsec", countsec);
     localStorage.setItem("elapsedmin", countmin);
     localStorage.setItem("elapsedhour", counthour);
-    localStorage.setItem("storagevalue", invalue);
     localStorage.setItem("stick_if", stick_if);
     localStorage.setItem("ecube_if", ecube_if);
     localStorage.setItem("wand_if", wand_if);
@@ -98,8 +96,7 @@ const autosave = () => {
     elapsedmin.innerHTML = min_str;
     elapsedhour.innerHTML = hour_str;
     candy_storage.innerHTML = bank_str;
-    invalue = bank_str;
-    count = count_str;
+    count = count_str
     countsec = sec_str;
     countmin = min_str;
     counthour = hour_str;
@@ -381,7 +378,6 @@ const autosave = () => {
     localStorage.removeItem("l30reward");
   }
 
-
   document.addEventListener("DOMContentLoaded", function() {
     var obj = document.getElementById("selfile");
     obj.addEventListener("change", function(evt) {
@@ -402,7 +398,7 @@ const autosave = () => {
           countsec = data.split(/\r\n|\r|\n/)[2]
           countmin = data.split(/\r\n|\r|\n/)[3]
           counthour = data.split(/\r\n|\r|\n/)[4]
-          invalue = data.split(/\r\n|\r|\n/)[5]
+          new_invalue = data.split(/\r\n|\r|\n/)[5]
           stick_if = data.split(/\r\n|\r|\n/)[6]
           ecube_if = data.split(/\r\n|\r|\n/)[7]
           wand_if = data.split(/\r\n|\r|\n/)[8]

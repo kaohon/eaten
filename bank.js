@@ -13,7 +13,7 @@ in_storage.addEventListener("click", function () {
     } else {
         candy -= invalue;
         var old_invalue = parseInt(candy_storage.innerHTML);
-        var new_invalue = invalue + old_invalue;
+        let new_invalue = invalue + old_invalue;
         candy_storage.innerHTML = new_invalue;
         localStorage.setItem("candyvalue", candy);
         localStorage.setItem("storagevalue", new_invalue);
@@ -30,7 +30,7 @@ out_storage.addEventListener("click", function () {
         alert("出金額は預金キャンディー数よりも少なくしてください。");
     } else {
         candy += outvalue;
-        var new_invalue = invalue - outvalue;
+        let new_invalue = invalue - outvalue;
         candy_storage.innerHTML = new_invalue;
         localStorage.setItem("candyvalue", candy);
         localStorage.setItem("storagevalue", new_invalue);
@@ -40,27 +40,27 @@ out_storage.addEventListener("click", function () {
   if (candy_storage.innerHTML >= "10000") {
     bank_level.value = 1;
     progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
-  } 
+  }
   if (candy_storage.innerHTML >= "100000") {
     bank_level.value = 2;
     progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
-  } 
+  }
   if (candy_storage.innerHTML >= "1000000") {
     bank_level.value = 3;
     progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
-  } 
+  }
   if (candy_storage.innerHTML >= "10000000") {
     bank_level.value = 4;
     progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
-  } 
+  }
   if (candy_storage.innerHTML >= "100000000") {
     bank_level.value = 5;
     progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
-  } 
+  }
   if (candy_storage.innerHTML >= "1000000000") {
     bank_level.value = 6;
     progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";
-  } 
+  }
   if (candy_storage.innerHTML >= "10000000000") {
     bank_level.value = 7;
     progress_word.innerHTML = "レベル進行度:" + bank_level.value + "/7";

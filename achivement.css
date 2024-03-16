@@ -5,6 +5,12 @@
 	margin: 20px;
 }
 
+.img_achivement {
+	position: absolute;
+	border: solid 1px rgb(0, 0, 0);
+	margin: 20px;
+}
+
 #ct_01_complete {
 	display: none;
 	background-color: yellow;
@@ -18,37 +24,37 @@
 
 #reach_b {
 	display: none;
-	background-color: rgb(183, 144, 128);
+	line-height: 0em;
 	margin-left: 175px;
 }
 
 #reach_s {
 	display: none;
-	background-color: rgb(209, 209, 221);
+	line-height: 0em;
 	margin-left: 225px;
 }
 
 #reach_g {
 	display: none;
-	background-color: rgb(249, 217, 158);
+	line-height: 0em;
 	margin-left: 275px;
 }
 
 #reach_p {
 	display: none;
-	background-color: rgb(109, 252, 255);
+	line-height: 0em;
 	margin-left: 325px;
 }
 
 #reach_d {
 	display: none;
-	background-color: rgb(37, 172, 255);
+	line-height: 0em;
 	margin-left: 375px;
 }
 
 #reach_m {
 	display: none;
-	background-color: rgb(208, 125, 255);
+	line-height: 0em;
 	margin-left: 425px;
 }
 

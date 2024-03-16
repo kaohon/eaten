@@ -575,50 +575,49 @@
 
 .color_b {
     position: absolute;
-    padding: 50px;
-    border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(183, 144, 128);
+    line-height: 0em;
+    outline: solid 3px rgb(0, 0, 0);
+    border: solid 3px rgb(183, 144, 128);
 }
 
 .color_s {
     position: absolute;
+    line-height: 0em;
     margin-top: 200px;
-    padding: 50px;
-    border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(209, 209, 221);
+    outline: solid 3px rgb(0, 0, 0);
+    border: solid 3px rgb(209, 209, 221);
 }
 
 .color_g {
     position: absolute;
-    padding: 50px;
+    line-height: 0em;
     margin-top: 400px;
-    top: 100px;
-    border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(214, 161, 64);
+    outline: solid 3px rgb(0, 0, 0);
+    border: solid 3px rgb(214, 161, 64);
 }
 
 .color_p {
     position: absolute;
-    padding: 50px;
+    line-height: 0em;
     margin-top: 600px;
-    border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(109, 252, 255);
+    outline: solid 3px rgb(0, 0, 0);
+    border: solid 3px rgb(109, 252, 255);
 }
 
 .color_d {
     position: absolute;
-    padding: 50px;
+    line-height: 0em;
     margin-top: 800px;
-    border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(37, 172, 255);
+    outline: solid 3px rgb(0, 0, 0);
+    border: solid 3px rgb(37, 172, 255);
 }
 
 .color_m {
     position: absolute;
-    padding: 50px;
+    line-height: 0em;
     margin-top: 1000px;
-    border: solid 3px rgb(0, 0, 0);
-    background-color: rgb(208, 125, 255);
+    outline: solid 3px rgb(0, 0, 0);
+    border: solid 3px rgb(208, 125, 255);
 }
 
 #b3 {

@@ -1,7 +1,6 @@
 var candyhtml = document.getElementById("candy");
 var cpshtml = document.getElementById("cps");
 
-let invalue = 0;
 let candy = 0;
 let count = 0;
 let cps = 1.0;
@@ -10,6 +9,7 @@ let counthour;
 let countmin;
 let countsec;
 
+var new_invalue = document.getElementById("candy_storage");
 let elapsedsec = document.getElementById("elapsedsec");
 let elapsedmin = document.getElementById("elapsedmin");
 let elapsedhour = document.getElementById("elapsedhour");
@@ -27,7 +27,7 @@ const countUp = () => {
     document.getElementById("elapsedsec").innerHTML = countsec;
     elapsedmin.innerHTML = countmin;
     elapsedhour.innerHTML = counthour;
-    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}\n${l0reward}\n${l5reward}\n${l10reward}\n${l15reward}\n${l20reward}\n${l25reward}\n${l30reward}`);
+    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${new_invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}\n${l0reward}\n${l5reward}\n${l10reward}\n${l15reward}\n${l20reward}\n${l25reward}\n${l30reward}`);
   }
   setInterval(countUp, 1000);
 
