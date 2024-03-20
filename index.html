@@ -220,52 +220,158 @@
         </div>
         <br>プレミアムパス限定:レベルx100倍のキャンディがレベルアップ時に銀行振込される
         <br>レベル30↑は1000キャンディが15レベルごとに獲得できる
-        <table style="position: absolute; left: 50%; transform: translateX(-50%);">
-            <td>
-                <div id="l0" class="level">0 <p class="reward_n">S1 プレイ者(称号)</p><p class="reward_sp">カード1枚選択パック</p></div>
-                <div id="l1" class="level">1</div>
-                <div id="l2" class="level">2</div>
-                <div id="l3" class="level">3</div>
-                <div id="l4" class="level">4</div>
-                <div id="l5" class="level">5 <p class="reward_n">750キャンディ</p></div>
-                <div id="l6" class="level">6</div>
-                <div id="l7" class="level">7</div>
-                <div id="l8" class="level">8</div>
-                <div id="l9" class="level">9</div>
-                <div id="l10" class="level">10 <p class="reward_n">1000キャンディ</p></div>
-                <div id="l11" class="level">11</div>
-                <div id="l12" class="level">12</div>
-                <div id="l13" class="level">13</div>
-                <div id="l14" class="level">14</div>
-                <div id="l15" class="level">15 <p class="reward_n">1250キャンディ</p></div>
-                <div id="l16" class="level">16</div>
-                <div id="l17" class="level">17</div>
-                <div id="l18" class="level">18</div>
-                <div id="l19" class="level">19</div>
-                <div id="l20" class="level">20 <p class="reward_n">1500キャンディ</p></div>
-                <div id="l21" class="level">21</div>
-                <div id="l22" class="level">22</div>
-                <div id="l23" class="level">23</div>
-                <div id="l24" class="level">24</div>
-                <div id="l25" class="level">25 <p class="reward_n">1750キャンディ</p></div>
-                <div id="l26" class="level">26</div>
-                <div id="l27" class="level">27</div>
-                <div id="l28" class="level">28</div>
-                <div id="l29" class="level">29</div>
-                <div id="l30" class="level">30 <p class="reward_n">S1 コンプリート(称号)</p><p class="reward_sp">3000キャンディ</p></div>
-            </td>
+        <table border="1" style="position: absolute; left: 50%; transform: translateX(-50%);">
+            <tr>
+                <th>レベル</th><th>通常</th><th>プレミアム</th>
+            </tr>
+            <tr>
+                <td id="l0" class="level">0</td><td id="l0_reward_n" class="reward_n">S1 プレイ者(称号)</td><td id="l0_reward_sp" class="reward_sp">カード1枚選択パック</td>
+            </tr>
+            <tr>
+                <td id="l1" class="level">1</td><td id="l1_reward_n" class="reward_n"></td><td id="l1_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l2" class="level">2</td><td id="l2_reward_n" class="reward_n"></td><td id="l2_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l3" class="level">3</td><td id="l3_reward_n" class="reward_n"></td><td id="l3_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l4" class="level">4</td><td id="l4_reward_n" class="reward_n"></td><td id="l4_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l5" class="level">5</td><td id="l5_reward_n" class="reward_n">750キャンディ</td><td id="l5_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l6" class="level">6</td><td id="l6_reward_n" class="reward_n"></td><td id="l6_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l7" class="level">7</td><td id="l7_reward_n" class="reward_n"></td><td id="l7_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l8" class="level">8</td><td id="l8_reward_n" class="reward_n"></td><td id="l8_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l9" class="level">9</td><td id="l9_reward_n" class="reward_n"></td><td id="l9_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l10" class="level">10</td><td id="l10_reward_n" class="reward_n">1000キャンディ</td><td id="l10_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l11" class="level">11</td><td id="l11_reward_n" class="reward_n"></td><td id="l11_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l12" class="level">12</td><td id="l12_reward_n" class="reward_n"></td><td id="l12_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l13" class="level">13</td><td id="l13_reward_n" class="reward_n"></td><td id="l13_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l14" class="level">14</td><td id="l14_reward_n" class="reward_n"></td><td id="l14_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l15" class="level">15</td><td id="l15_reward_n" class="reward_n">1250キャンディ</td><td id="l15_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l16" class="level">16</td><td id="l16_reward_n" class="reward_n"></td><td id="l16_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l17" class="level">17</td><td id="l17_reward_n" class="reward_n"></td><td id="l17_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l18" class="level">18</td><td id="l18_reward_n" class="reward_n"></td><td id="l18_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l19" class="level">19</td><td id="l19_reward_n" class="reward_n"></td><td id="l19_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l20" class="level">20</td><td id="l20_reward_n" class="reward_n">1500キャンディ</td><td id="l20_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l21" class="level">21</td><td id="l21_reward_n" class="reward_n"></td><td id="l21_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l22" class="level">22</td><td id="l22_reward_n" class="reward_n"></td><td id="l22_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l23" class="level">23</td><td id="l23_reward_n" class="reward_n"></td><td id="l23_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l24" class="level">24</td><td id="l24_reward_n" class="reward_n"></td><td id="l24_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l25" class="level">25</td><td id="l25_reward_n" class="reward_n">1750キャンディ</td><td id="l25_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l26" class="level">26</td><td id="l26_reward_n" class="reward_n"></td><td id="l26_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l27" class="level">27</td><td id="l27_reward_n" class="reward_n"></td><td id="l27_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l28" class="level">28</td><td id="l28_reward_n" class="reward_n"></td><td id="l28_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l29" class="level">29</td><td id="l29_reward_n" class="reward_n"></td><td id="l29_reward_sp" class="reward_sp"></td>
+            </tr>
+            <tr>
+                <td id="l30" class="level">30</td><td id="l30_reward_n" class="reward_n">S1 コンプリート(称号) 3000キャンディ</td><td id="l30_reward_sp" class="reward_sp"></td>
+            </tr>
         </table>
     </main>
     <main id="rank">
-        <!--Circuitシステム(C1ブロンズ ➞ C1シルバー ➞ C1ゴールド ➞ C1プラチナ ➞ C1ダイヤモンド ➞ C1マスター ➞ C2ブロンズ ......)-->
-        ランク Circuit 1 ブロンズ3
-        ブロンズ:15時間毎にランクアップ
-        シルバー:20時間毎にランクアップ
-        ゴールド:25時間毎にランクアップ
-        プラチナ:30時間毎にランクアップ
-        ダイヤモンド:35時間毎にランクアップ
-        マスター:40時間毎にランクアップ
-        Circuit 1 ブロンズ3 ➞ ブロンズ2 ➞ ブロンズ1 ➞ Circuit 1 シルバー3
+        <table border="1">
+            <tr>
+                <th>時間</th><th>ランク</th>
+            </tr>
+            <tr>
+                <td>0 - 15</td><td>-</td>
+            </tr>
+            <tr>
+                <td>15 - 65</td><td>ブロンズ</td>
+            </tr>
+            <tr>
+                <td>65 - 130</td><td>シルバー</td>
+            </tr>
+            <tr>
+                <td>130 - 210</td><td>ゴールド</td>
+            </tr>
+            <tr>
+                <td>210 - 305</td><td>プラチナ</td>
+            </tr>
+            <tr>
+                <td>305 - 415</td><td>ダイアモンド</td>
+            </tr>
+            <tr>
+                <td>415 - 510</td><td>マスター</td>
+            </tr>
+        </table>
+        <table border="1">
+            <tr>
+                <th>ランク</th><th>Ⅰ</th><th>Ⅱ</th><th>Ⅲ</th>
+            </tr>
+            <tr>
+                <td>ランク無し</td><td>0 - 15</td><td> - </td><td> - </td>
+            </tr>
+            <tr>
+                <td>ブロンズ</td><td>15 - 30</td><td>30 - 45</td><td>45 - 65</td>
+            </tr>
+            <tr>
+                <td>シルバー</td><td>65 - 85</td><td>85 - 105</td><td>105 - 130</td>
+            </tr>
+            <tr>
+                <td>ゴールド</td><td>130 - 155</td><td>155 - 180</td><td>180 - 210</td>
+            </tr>
+            <tr>
+                <td>プラチナ</td><td>210 - 240</td><td>240 - 270</td><td>270 - 305</td>
+            </tr>
+            <tr>
+                <td>ダイアモンド</td><td>305 - 340</td><td>340 - 375</td><td>375 - 415</td>
+            </tr>
+            <tr>
+                <td>マスター</td><td>415 - 455</td><td>455 - 495</td><td>495 - 510</td>
+            </tr>
+        </table>
         <span id="b3" class="color_b"><img src="img/bronze1.png"></span>
         <span id="b2" class="color_b"><img src="img/bronze2.png"></span>
         <span id="b1" class="color_b"><img src="img/bronze3.png"></span>

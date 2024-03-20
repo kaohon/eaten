@@ -28,6 +28,7 @@ const autosave = () => {
     localStorage.setItem("l20reward", l20reward);
     localStorage.setItem("l25reward", l25reward);
     localStorage.setItem("l30reward", l30reward);
+    localStorage.setItem("premium", premium);
   }
   setInterval(autosave, 30000);
 
@@ -60,6 +61,7 @@ const autosave = () => {
     localStorage.setItem("l20reward", l20reward);
     localStorage.setItem("l25reward", l25reward);
     localStorage.setItem("l30reward", l30reward);
+    localStorage.setItem("premium", premium);
   }
 
   window.onload = function() {
@@ -91,6 +93,7 @@ const autosave = () => {
     var l20reward_str = localStorage.getItem("l20reward");
     var l25reward_str = localStorage.getItem("l25reward");
     var l30reward_str = localStorage.getItem("l30reward");
+    var premium_str = localStorage.getItem("premium");
     candyhtml.innerHTML = candy_str;
     elapsedsec.innerHTML = sec_str;
     elapsedmin.innerHTML = min_str;
@@ -321,6 +324,14 @@ const autosave = () => {
 
       }
 
+      if (premium_str === "true") {
+        premium = true;
+        l0_reward_sp.classList.add("lup");
+        premium_buy.removeEventListener("click", premium_buy_func);
+      } else {
+
+      }
+
       if (lastsword_str === "true" && lastwand_str === "true") {
         ct_02_open.style.visibility = "visible";
         ct_01_complete.style.display = "block";
@@ -376,6 +387,7 @@ const autosave = () => {
     localStorage.removeItem("l20reward");
     localStorage.removeItem("l25reward");
     localStorage.removeItem("l30reward");
+    localStorage.removeItem("premium");
   }
 
   document.addEventListener("DOMContentLoaded", function() {
@@ -421,6 +433,7 @@ const autosave = () => {
           l20reward = data.split(/\r\n|\r|\n/)[25]
           l25reward = data.split(/\r\n|\r|\n/)[26]
           l30reward = data.split(/\r\n|\r|\n/)[27]
+          premium = data.split(/\r\n|\r|\n/)[28]
         }
     }, false);
 });
