@@ -275,7 +275,7 @@ const autosave = () => {
 
       if (l0reward_str === "true") {
         l0reward = true;
-        l0.classList.add("acq");
+        l0_reward_n.classList.add("acq");
         s1_play.style.display = "block";
       } else {
 
@@ -283,42 +283,42 @@ const autosave = () => {
 
       if (l5reward_str === "true") {
         l5reward = true;
-        l5.classList.add("acq");
+        l5_reward_n.classList.add("acq");
       } else {
 
       }
 
       if (l10reward_str === "true") {
         l10reward = true;
-        l10.classList.add("acq");
+        l10_reward_n.classList.add("acq");
       } else {
 
       }
 
       if (l15reward_str === "true") {
         l15reward = true;
-        l15.classList.add("acq");
+        l15_reward_n.classList.add("acq");
       } else {
 
       }
 
       if (l20reward_str === "true") {
         l20reward = true;
-        l20.classList.add("acq");
+        l20_reward_n.classList.add("acq");
       } else {
 
       }
 
       if (l25reward_str === "true") {
         l25reward = true;
-        l25.classList.add("acq");
+        l25_reward_n.classList.add("acq");
       } else {
 
       }
 
       if (l30reward_str === "true") {
         l30reward = true;
-        l30.classList.add("acq");
+        l30_reward_n.classList.add("acq");
         s1_complete.style.display = "block";
       } else {
 
