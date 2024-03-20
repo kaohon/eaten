@@ -1,4 +1,5 @@
-counthour = elapsedhour.innerHTML;
+counthour = parseInt(elapsedhour.innerHTML);
+rankhour = counthour % 510;
 
 let b3 = document.getElementById("b3");
 let b2 = document.getElementById("b2");
@@ -26,66 +27,52 @@ let reach_p = document.getElementById("reach_p");
 let reach_d = document.getElementById("reach_d");
 let reach_m = document.getElementById("reach_m");
 
-const rankup = 	() => {
-	if (counthour >= 15) {
-		b3.classList.add("bought");
-		reach_b.style.display = "block";
-	}
-	if (counthour >= 30) {
-		b2.classList.add("bought");
-	}
-	if (counthour >= 45) {
-		b1.classList.add("bought");
-	}
-	if (counthour >= 65) {
-		s3.classList.add("bought");
-		reach_s.style.display = "block";
-	}
-	if (counthour >= 85) {
-		s2.classList.add("bought");
-	}
-	if (counthour >= 105) {
-		s1.classList.add("bought");
-	}
-	if (counthour >= 130) {
-		g3.classList.add("bought");
-		reach_g.style.display = "block";
-	}
-	if (counthour >= 155) {
-		g2.classList.add("bought");
-	}
-	if (counthour >= 180) {
-		g1.classList.add("bought");
-	}
-	if (counthour >= 210) {
-		p3.classList.add("bought");
-		reach_p.style.display = "block";
-	}
-	if (counthour >= 240) {
-		p2.classList.add("bought");
-	}
-	if (counthour >= 270) {
-		p1.classList.add("bought");
-	}
-	if (counthour >= 305) {
-		d3.classList.add("bought");
-		reach_d.style.display = "block";
-	}
-	if (counthour >= 340) {
-		d2.classList.add("bought");
-	}
-	if (counthour >= 375) {
-		d1.classList.add("bought");
-	}
-	if (counthour >= 415) {
-		m3.classList.add("bought");
-		reach_m.style.display = "block";
-	}
-	if (counthour >= 455) {
-		m2.classList.add("bought");
-	}
-	if (counthour >= 495) {
-		m1.classList.add("bought");
-	}
+let now_rank = document.getElementById("now_rank");
+
+const rankup = () => {
+    const ranks = [
+        { hour: 15, element: b3, displayElement: reach_b, now: "ブロンズ3" },
+        { hour: 30, element: b2, now: "ブロンズ2" },
+        { hour: 45, element: b1, now: "ブロンズ1" },
+        { hour: 65, element: s3, displayElement: reach_s, now: "シルバー3" },
+        { hour: 85, element: s2, now: "シルバー2" },
+        { hour: 105, element: s1, now: "シルバー1" },
+        { hour: 130, element: g3, displayElement: reach_g, now: "ゴールド3" },
+        { hour: 155, element: g2, now: "ゴールド2" },
+        { hour: 180, element: g1, now: "ゴールド1" },
+        { hour: 210, element: p3, displayElement: reach_p, now: "プラチナ3" },
+        { hour: 240, element: p2, now: "プラチナ2" },
+        { hour: 270, element: p1, now: "プラチナ1" },
+        { hour: 305, element: d3, displayElement: reach_d, now: "ダイアモンド3" },
+        { hour: 340, element: d2, now: "ダイアモンド2" },
+        { hour: 375, element: d1, now: "ダイアモンド1" },
+        { hour: 415, element: m3, displayElement: reach_m, now: "マスター3" },
+        { hour: 455, element: m2, now: "マスター2" },
+        { hour: 495, element: m1, now: "マスター1" }
+    ];
+
+ranks.forEach(rank => {
+    if (rankhour >= rank.hour) {
+        rank.element.classList.add("bought");
+        if (rank.displayElement) rank.displayElement.style.display = "block";
+    }
+});
+
+ranks.forEach(rank => {
+    if (counthour >= rank.hour) {
+        if (rank.displayElement) rank.displayElement.style.display = "block";
+    }
+});
+
+ranks.forEach(rank => {
+    if (rankhour >= rank.hour) {
+        now_rank.innerHTML = rank.now;
+    }
+});
 }
-setInterval(rankup, 1000);
+
+setInterval(() => {
+    counthour = parseInt(elapsedhour.innerHTML);
+    rankhour = counthour % 510;
+    rankup();
+}, 1000);
