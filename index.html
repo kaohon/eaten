@@ -198,17 +198,17 @@
     </main>
     <main id="items">
         ランダムカードセット(3枚)
-        <div class="standard-button">購入
+        <div id="cardset_buy" class="standard-button">購入
             <p class="button-subtitle">300000キャンディ</p>
             <p class="button-subtitle">(2セットまで)</p>
         </div>
         <br>カード選択ボックス(1枚)
-        <div class="standard-button">購入
+        <div id="cardbox_buy" class="standard-button">購入
             <p class="button-subtitle">150000キャンディ</p>
             <p class="button-subtitle">(3個まで)</p>
         </div>
         <br>コレクションツリー Part2
-        <div class="standard-button">購入
+        <div id="collection_tree_buy" class="standard-button">購入
             <p class="button-subtitle">75000キャンディ</p>
             <p class="button-subtitle">(Part1コンプリートで自動解除)</p>
         </div>
@@ -220,7 +220,7 @@
         </div>
         <br>プレミアムパス限定:レベルx100倍のキャンディがレベルアップ時に銀行振込される
         <br>レベル30↑は1000キャンディが15レベルごとに獲得できる
-        <table border="1" style="position: absolute; left: 50%; transform: translateX(-50%);">
+        <table border="1" style="width: 300px; position: absolute; left: 50%; transform: translateX(-50%);">
             <tr>
                 <th>レベル</th><th>通常</th><th>プレミアム</th>
             </tr>
@@ -393,6 +393,7 @@
     </main>
 
     <script src="level.js"></script>
+    <script src="shop.js"></script>
     <script src="rank.js"></script>
     <script src="pass.js"></script>
     <script src="data.js"></script>

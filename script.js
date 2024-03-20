@@ -28,7 +28,7 @@ const countUp = () => {
     elapsedmin.innerHTML = countmin;
     elapsedhour.innerHTML = counthour;
     circuit.innerHTML = 1 + parseInt(counthour / 510);
-    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${new_invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}\n${l0reward}\n${l5reward}\n${l10reward}\n${l15reward}\n${l20reward}\n${l25reward}\n${l30reward}\n${premium}`);
+    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${new_invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}\n${l0reward}\n${l5reward}\n${l10reward}\n${l15reward}\n${l20reward}\n${l25reward}\n${l30reward}\n${premium}\n${ct_02_buy}`);
   }
   setInterval(countUp, 1000);
 
@@ -83,6 +83,8 @@ function stickfunc() {
     candy -= 10000;
     stick.removeEventListener("click", stickfunc);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 ecube.addEventListener("click", ecubefunc);
@@ -100,6 +102,8 @@ function ecubefunc() {
     ecube.removeEventListener("click", ecubefunc);
     setInterval(collectioneffect, 10000);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 wand.addEventListener("click", wandfunc);
@@ -118,6 +122,8 @@ function wandfunc() {
     wand.removeEventListener("click", wandfunc);
     setInterval(collectioneffect, 10000);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 dcwand.addEventListener("click", dcwandfunc);
@@ -134,6 +140,8 @@ function dcwandfunc() {
     dcwand.removeEventListener("click", dcwandfunc);
     setInterval(collectioneffect, 5000);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 bwand.addEventListener("click", bwandfunc);
@@ -150,6 +158,8 @@ function bwandfunc() {
     bwand.removeEventListener("click", bwandfunc);
     setInterval(collectioneffect, 3125);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 twand.addEventListener("click", twandfunc);
@@ -166,6 +176,8 @@ function twandfunc() {
     twand.removeEventListener("click", twandfunc);
     setInterval(collectioneffect, 2500);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 lastwand.addEventListener("click", lastwandfunc);
@@ -183,6 +195,8 @@ function lastwandfunc() {
     lastwand.removeEventListener("click", lastwandfunc);
     setInterval(collectioneffect, 1250);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 sword.addEventListener("click", swordfunc);
@@ -201,6 +215,8 @@ function swordfunc() {
     sword.removeEventListener("click", swordfunc);
     setInterval(collectioneffect, 10000);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 dsword.addEventListener("click", dswordfunc);
@@ -217,6 +233,8 @@ function dswordfunc() {
     dsword.removeEventListener("click", dswordfunc);
     setInterval(collectioneffect, 5000);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 tsword.addEventListener("click", tswordfunc);
@@ -233,6 +251,8 @@ function tswordfunc() {
     tsword.removeEventListener("click", tswordfunc);
     setInterval(collectioneffect, 2500);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 lastsword.addEventListener("click", lastswordfunc);
@@ -250,6 +270,8 @@ function lastswordfunc() {
     lastsword.removeEventListener("click", lastswordfunc);
     setInterval(collectioneffect, 625);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 spear.addEventListener("click", spearfunc);
@@ -264,6 +286,8 @@ function spearfunc() {
     spear.removeEventListener("click", spearfunc);
     setInterval(collectioneffect, 3125);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 bow.addEventListener("click", bowfunc);
@@ -278,6 +302,8 @@ function bowfunc() {
     bow.removeEventListener("click", bowfunc);
     setInterval(collectioneffect, 2000);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 knife.addEventListener("click", knifefunc);
@@ -292,6 +318,8 @@ function knifefunc() {
     knife.removeEventListener("click", knifefunc);
     setInterval(collectioneffect, 3125);
   }
+  audio.currentTime = 0;
+  audio.play()
 }
 
 feather_knife.addEventListener("click", feather_knifefunc);
@@ -308,4 +336,6 @@ function feather_knifefunc() {
     feather_knife.removeEventListener("click", feather_knifefunc);
     setInterval(collectioneffect, 1875);
   }
+  audio.currentTime = 0;
+  audio.play()
 }

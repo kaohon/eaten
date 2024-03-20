@@ -91,39 +91,27 @@
     }
 
     .color_b {
-        position: absolute;
-        line-height: 0em;
-        top: 150px;
+        top: 620px;
     }
 
     .color_s {
-        position: absolute;
-        line-height: 0em;
-        top: 180px;
+        top: 650px;
     }
 
     .color_g {
-        position: absolute;
-        line-height: 0em;
-        top: 210px;
+        top: 680px;
     }
 
     .color_p {
-        position: absolute;
-        line-height: 0em;
-        top: 240px;
+        top: 710px;
     }
 
     .color_d {
-        position: absolute;
-        line-height: 0em;
-        top: 270px;
+        top: 740px;
     }
 
     .color_m {
-        position: absolute;
-        line-height: 0em;
-        top: 300px;
+        top: 770px;
     }
 
      #b3 {

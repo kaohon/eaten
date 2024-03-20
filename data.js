@@ -1,4 +1,5 @@
 var candyhtml = document.getElementById("candy");
+audio = new Audio('audio/button.mp3');
 
 const autosave = () => {
     localStorage.setItem("candyvalue", candy);
@@ -29,6 +30,7 @@ const autosave = () => {
     localStorage.setItem("l25reward", l25reward);
     localStorage.setItem("l30reward", l30reward);
     localStorage.setItem("premium", premium);
+    localStorage.setItem("ct_02_buy", ct_02_buy);
   }
   setInterval(autosave, 30000);
 
@@ -62,6 +64,10 @@ const autosave = () => {
     localStorage.setItem("l25reward", l25reward);
     localStorage.setItem("l30reward", l30reward);
     localStorage.setItem("premium", premium);
+    localStorage.setItem("ct_02_buy", ct_02_buy);
+
+    audio.currentTime = 0;
+    audio.play();
   }
 
   window.onload = function() {
@@ -94,6 +100,7 @@ const autosave = () => {
     var l25reward_str = localStorage.getItem("l25reward");
     var l30reward_str = localStorage.getItem("l30reward");
     var premium_str = localStorage.getItem("premium");
+    var ct_02_buy_str = localStorage.getItem("ct_02_buy");
     candyhtml.innerHTML = candy_str;
     elapsedsec.innerHTML = sec_str;
     elapsedmin.innerHTML = min_str;
@@ -332,6 +339,14 @@ const autosave = () => {
 
       }
 
+      if (ct_02_buy_str === "true") {
+        ct_02_buy = true;
+        ct_02_open.style.visibility = "visible";
+        collection_tree_buy.removeEventListener("click", premium_buy_func);
+      } else {
+
+      }
+
       if (lastsword_str === "true" && lastwand_str === "true") {
         ct_02_open.style.visibility = "visible";
         ct_01_complete.style.display = "block";
@@ -348,6 +363,14 @@ const autosave = () => {
         } else {
 
         }
+
+        if (ct_02_buy_str === "true") {
+          ct_02_buy = true;
+          ct_02_open.style.display = "flex";
+          collection_tree_buy.removeEventListener("click", premium_buy_func);
+        } else {
+
+        }
       }
   }
 
@@ -356,6 +379,9 @@ const autosave = () => {
     [text],
     { "type": "text/plain" })
       document.getElementById('link1').href = window.URL.createObjectURL(blob)
+
+    audio.currentTime = 0;
+    audio.play();
   }
 
   function reset() {
@@ -388,6 +414,10 @@ const autosave = () => {
     localStorage.removeItem("l25reward");
     localStorage.removeItem("l30reward");
     localStorage.removeItem("premium");
+    localStorage.removeItem("ct_02_buy");
+
+    audio.currentTime = 0;
+    audio.play();
   }
 
   document.addEventListener("DOMContentLoaded", function() {
@@ -434,6 +464,7 @@ const autosave = () => {
           l25reward = data.split(/\r\n|\r|\n/)[26]
           l30reward = data.split(/\r\n|\r|\n/)[27]
           premium = data.split(/\r\n|\r|\n/)[28]
+          ct_02_buy = data.split(/\r\n|\r|\n/)[29]
         }
     }, false);
 });
