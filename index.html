@@ -30,14 +30,32 @@
         <br>キャンディを貯金する 現在の貯蔵:<span id="candy_storage"></span><br>
         <span id="in_storage">預金</span>
         <span id="out_storage">出金</span>
-        <br>キャンディを預金することで、様々な特典を得ることが出来ます。
-        <br>レベル1(預金10000↑):預金したキャンディに利息が発生(10日おきに預金額の1.1倍)
-        <br>レベル2(預金100000↑):預金したキャンディに利息が発生(10日おきに預金額の1.2倍)
-        <br>レベル3(預金1000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.3倍)
-        <br>レベル4(預金10000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.4倍)
-        <br>レベル5(預金100000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.5倍)
-        <br>レベル6(預金1000000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.6倍)
-        <br>レベル7(預金10000000000↑):預金したキャンディに利息が発生(10日おきに預金額の1.7倍)
+        <table border="1">
+            <tr>
+                <th>レベル</th><th>預金</th><th>倍率(10日おき)</th>
+            </tr>
+            <tr>
+                <td>1</td><td>10000</td><td>1.1</td>
+            </tr>
+            <tr>
+                <td>2</td><td>100000</td><td>1.2</td>
+            </tr>
+            <tr>
+                <td>3</td><td>1000000</td><td>1.3</td>
+            </tr>
+            <tr>
+                <td>4</td><td>10000000</td><td>1.4</td>
+            </tr>
+            <tr>
+                <td>5</td><td>100000000</td><td>1.5</td>
+            </tr>
+            <tr>
+                <td>6</td><td>1000000000</td><td>1.6</td>
+            </tr>
+            <tr>
+                <td>7</td><td>10000000000</td><td>1.7</td>
+            </tr>
+        </table>
     </main>
     <main id="stats">
         レベル:<span id="levelhtml"></span>
@@ -86,51 +104,51 @@
                 <p>キャンディを加工し、研磨をしたもの。<img src="img/stick.png"></p></div>
         <p id="ecube" class="box"><img src="img/energycube.png">
             </p><div id="ecube_tt" class="tooltip">エナジーキューブ 50000キャンディ
-                <p>キャンディ秒間生産量が+0.1</p>
+                <p>キャンディ秒間生産量が+0.25</p>
                 <p>キャンディを凝縮し、無限のエネルギーを放出できるようにしたアイテム。価値が非常に高い。<img src="img/energycube.png"></p></div>
         <p id="wand" class="box"><img src="img/wand.png">
             </p><div id="wand_tt" class="tooltip">キャンディワンド 60000キャンディ
-                <p>キャンディ秒間生産量が+0.1</p>
+                <p>キャンディ秒間生産量が+0.25</p>
                 <p>無限のエネルギーで魔法攻撃をしていた武器。<img src="img/wand.png"></p></div>
         <p id="dcwand" class="box"><img src="img/doublecubewand.png">
             </p><div id="dcwand_tt" class="tooltip">ダブルキューブ・キャンディワンド 110000キャンディ
-                <p>キャンディ秒間生産量が+0.2</p>
+                <p>キャンディ秒間生産量が+0.5</p>
                 <p>キャンディワンドが進化し、エナジーキューブが2つ搭載されていた武器。<img src="img/doublecubewand.png"></p></div>
         <p id="bwand" class="box"><img src="img/wandboomerang.png">
             </p><div id="bwand_tt" class="tooltip">キャンディワンド・ブーメラン 180000キャンディ
-                <p>キャンディ秒間生産量が+0.32</p>
+                <p>キャンディ秒間生産量が+0.75</p>
                 <p>ダブルキューブ・キャンディワンドが進化し、エナジーキューブが3つ搭載され、魔法攻撃と物理攻撃の両方を可能とした武器。<img src="img/wandboomerang.png"></p></div>
         <p id="twand" class="box"><img src="img/turbowand.png">
             </p><div id="twand_tt" class="tooltip">超絶キャンディワンド改・ターボ 260000キャンディ
-                <p>キャンディ秒間生産量が+0.4</p>
+                <p>キャンディ秒間生産量が+1.0</p>
                 <p>キャンディワンドの頂点。<img src="img/turbowand.png"></p></div>
         <p id="lastwand" class="box"><img src="img/worldlastturbowand.png">
             </p><div id="lastwand_tt" class="tooltip">ワールドエンド・キャンディワンド 660000キャンディ
-                <p>キャンディ秒間生産量が+0.8</p>
+                <p>キャンディ秒間生産量が+2.0</p>
                 <p>もう一方の選択肢が解放される。</p>
                 <p>世界の終わりに...<img src="img/worldlastturbowand.png"></p></div>
         <p id="sword" class="box"><img src="img/sword.png">
             </p><div id="sword_tt" class="tooltip">キャンディソード 60000キャンディ
-                <p>キャンディ秒間生産量が+0.1</p>
+                <p>キャンディ秒間生産量が+0.25</p>
                 <p>無限のエネルギーで物理攻撃をしていた武器。<img src="img/sword.png"></p></div>
         <p id="dsword" class="box"><img src="img/dualsword.png">
             </p><div id="dsword_tt" class="tooltip">デュアル・キャンディソード 120000キャンディ
-                <p>キャンディ秒間生産量が+0.2</p>
+                <p>キャンディ秒間生産量が+0.5</p>
                 <p>キャンディソードが進化し、二刀流となった武器。<img src="img/dualsword.png"></p></div>
         <p id="tsword" class="box"><img src="img/turbosword.png">
             </p><div id="tsword_tt" class="tooltip">超絶キャンディソード改・ターボ 220000キャンディ
-                <p>キャンディ秒間生産量が+0.4</p>
+                <p>キャンディ秒間生産量が+1.0</p>
                 <p>キャンディソードの頂点。<img src="img/turbosword.png"></p></div>
         <p id="lastsword" class="box"><img src="img/worldlastturbosword.png">
             </p><div id="lastsword_tt" class="tooltip">ワールドエンド・キャンディソード 860000キャンディ
-                <p>キャンディ秒間生産量が+1.6</p>
+                <p>キャンディ秒間生産量が+4.0</p>
                 <p>もう一方の選択肢が解放される。</p>
                 <p>世界の終わりに...<img src="img/worldlastturbosword.png"></p></div>
     </section>
     <section id="ct_02">
         <p id="spear" class="box"><img src="img/spear.png">
             </p><div id="spear_tt" class="tooltip">キャンディ・ボウ 180000キャンディ
-                <p>キャンディ秒間生産量が+0.32</p>
+                <p>キャンディ秒間生産量が+0.5</p>
                 <p><img src="img/bow.png"></p></div>
         <p id="bow" class="box"><img src="img/bow.png">
             </p><div id="bow_tt" class="tooltip">キャンディ・ボウ 300000キャンディ
@@ -138,12 +156,12 @@
                 <p><img src="img/bow.png"></p></div>
         <p id="knife" class="box"><img src="img/knife.png">
             </p><div id="knife_tt" class="tooltip">キャンディ・ナイフ 180000キャンディ
-                <p>キャンディ秒間生産量が+0.32</p>
+                <p>キャンディ秒間生産量が+0.5</p>
                 <p><img src="img/knife.png"></p></div>
 
         <p id="feather_knife" class="box"><img src="img/feather_knife.png">
             </p><div id="feather_knife_tt" class="tooltip">キャンディ・ファザーナイフ 360000キャンディ
-                <p>キャンディ秒間生産量が+0.6</p>
+                <p>キャンディ秒間生産量が+1.0</p>
                 <p><img src="img/feather_knife.png"></p></div>
     </section>
     </main>

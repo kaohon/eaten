@@ -15,9 +15,9 @@ let elapsedmin = document.getElementById("elapsedmin");
 let elapsedhour = document.getElementById("elapsedhour");
 
 const countUp = () => {
-    console.log(candy++);
+    candy = Number(candy) + cps;
     console.log(count++);
-    candyhtml.innerHTML = candy + " キャンディー";
+    candyhtml.innerHTML = Number(candy) + " キャンディー";
     cpshtml.innerHTML = cps;
 
     counthour = Math.floor(count / 60 / 60);
@@ -67,12 +67,6 @@ let bow = document.getElementById("bow");
 let knife = document.getElementById("knife");
 let feather_knife = document.getElementById("feather_knife");
 
-
-var collectioneffect = () => {
-  console.log(candy++);
-  candyhtml.innerHTML = candy + " キャンディー";
-}
-
 stick.addEventListener("click", stickfunc);
 function stickfunc() {
   if (candy < 10000) {
@@ -98,9 +92,8 @@ function ecubefunc() {
     ecube_if = true;
     ecube.classList.add("bought");
     candy -= 50000;
-    cps += 0.1;
+    cps += 0.25;
     ecube.removeEventListener("click", ecubefunc);
-    setInterval(collectioneffect, 10000);
   }
   audio.currentTime = 0;
   audio.play()
@@ -118,9 +111,8 @@ function wandfunc() {
     wand_if = "pretrue";
     wand.classList.add("bought");
     candy -= 60000;
-    cps += 0.1;
+    cps += 0.25;
     wand.removeEventListener("click", wandfunc);
-    setInterval(collectioneffect, 10000);
   }
   audio.currentTime = 0;
   audio.play()
@@ -136,9 +128,8 @@ function dcwandfunc() {
     dcwand_if = true;
     dcwand.classList.add("bought");
     candy -= 110000;
-    cps += 0.2;
+    cps += 0.5;
     dcwand.removeEventListener("click", dcwandfunc);
-    setInterval(collectioneffect, 5000);
   }
   audio.currentTime = 0;
   audio.play()
@@ -154,9 +145,8 @@ function bwandfunc() {
     bwand_if = true;
     bwand.classList.add("bought");
     candy -= 180000;
-    cps += 0.32;
+    cps += 0.75;
     bwand.removeEventListener("click", bwandfunc);
-    setInterval(collectioneffect, 3125);
   }
   audio.currentTime = 0;
   audio.play()
@@ -172,9 +162,8 @@ function twandfunc() {
     twand_if = true;
     twand.classList.add("bought");
     candy -= 260000;
-    cps += 0.4;
+    cps += 1.0;
     twand.removeEventListener("click", twandfunc);
-    setInterval(collectioneffect, 2500);
   }
   audio.currentTime = 0;
   audio.play()
@@ -191,9 +180,8 @@ function lastwandfunc() {
     lastwand_if = true;
     lastwand.classList.add("bought");
     candy -= 660000;
-    cps += 0.8;
+    cps += 2.0;
     lastwand.removeEventListener("click", lastwandfunc);
-    setInterval(collectioneffect, 1250);
   }
   audio.currentTime = 0;
   audio.play()
@@ -211,9 +199,8 @@ function swordfunc() {
     sword_if = "pretrue";
     sword.classList.add("bought");
     candy -= 60000;
-    cps += 0.1;
+    cps += 0.25;
     sword.removeEventListener("click", swordfunc);
-    setInterval(collectioneffect, 10000);
   }
   audio.currentTime = 0;
   audio.play()
@@ -229,9 +216,8 @@ function dswordfunc() {
     dsword_if = true;
     dsword.classList.add("bought");
     candy -= 120000;
-    cps += 0.2;
+    cps += 0.5;
     dsword.removeEventListener("click", dswordfunc);
-    setInterval(collectioneffect, 5000);
   }
   audio.currentTime = 0;
   audio.play()
@@ -247,9 +233,8 @@ function tswordfunc() {
     tsword_if = true;
     tsword.classList.add("bought");
     candy -= 220000;
-    cps += 0.4;
+    cps += 1.0;
     tsword.removeEventListener("click", tswordfunc);
-    setInterval(collectioneffect, 2500);
   }
   audio.currentTime = 0;
   audio.play()
@@ -266,9 +251,8 @@ function lastswordfunc() {
     lastsword_if = true;
     lastsword.classList.add("bought");
     candy -= 860000;
-    cps += 1.6;
+    cps += 4.0;
     lastsword.removeEventListener("click", lastswordfunc);
-    setInterval(collectioneffect, 625);
   }
   audio.currentTime = 0;
   audio.play()
@@ -282,9 +266,8 @@ function spearfunc() {
     spear_if = true;
     spear.classList.add("bought");
     candy -= 180000;
-    cps += 0.32;
+    cps += 0.5;
     spear.removeEventListener("click", spearfunc);
-    setInterval(collectioneffect, 3125);
   }
   audio.currentTime = 0;
   audio.play()
@@ -300,7 +283,6 @@ function bowfunc() {
     candy -= 300000;
     cps += 0.5;
     bow.removeEventListener("click", bowfunc);
-    setInterval(collectioneffect, 2000);
   }
   audio.currentTime = 0;
   audio.play()
@@ -314,9 +296,8 @@ function knifefunc() {
     knife_if = true;
     knife.classList.add("bought");
     candy -= 180000;
-    cps += 0.32;
+    cps += 0.5;
     knife.removeEventListener("click", knifefunc);
-    setInterval(collectioneffect, 3125);
   }
   audio.currentTime = 0;
   audio.play()
@@ -332,9 +313,8 @@ function feather_knifefunc() {
     feather_knife_if = true;
     feather_knife.classList.add("bought");
     candy -= 360000;
-    cps += 0.6;
+    cps += 1.0;
     feather_knife.removeEventListener("click", feather_knifefunc);
-    setInterval(collectioneffect, 1875);
   }
   audio.currentTime = 0;
   audio.play()

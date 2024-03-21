@@ -1,4 +1,3 @@
-var candyhtml = document.getElementById("candy");
 audio = new Audio('audio/button.mp3');
 
 const autosave = () => {
@@ -110,7 +109,7 @@ const autosave = () => {
     countsec = sec_str;
     countmin = min_str;
     counthour = hour_str;
-    candy = candy_str;
+    candy = Number(candy_str);
     if (stick_str === "true") {
       stick_if = true;
       stick.classList.add("bought");
@@ -121,130 +120,117 @@ const autosave = () => {
 
     if (ecube_str === "true") {
       ecube_if = true;
-      cps += 0.1;
+      cps += 0.25;
       ecube.classList.add("bought");
       ecube.removeEventListener("click", ecubefunc);
-      setInterval(collectioneffect, 10000);
     } else {
 
     }
 
     if (wand_str === "pretrue") {
       wand_if = "pretrue";
-      cps += 0.1;
+      cps += 0.25;
       wand.classList.add("bought");
-      wand.removeEventListener("click", wandfunc);
-      setInterval(collectioneffect, 10000);
+      wand.removeEventListener("click", wandfunc)
     } else {
 
     }
 
     if (wand_str === "true") {
       wand_if = true;
-      cps += 0.1;
+      cps += 0.25;
       wand.classList.add("bought");
-      wand.removeEventListener("click", wandfunc);
-      setInterval(collectioneffect, 10000);
+      wand.removeEventListener("click", wandfunc)
     } else {
 
     }
 
     if (dcwand_str === "true") {
       dcwand_if = true;
-      cps += 0.2;
+      cps += 0.5;
       dcwand.classList.add("bought");
       dcwand.removeEventListener("click", dcwandfunc);
-      setInterval(collectioneffect, 5000);
     } else {
 
     }
 
     if (bwand_str === "true") {
       bwand_if = true;
-      cps += 0.32;
+      cps += 0.75;
       bwand.classList.add("bought");
       bwand.removeEventListener("click", bwandfunc);
-      setInterval(collectioneffect, 3125);
     } else {
 
     }
 
     if (twand_str === "true") {
       twand_if = true;
-      cps += 0.4;
+      cps += 1.0;
       twand.classList.add("bought");
       twand.removeEventListener("click", twandfunc);
-      setInterval(collectioneffect, 2500);
     } else {
 
     }
 
     if (lastwand_str === "true") {
         lastwand_if = true;
-        cps += 0.8;
+        cps += 2.0;
         lastwand.classList.add("bought");
         lastwand.removeEventListener("click", lastwandfunc);
-        setInterval(collectioneffect, 1250);
       } else {
 
       }
 
     if (sword_str === "true") {
       sword_if = true;
-      cps += 0.1;
+      cps += 0.25;
       sword.classList.add("bought");
-      sword.removeEventListener("click", swordfunc);
-      setInterval(collectioneffect, 10000);
+      sword.removeEventListener("click", swordfunc)
     } else {
 
     }
 
     if (sword_str === "pretrue") {
       sword_if = "pretrue";
-      cps += 0.1;
+      cps += 0.25;
       sword.classList.add("bought");
-      sword.removeEventListener("click", swordfunc);
-      setInterval(collectioneffect, 10000);
+      sword.removeEventListener("click", swordfunc)
     } else {
 
     }
 
     if (dsword_str === "true") {
         dsword_if = true;
-        cps += 0.2;
+        cps += 0.5;
         dsword.classList.add("bought");
         dsword.removeEventListener("click", dswordfunc);
-        setInterval(collectioneffect, 5000);
       } else {
 
       }
 
       if (tsword_str === "true") {
         tsword_if = true;
-        cps += 0.4;
+        cps += 1.0;
         tsword.classList.add("bought");
         tsword.removeEventListener("click", tswordfunc);
-        setInterval(collectioneffect, 2500);
       } else {
 
       }
 
       if (lastsword_str === "true") {
         lastsword_if = true;
-        cps += 1.6;
+        cps += 4.0;
         lastsword.classList.add("bought");
         lastsword.removeEventListener("click", lastswordfunc);
-        setInterval(collectioneffect, 625);
       } else {
 
       }
 
       if (spear_str === "true") {
         spear_if = true;
-        cps += 0.32;
+        cps += 0.5;
         spear.classList.add("bought");
         spear.removeEventListener("click", spearfunc);
-        setInterval(collectioneffect, 3125);
       } else {
 
       }
@@ -254,28 +240,25 @@ const autosave = () => {
         cps += 0.5;
         bow.classList.add("bought");
         bow.removeEventListener("click", bowfunc);
-        setInterval(collectioneffect, 2000);
       } else {
 
       }
 
       if (knife_str === "true") {
         knife_if = true;
-        cps += 0.32;
+        cps += 0.5;
         knife.classList.add("bought");
         knife.removeEventListener("click", knifefunc);
-        setInterval(collectioneffect, 3125);
       } else {
 
       }
 
       if (feather_knife_str === "true") {
         feather_knife_if = true;
-        cps += 0.6;
+        cps += 1.0;
         ct_02_complete.style.display = "block";
         feather_knife.classList.add("bought");
         feather_knife.removeEventListener("click", feather_knifefunc);
-        setInterval(collectioneffect, 1875);
       } else {
 
       }
@@ -371,6 +354,13 @@ const autosave = () => {
         } else {
 
         }
+      }
+
+      if (candy_str !== null && !isNaN(candy_str)) {
+        candy = Number(candy_str);
+      } else {
+      // Set candy to a default value (e.g., 0) if data is invalid
+        candy = 0;
       }
   }
 
