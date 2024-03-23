@@ -189,3 +189,7 @@ let ct_02 = document.getElementById("ct_02");
     audio.currentTime = 0;
     audio.play();
   });
+
+  function take_arcana_1() {
+
+  }

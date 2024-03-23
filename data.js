@@ -109,6 +109,7 @@ const autosave = () => {
     countsec = sec_str;
     countmin = min_str;
     counthour = hour_str;
+    new_invalue = Number(bank_str);
     candy = Number(candy_str);
     if (stick_str === "true") {
       stick_if = true;
