@@ -59,7 +59,7 @@
         </table>
     </main>
     <main id="stats">
-        レベル:<span id="levelhtml"></span>
+        レベル:<span id="levelhtml">0</span>
         <p>プレイ時間:<span id="elapsedhour"></span>時間<span id="elapsedmin"></span>分<span id="elapsedsec"></span>秒</p>
         <p>プレイ時間をシェアする <a id="lineshare" target="_blank" rel="nofollow noopener noreferrer">LINEでシェア</a></p>
         <p>総生産キャンディ:<span id="all_candy"></span></p>
@@ -84,6 +84,27 @@
             <span id="reach_d_tt" class="tooltip">ダイアモンドランクに到達</span>
         <span id="reach_m" class="achivement"><img src="img/master_a.png"></span>
             <span id="reach_m_tt" class="tooltip">マスターランクに到達</span>
+        <!--level-->
+        <span id="l50" class="achivement">50</span>
+            <span id="l50_tt" class="tooltip">レベル50に到達</span>
+        <span id="l100" class="achivement">100</span>
+            <span id="l100_tt" class="tooltip">レベル100に到達</span>
+        <span id="l150" class="achivement">150</span>
+            <span id="l150_tt" class="tooltip">レベル150に到達</span>
+        <span id="l200" class="achivement">200</span>
+            <span id="l200_tt" class="tooltip">レベル200に到達</span>
+        <span id="l250" class="achivement">250</span>
+            <span id="l250_tt" class="tooltip">レベル250に到達</span>
+        <span id="l300" class="achivement">300</span>
+            <span id="l300_tt" class="tooltip">レベル300に到達</span>
+        <span id="l350" class="achivement">350</span>
+            <span id="l350_tt" class="tooltip">レベル350に到達</span>
+        <span id="l400" class="achivement">400</span>
+            <span id="l400_tt" class="tooltip">レベル400に到達</span>
+        <span id="l450" class="achivement">450</span>
+            <span id="l450_tt" class="tooltip">レベル450に到達</span>
+        <span id="l500" class="achivement">500</span>
+            <span id="l500_tt" class="tooltip">レベルに500到達</span>
         <!--season-->
         <span id="s1_play" class="achivement">s1</span>
             <span id="s1_play_tt" class="tooltip">シーズン1 プレイ</span>
@@ -169,15 +190,17 @@
     <main id="cards">
         <p id="arcana_img">
             カードを選択
+            <progress id="card_point" value="0" max="100"></progress>
+                <span id="card_point_word">カードポイント:0 / 100</span>
             <!--01-->
             <br><img id="arcana_1" src="img/arcana_1.png">
-                <span id="arcana_1_tt" class="tooltip">Ⅰ 抑制解放<br>キャンディの生産量が2分間2倍に<br>(クールタイム:30分)</span>
+                <span id="arcana_1_tt" class="tooltip">Ⅰ 抑制解放<br>キャンディの生産量が2分間2倍に</span>
             <!--02-->
             <img id="arcana_2" src="img/arcana_2.png">
-                <span id="arcana_2_tt" class="tooltip">II 延長<br>カードの効果を1.5倍延長<br>(クールタイム:30分)</span>
+                <span id="arcana_2_tt" class="tooltip">II 延長<br>カードの効果を1.5倍延長</span>
             <!--03-->
             <img id="arcana_3" src="img/arcana_3.png">
-                <span id="arcana_3_tt" class="tooltip">Ⅲ 錬成<br>1000キャンディを無から生成<br>(クールタイム:30分)</span>
+                <span id="arcana_3_tt" class="tooltip">Ⅲ 錬成<br>1000キャンディを無から生成</span>
             <!--
             <img id="arcana_4" src="img/arcana_4.png">
                 <span id="arcana_4_tt" class="tooltip">Ⅳ 抑制解放 Part1<br>キャンディの生産量が3分間1.5倍<br>(クールタイム:10分)</span>
