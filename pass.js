@@ -355,6 +355,26 @@ const passlv = () => {
         l30_reward_sp.classList.add("lup");
       }
   }
+
+var fromDate = moment();
+var toDate = moment('2024-04-10');
+var rest_d = Math.floor(toDate.diff(fromDate, 's') / 60 / 60 / 24)
+var rest_h = toDate.diff(fromDate, 'h') - rest_d * 24;
+var rest_m = toDate.diff(fromDate, 'm') - toDate.diff(fromDate, 'h') * 60;
+var rest_s = toDate.diff(fromDate, 's') - toDate.diff(fromDate, 'm') * 60;
+
+season_rest.innerHTML = rest_d + "日" + rest_h + "時間" + rest_m + "分" + rest_s + "秒";
+
+// 比較
+if (fromDate.isAfter(toDate)) {
+    pass.style.display = "none";
+    pass_open.style.display = "none";
+    rank.style.display = "none";
+    rank_open.style.display = "none";
+} else {
+    console.log("まだ指定した日付を過ぎていません。");
+}
+
 }
 setInterval(passlv, 1000);
 

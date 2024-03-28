@@ -4,9 +4,29 @@
 	padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: default;
+}
+
+label > input {
+    display: none; /* アップロードボタンのスタイルを無効にする */
+}
+
+.setting-button {
+    margin: 20px;
+}
+
+.bank-button {
+    margin: 20px;
+}
+
 .standard-button {
+    padding: 5px;
     width: fit-content;
     text-align: center;
+    cursor: pointer;
     border: solid 1px black;
 }
 .button-subtitle {
@@ -31,7 +51,8 @@
 }
 
 #main {
-    padding: 20px;
+    overflow-y: hidden;
+    padding: 19px;
     width: 100%;
     border: solid 1px black;
     text-align: center;

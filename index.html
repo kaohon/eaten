@@ -29,8 +29,8 @@
         <progress id="bank_level" value="0" max="7"></progress>
         <span id="progress_word">レベル進行度:0/7</span>
         <br>キャンディを貯金する 現在の貯蔵:<span id="candy_storage"></span><br>
-        <span id="in_storage">預金</span>
-        <span id="out_storage">出金</span>
+        <span class="standard-button bank-button" id="in_storage">預金</span>
+        <span class="standard-button bank-button" id="out_storage">出金</span>
         <table border="1">
             <tr>
                 <th>レベル</th><th>預金</th><th>倍率(10日おき)</th>
@@ -236,10 +236,10 @@
         アルティメットスキル:1つの武器のCPSを2倍
     </main>
     <main id="setting">
-        <button onclick="save()">保存</button>
-        <a href="#" id="link1" download="savedata.txt"><button onclick="download()">セーブデータ書き出し</button></a>
-        セーブデータ読み込み<input type="file" id="selfile">
-        <button onclick="reset()">リセット</button>
+        <p class="standard-button setting-button" onclick="save()">保存</p>
+        <a href="#" id="link1" download="savedata.txt"><p class="standard-button setting-button" onclick="download()">セーブデータ書き出し</p></a>
+        <label class="standard-button setting-button" for="selfile">セーブデータ読み込み<input type="file" id="selfile"></label>
+        <p class="standard-button setting-button" onclick="reset()">リセット</p>
         <!--<span id="alert">自動セーブしました。(30秒毎)</span>-->
     </main>
     <main id="items">
@@ -260,7 +260,8 @@
         </div>
     </main>
     <main id="pass">
-        [プレシーズン] BETA-Season 1 1/10 開始予定
+        残りシーズン日数:<span id="season_rest"></span>
+        <p>[プレシーズン] BETA-Season 1 1/10 開始予定</p>
         <div id="premium_buy" class="standard-button">プレミアムパスを購入
             <p class="button-subtitle">100000キャンディ</p>
         </div>
@@ -447,5 +448,6 @@
     <script src="event.js"></script>
     <script src="serviceWorker.js"></script>
     <script src="script.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
 </body>
 </html>
