@@ -3,6 +3,7 @@ var cpshtml = document.getElementById("cps");
 
 let candy = 0;
 let count = 0;
+let count_s2 = 0;
 let cps = 1.0;
 
 let counthour;
@@ -14,6 +15,10 @@ let elapsedsec = document.getElementById("elapsedsec");
 let elapsedmin = document.getElementById("elapsedmin");
 let elapsedhour = document.getElementById("elapsedhour");
 
+let elapsedsec_s1 = document.getElementById("elapsedsec_s1");
+let elapsedmin_s1 = document.getElementById("elapsedmin_s1");
+let elapsedhour_s1 = document.getElementById("elapsedhour_s1");
+
 const countUp = () => {
     candy = Number(candy) + cps;
     console.log(count++);
@@ -24,13 +29,38 @@ const countUp = () => {
     countmin = Math.floor(count / 60) - Math.floor(count / 60 / 60) * 60;
     countsec = count - (countmin * 60 + counthour * 60 * 60);
 
-    document.getElementById("elapsedsec").innerHTML = countsec;
+    elapsedsec.innerHTML = countsec;
     elapsedmin.innerHTML = countmin;
     elapsedhour.innerHTML = counthour;
+
+    elapsedsec_s1.innerHTML = countsec;
+    elapsedmin_s1.innerHTML = countmin;
+    elapsedhour_s1.innerHTML = counthour;
+
     circuit.innerHTML = 1 + parseInt(counthour / 510);
     text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${new_invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}\n${l0reward}\n${l5reward}\n${l10reward}\n${l15reward}\n${l20reward}\n${l25reward}\n${l30reward}\n${premium}\n${ct_02_buy}`);
+
+    var fromDate = moment();
+    var toDate = moment('2024-04-10');
+    var rest_d = Math.floor(toDate.diff(fromDate, 's') / 60 / 60 / 24)
+    var rest_h = toDate.diff(fromDate, 'h') - rest_d * 24;
+    var rest_m = toDate.diff(fromDate, 'm') - toDate.diff(fromDate, 'h') * 60;
+    var rest_s = toDate.diff(fromDate, 's') - toDate.diff(fromDate, 'm') * 60;
+
+    season_rest.innerHTML = rest_d + "日" + rest_h + "時間" + rest_m + "分" + rest_s + "秒";
+
+    // 比較
+    if (fromDate.isAfter(toDate)) {
+      pass.style.display = "none";
+      pass_open.style.display = "none";
+      rank.style.display = "none";
+      rank_open.style.display = "none";
+      clearInterval(countUpId);
+    } else {
+      console.log("まだ指定した日付を過ぎていません。");
+    }
   }
-  setInterval(countUp, 1000);
+  const countUpId = setInterval(countUp, 1000);
 
 let stick_if = false;
 let ecube_if = false;

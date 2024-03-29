@@ -2,7 +2,7 @@
 // アプリケーション設定
 define('CONSUMER_KEY', '546956528701-5287rptlkf6ajdunm83bp6cjsle1qcke.apps.googleusercontent.com');
 define('CONSUMER_SECRET', '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');
-define('CALLBACK_URL', 'https://kaohon.github.io/eaten/test/oauth.php');
+define('CALLBACK_URL', 'http://localhost/test/oauth.php');
 
 // URL
 define('TOKEN_URL', 'https://accounts.google.com/o/oauth2/token');

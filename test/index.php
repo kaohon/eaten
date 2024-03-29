@@ -1,7 +1,7 @@
 <?php
 // アプリケーション設定
 define('CONSUMER_KEY', '546956528701-5287rptlkf6ajdunm83bp6cjsle1qcke.apps.googleusercontent.com');
-define('CALLBACK_URL', 'https://kaohon.github.io/eaten/test/oauth.php');
+define('CALLBACK_URL', 'http://localhost/test/oauth.php');
 
 // URL
 define('AUTH_URL', 'https://accounts.google.com/o/oauth2/auth');
