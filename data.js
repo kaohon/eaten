@@ -30,6 +30,10 @@ const autosave = () => {
     localStorage.setItem("l30reward", l30reward);
     localStorage.setItem("premium", premium);
     localStorage.setItem("ct_02_buy", ct_02_buy);
+    localStorage.setItem("elapsedtime_s1", count_s1);
+    localStorage.setItem("elapsedsec_s1", countsec_s1);
+    localStorage.setItem("elapsedmin_s1", countmin_s1);
+    localStorage.setItem("elapsedhour_s1", counthour_s1);
   }
   setInterval(autosave, 30000);
 
@@ -64,6 +68,10 @@ const autosave = () => {
     localStorage.setItem("l30reward", l30reward);
     localStorage.setItem("premium", premium);
     localStorage.setItem("ct_02_buy", ct_02_buy);
+    localStorage.setItem("elapsedtime_s1", count_s1);
+    localStorage.setItem("elapsedsec_s1", countsec_s1);
+    localStorage.setItem("elapsedmin_s1", countmin_s1);
+    localStorage.setItem("elapsedhour_s1", counthour_s1);
 
     audio.currentTime = 0;
     audio.play();
@@ -100,15 +108,26 @@ const autosave = () => {
     var l30reward_str = localStorage.getItem("l30reward");
     var premium_str = localStorage.getItem("premium");
     var ct_02_buy_str = localStorage.getItem("ct_02_buy");
+    var count_str_s1 = localStorage.getItem("elapsedtime_s1");
+    var sec_str_s1 = localStorage.getItem("elapsedsec_s1");
+    var min_str_s1 = localStorage.getItem("elapsedmin_s1");
+    var hour_str_s1 = localStorage.getItem("elapsedhour_s1");
     candyhtml.innerHTML = candy_str;
     elapsedsec.innerHTML = sec_str;
     elapsedmin.innerHTML = min_str;
     elapsedhour.innerHTML = hour_str;
+    elapsedsec_s1.innerHTML = sec_str_s1;
+    elapsedmin_s1.innerHTML = min_str_s1;
+    elapsedhour_s1.innerHTML = hour_str_s1;
     candy_storage.innerHTML = bank_str;
     count = count_str
     countsec = sec_str;
     countmin = min_str;
     counthour = hour_str;
+    count_s1 = count_str_s1;
+    sec_s1 = sec_str_s1;
+    min_s1 = min_str_s1;
+    hour_s1 = hour_str_s1;
     new_invalue = Number(bank_str);
     candy = Number(candy_str);
     if (stick_str === "true") {
@@ -365,16 +384,6 @@ const autosave = () => {
       }
   }
 
-  function download() {
-  var blob = new Blob(
-    [text],
-    { "type": "text/plain" })
-      document.getElementById('link1').href = window.URL.createObjectURL(blob)
-
-    audio.currentTime = 0;
-    audio.play();
-  }
-
   function reset() {
     localStorage.removeItem("candyvalue");
     localStorage.removeItem("elapsedtime");
@@ -406,56 +415,94 @@ const autosave = () => {
     localStorage.removeItem("l30reward");
     localStorage.removeItem("premium");
     localStorage.removeItem("ct_02_buy");
+    localStorage.removeItem("elapsedtime_s1");
+    localStorage.removeItem("elapsedsec_s1");
+    localStorage.removeItem("elapsedmin_s1");
+    localStorage.removeItem("elapsedhour_s1");
 
     audio.currentTime = 0;
     audio.play();
   }
+// 暗号化キー
+const encryptionKey = 'E6&mFz9x#s@Lq2Dv';
 
-  document.addEventListener("DOMContentLoaded", function() {
-    var obj = document.getElementById("selfile");
-    obj.addEventListener("change", function(evt) {
-        var file = evt.target.files;
-        var reader = new FileReader();
+// テキストをAESで暗号化する関数
+function encryptText(text) {
+    const encryptedText = CryptoJS.AES.encrypt(text, encryptionKey).toString();
+    return encryptedText;
+}
 
-        // dataURL形式でファイルを読み込む
-        reader.readAsDataURL(file[0]);
+// 暗号化されたテキストをAESで復号化する関数
+function decryptText(encryptedText) {
+    const decryptedBytes = CryptoJS.AES.decrypt(encryptedText, encryptionKey);
+    const decryptedText = decryptedBytes.toString(CryptoJS.enc.Utf8);
+    return decryptedText;
+}
 
-        // ファイルの読込が終了した時の処理
-        reader.onload = function() {
-          var base64Data = reader.result.split(';base64,')[1];
-          var decodedData = atob(base64Data);
-          data = atob(decodedData);
-          // 2行目を取得する
-          candy = data.split(/\r\n|\r|\n/)[0]
-          count = data.split(/\r\n|\r|\n/)[1]
-          countsec = data.split(/\r\n|\r|\n/)[2]
-          countmin = data.split(/\r\n|\r|\n/)[3]
-          counthour = data.split(/\r\n|\r|\n/)[4]
-          new_invalue = data.split(/\r\n|\r|\n/)[5]
-          stick_if = data.split(/\r\n|\r|\n/)[6]
-          ecube_if = data.split(/\r\n|\r|\n/)[7]
-          wand_if = data.split(/\r\n|\r|\n/)[8]
-          dcwand_if = data.split(/\r\n|\r|\n/)[9]
-          bwand_if = data.split(/\r\n|\r|\n/)[10]
-          twand_if = data.split(/\r\n|\r|\n/)[11]
-          lastwand_if = data.split(/\r\n|\r|\n/)[12]
-          sword_if = data.split(/\r\n|\r|\n/)[13]
-          dsword_if = data.split(/\r\n|\r|\n/)[14]
-          tsword_if = data.split(/\r\n|\r|\n/)[15]
-          lastsword_if = data.split(/\r\n|\r|\n/)[16]
-          spear_if = data.split(/\r\n|\r|\n/)[17]
-          bow_if = data.split(/\r\n|\r|\n/)[18]
-          knife_if = data.split(/\r\n|\r|\n/)[19]
-          feather_knife_if = data.split(/\r\n|\r|\n/)[20]
-          l0reward = data.split(/\r\n|\r|\n/)[21]
-          l5reward = data.split(/\r\n|\r|\n/)[22]
-          l10reward = data.split(/\r\n|\r|\n/)[23]
-          l15reward = data.split(/\r\n|\r|\n/)[24]
-          l20reward = data.split(/\r\n|\r|\n/)[25]
-          l25reward = data.split(/\r\n|\r|\n/)[26]
-          l30reward = data.split(/\r\n|\r|\n/)[27]
-          premium = data.split(/\r\n|\r|\n/)[28]
-          ct_02_buy = data.split(/\r\n|\r|\n/)[29]
-        }
-    }, false);
-});
+function download() {
+    const text = (`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${new_invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}\n${l0reward}\n${l5reward}\n${l10reward}\n${l15reward}\n${l20reward}\n${l25reward}\n${l30reward}\n${premium}\n${ct_02_buy}\n${count_s1}\n${countsec_s1}\n${countmin_s1}\n${counthour_s1}`);
+    // テキストデータをAESで暗号化
+    var encryptedText = encryptText(text);
+
+    // 暗号化されたテキストをBlobに変換してダウンロードリンクにセットする
+    var blob = new Blob([encryptedText], { type: 'text/plain' });
+    var url = window.URL.createObjectURL(blob);
+    var link = document.createElement('a');
+    link.href = url;
+    link.download = 'encrypted_data.txt';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // 音声再生
+    audio.currentTime = 0;
+    audio.play();
+}
+
+document.getElementById('selfile').addEventListener('change', function(evt) {
+    var file = evt.target.files[0];
+    var reader = new FileReader();
+
+    reader.onload = function() {
+        // ファイルが読み込まれた後の処理
+        var decryptedData = decryptText(reader.result).split('\n');
+        console.log("復号化されたデータ:", decryptedData); // デバッグメッセージを追加
+
+        // 各変数に値を設定する
+        candy = decryptedData[0];
+        count = decryptedData[1];
+        countsec = decryptedData[2];
+        countmin = decryptedData[3];
+        counthour = decryptedData[4];
+        new_invalue = decryptedData[5];
+        stick_if = decryptedData[6];
+        ecube_if = decryptedData[7];
+        wand_if = decryptedData[8];
+        dcwand_if = decryptedData[9];
+        bwand_if = decryptedData[10];
+        twand_if = decryptedData[11];
+        lastwand_if = decryptedData[12];
+        sword_if = decryptedData[13];
+        dsword_if = decryptedData[14];
+        tsword_if = decryptedData[15];
+        lastsword_if = decryptedData[16];
+        spear_if = decryptedData[17];
+        bow_if = decryptedData[18];
+        knife_if = decryptedData[19];
+        feather_knife_if = decryptedData[20];
+        l0reward = decryptedData[21];
+        l5reward = decryptedData[22];
+        l10reward = decryptedData[23];
+        l15reward = decryptedData[24];
+        l20reward = decryptedData[25];
+        l25reward = decryptedData[26];
+        l30reward = decryptedData[27];
+        premium = decryptedData[28];
+        ct_02_buy = decryptedData[29];
+        count_s1 = decryptedData[30];
+        countsec_s1 = decryptedData[31];
+        countmin_s1 = decryptedData[32];
+        counthour_s1 = decryptedData[33];
+    };
+    reader.readAsBinaryString(file);
+}, false);

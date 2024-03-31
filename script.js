@@ -3,12 +3,17 @@ var cpshtml = document.getElementById("cps");
 
 let candy = 0;
 let count = 0;
+let count_s1 = 0;
 let count_s2 = 0;
 let cps = 1.0;
 
 let counthour;
 let countmin;
 let countsec;
+
+let counthour_s1;
+let countmin_s1;
+let countsec_s1;
 
 var new_invalue = document.getElementById("candy_storage");
 let elapsedsec = document.getElementById("elapsedsec");
@@ -22,6 +27,7 @@ let elapsedhour_s1 = document.getElementById("elapsedhour_s1");
 const countUp = () => {
     candy = Number(candy) + cps;
     console.log(count++);
+    console.log(count_s1++);
     candyhtml.innerHTML = Number(candy) + " キャンディー";
     cpshtml.innerHTML = cps;
 
@@ -29,16 +35,19 @@ const countUp = () => {
     countmin = Math.floor(count / 60) - Math.floor(count / 60 / 60) * 60;
     countsec = count - (countmin * 60 + counthour * 60 * 60);
 
+    counthour_s1 = Math.floor(count_s1 / 60 / 60);
+    countmin_s1 = Math.floor(count_s1 / 60) - Math.floor(count_s1 / 60 / 60) * 60;
+    countsec_s1 = count_s1 - (countmin_s1 * 60 + counthour_s1 * 60 * 60);
+
     elapsedsec.innerHTML = countsec;
     elapsedmin.innerHTML = countmin;
     elapsedhour.innerHTML = counthour;
 
-    elapsedsec_s1.innerHTML = countsec;
-    elapsedmin_s1.innerHTML = countmin;
-    elapsedhour_s1.innerHTML = counthour;
+    elapsedsec_s1.innerHTML = countsec_s1;
+    elapsedmin_s1.innerHTML = countmin_s1;
+    elapsedhour_s1.innerHTML = counthour_s1;
 
     circuit.innerHTML = 1 + parseInt(counthour / 510);
-    text = btoa(`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${new_invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}\n${l0reward}\n${l5reward}\n${l10reward}\n${l15reward}\n${l20reward}\n${l25reward}\n${l30reward}\n${premium}\n${ct_02_buy}`);
 
     var fromDate = moment();
     var toDate = moment('2024-04-10');
@@ -57,10 +66,22 @@ const countUp = () => {
       rank_open.style.display = "none";
       clearInterval(countUpId);
     } else {
-      console.log("まだ指定した日付を過ぎていません。");
+
     }
+
+/*
+// 検証ツールが開かれているかどうかを監視するための定期的なチェック
+setInterval(function() {
+  // 検証ツールを開発者向けコンソールを開いているかどうかを確認
+  if (window.outerWidth - window.innerWidth > 150 || window.outerHeight - window.innerHeight > 150) {
+    // 検証ツールが開かれている場合はページをリロードするなどの処理を行う
+    console.error('!!!!!✖✖データの改ざん✖✖!!!!!');
+    location.reload();
   }
-  const countUpId = setInterval(countUp, 1000);
+}, 500); // 1秒ごとにチェック
+*/
+}
+const countUpId = setInterval(countUp, 1000);
 
 let stick_if = false;
 let ecube_if = false;
