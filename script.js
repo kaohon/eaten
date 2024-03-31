@@ -69,7 +69,7 @@ const countUp = () => {
 
     }
 
-/*
+
 // 検証ツールが開かれているかどうかを監視するための定期的なチェック
 setInterval(function() {
   // 検証ツールを開発者向けコンソールを開いているかどうかを確認
@@ -78,8 +78,7 @@ setInterval(function() {
     console.error('!!!!!✖✖データの改ざん✖✖!!!!!');
     location.reload();
   }
-}, 500); // 1秒ごとにチェック
-*/
+}, 1000); // 1秒ごとにチェック
 }
 const countUpId = setInterval(countUp, 1000);
 
