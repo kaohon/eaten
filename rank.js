@@ -1,5 +1,9 @@
 counthour = parseInt(elapsedhour.innerHTML);
+counthour_s1 = parseInt(elapsedhour_s1.innerHTML);
+//counthour_s2 = parseInt(elapsedhour_s2.innerHTML);
 rankhour = counthour % 510;
+rankhour_s1 = counthour_s1 % 510;
+//rankhour_s2 = counthour_s2 % 510;
 
 let b3 = document.getElementById("b3");
 let b2 = document.getElementById("b2");
@@ -28,6 +32,8 @@ let reach_d = document.getElementById("reach_d");
 let reach_m = document.getElementById("reach_m");
 
 let now_rank = document.getElementById("now_rank");
+let now_rank_s1 = document.getElementById("now_rank_s1");
+//let now_rank_s2 = document.getElementById("now_rank_s2");
 
 const rankup = () => {
     const ranks = [
@@ -69,10 +75,28 @@ ranks.forEach(rank => {
         now_rank.innerHTML = rank.now;
     }
 });
+
+ranks.forEach(rank => {
+    if (rankhour_s1 >= rank.hour) {
+        now_rank_s1.innerHTML = rank.now;
+    }
+});
+
+/*
+ranks.forEach(rank => {
+    if (rankhour_s2 >= rank.hour) {
+        now_rank_s2.innerHTML = rank.now;
+    }
+});
+*/
 }
 
 setInterval(() => {
     counthour = parseInt(elapsedhour.innerHTML);
+    counthour_s1 = parseInt(elapsedhour_s1.innerHTML);
+    //counthour_s2 = parseInt(elapsedhour_s2.innerHTML);
     rankhour = counthour % 510;
+    rankhour_s1 = counthour_s1 % 510;
+    //rankhour_s2 = counthour_s2 % 510;
     rankup();
 }, 1000);

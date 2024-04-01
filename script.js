@@ -2,9 +2,12 @@ var candyhtml = document.getElementById("candy");
 var cpshtml = document.getElementById("cps");
 
 let candy = 0;
+let allcandy = 0;
+let allcandy_s1 = 0;
+//let allcandy_s2 = 0;
 let count = 0;
 let count_s1 = 0;
-let count_s2 = 0;
+//let count_s2 = 0;
 let cps = 1.0;
 
 let counthour;
@@ -15,6 +18,10 @@ let counthour_s1;
 let countmin_s1;
 let countsec_s1;
 
+//let counthour_s2;
+//let countmin_s2;
+//let countsec_s2;
+
 var new_invalue = document.getElementById("candy_storage");
 let elapsedsec = document.getElementById("elapsedsec");
 let elapsedmin = document.getElementById("elapsedmin");
@@ -24,11 +31,22 @@ let elapsedsec_s1 = document.getElementById("elapsedsec_s1");
 let elapsedmin_s1 = document.getElementById("elapsedmin_s1");
 let elapsedhour_s1 = document.getElementById("elapsedhour_s1");
 
+//let elapsedsec_s2 = document.getElementById("elapsedsec_s2");
+//let elapsedmin_s2 = document.getElementById("elapsedmin_s2");
+//let elapsedhour_s2 = document.getElementById("elapsedhour_s2");
+
 const countUp = () => {
     candy = Number(candy) + cps;
+    allcandy = Number(allcandy) + cps;
+    allcandy_s1 = Number(allcandy_s1) + cps;
+    //allcandy_s2 = Number(allcandy_s2) + cps;
     console.log(count++);
     console.log(count_s1++);
+    //console.log(count_s2++);
     candyhtml.innerHTML = Number(candy) + " キャンディー";
+    allcandyhtml.innerHTML = Number(allcandy) + " キャンディー";
+    allcandyhtml_s1.innerHTML = Number(allcandy_s1) + " キャンディー";
+    //allcandyhtml_s2.innerHTML = Number(allcandy_s2) + " キャンディー";
     cpshtml.innerHTML = cps;
 
     counthour = Math.floor(count / 60 / 60);
@@ -39,6 +57,10 @@ const countUp = () => {
     countmin_s1 = Math.floor(count_s1 / 60) - Math.floor(count_s1 / 60 / 60) * 60;
     countsec_s1 = count_s1 - (countmin_s1 * 60 + counthour_s1 * 60 * 60);
 
+    //counthour_s2 = Math.floor(count_s2 / 60 / 60);
+    //countmin_s2 = Math.floor(count_s2 / 60) - Math.floor(count_s2 / 60 / 60) * 60;
+    //countsec_s2 = count_s2 - (countmin_s2 * 60 + counthour_s2 * 60 * 60);
+
     elapsedsec.innerHTML = countsec;
     elapsedmin.innerHTML = countmin;
     elapsedhour.innerHTML = counthour;
@@ -47,10 +69,17 @@ const countUp = () => {
     elapsedmin_s1.innerHTML = countmin_s1;
     elapsedhour_s1.innerHTML = counthour_s1;
 
+    //elapsedsec_s2.innerHTML = countsec_s2;
+    //elapsedmin_s2.innerHTML = countmin_s2;
+    //elapsedhour_s2.innerHTML = counthour_s2;
+
     circuit.innerHTML = 1 + parseInt(counthour / 510);
+    circuit_s1.innerHTML = 1 + parseInt(counthour_s1 / 510);
+    //circuit_s2.innerHTML = 1 + parseInt(counthour_s2 / 510);
 
     var fromDate = moment();
     var toDate = moment('2024-04-10');
+    //var toDate = moment('2024-06-10');
     var rest_d = Math.floor(toDate.diff(fromDate, 's') / 60 / 60 / 24)
     var rest_h = toDate.diff(fromDate, 'h') - rest_d * 24;
     var rest_m = toDate.diff(fromDate, 'm') - toDate.diff(fromDate, 'h') * 60;
@@ -64,21 +93,38 @@ const countUp = () => {
       pass_open.style.display = "none";
       rank.style.display = "none";
       rank_open.style.display = "none";
+      localStorage.removeItem("premium");
       clearInterval(countUpId);
     } else {
 
     }
 
-
+/*
 // 検証ツールが開かれているかどうかを監視するための定期的なチェック
 setInterval(function() {
   // 検証ツールを開発者向けコンソールを開いているかどうかを確認
-  if (window.outerWidth - window.innerWidth > 150 || window.outerHeight - window.innerHeight > 150) {
-    // 検証ツールが開かれている場合はページをリロードするなどの処理を行う
-    console.error('!!!!!✖✖データの改ざん✖✖!!!!!');
-    location.reload();
-  }
-}, 1000); // 1秒ごとにチェック
+    if (window.outerWidth - window.innerWidth > 150 || window.outerHeight - window.innerHeight > 150) {
+      console.error('!!!!!✖✖データの改ざん✖✖!!!!!');
+      rank.style.display = "none";
+      rank_open.style.display = "none";
+      items.style.display = "none";
+      items_open.style.display = "none";
+      collection.style.display = "none";
+      collection_open.style.display = "none";
+      setting.style.display = "none";
+      setting_open.style.display = "none";
+      stats.style.display = "none";
+      stats_open.style.display = "none";
+      cards.style.display = "none";
+      cards_open.style.display = "none";
+      bank.style.display = "none";
+      bank_open.style.display = "none";
+      pass.style.display = "none";
+      pass_open.style.display = "none";
+      window.location.href = "https://www.google.com/";
+    }
+  }, 500); // 1秒ごとにチェック
+  */
 }
 const countUpId = setInterval(countUp, 1000);
 

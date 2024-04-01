@@ -185,11 +185,11 @@ let ct_02 = document.getElementById("ct_02");
   let lineshare = document.getElementById("lineshare");
 
   lineshare.addEventListener("click", function () {
-    window.location.href = "https://line.me/R/msg/text/現在のキャンディ生産数: " + candy + " キャンディ" + "%0a現在のプレイ時間: " + counthour + " 時間 " + countmin + " 分 " + countsec + " 秒 ";
+    window.location.href =
+    "https://line.me/R/msg/text/現在のキャンディ生産数: " + candy + " キャンディ"
+    + "%0a現在のプレイ時間: " + counthour + " 時間 " + countmin + " 分 " + countsec + " 秒 "
+    + "%0a現在のレベル: " + levelhtml.innerHTML + " / 500"
+    + "%0a現在のランク: " + "Circuit " + circuit.innerHTML + " " + now_rank.innerHTML;
     audio.currentTime = 0;
     audio.play();
   });
-
-  function take_arcana_1() {
-
-  }

@@ -63,6 +63,7 @@ let l29 = document.getElementById("l29");
 let l30 = document.getElementById("l30");
 
 counthour = elapsedhour_s1.innerHTML;
+//counthour = elapsedhour_s2.innerHTML;
 
 premium = false;
 
@@ -358,78 +359,71 @@ const passlv = () => {
 }
 setInterval(passlv, 1000);
 
-let l0reward = false;
-let l5reward = false;
-let l10reward = false;
-let l15reward = false;
-let l20reward = false;
-let l25reward = false;
-let l30reward = false;
+let l0reward_s1 = false;
+let l5reward_s1 = false;
+let l10reward_s1 = false;
+let l15reward_s1 = false;
+let l20reward_s1 = false;
+let l25reward_s1 = false;
+let l30reward_s1 = false;
 
   if (l0up === true) {
   l0_reward_n.addEventListener("click", l0func);
   function l0func() {
       s1_play.style.display = "block";
-      l0reward = true;
+      //s2_play.style.display = "block";
+      l0reward_s1 = true;
       l0_reward_n.classList.add("acq");
   l0_reward_n.removeEventListener("click", l0func);
   }
 }
 
 const l5func = () => {
-if (l5up && !l5reward) {
+if (l5up && !l5reward_s1) {
     candy += 750;
-    l5reward = true;
+    l5reward_s1 = true;
     l5_reward_n.classList.add("acq");
   }
 }
 
 const l10func = () => {
-if (l10up && !l10reward) {
+if (l10up && !l10reward_s1) {
     candy += 1000;
-    l10reward = true;
+    l10reward_s1 = true;
     l10_reward_n.classList.add("acq");
   }
 }
 
 const l15func = () => {
-if (l15up && !l15reward) {
+if (l15up && !l15reward_s1) {
     candy += 1250;
-    l15reward = true;
+    l15reward_s1 = true;
     l15_reward_n.classList.add("acq");
   }
 }
 
 const l20func = () => {
-if (l20up && !l20reward) {
+if (l20up && !l20reward_s1) {
     candy += 1500;
-    l20reward = true;
+    l20reward_s1 = true;
     l20_reward_n.classList.add("acq");
   }
 }
 
 const l25func = () => {
-if (l25up && !l25reward) {
+if (l25up && !l25reward_s1) {
     candy += 1750;
-    l25reward = true;
+    l25reward_s1 = true;
     l25_reward_n.classList.add("acq");
   }
 }
 
 const l30func = () => {
-if (l30up && !l30reward) {
+if (l30up && !l30reward_s1) {
     candy += 3000;
     s1_complete.style.display = "block";
-    l30reward = true;
+    //s2_complete.style.display = "block";
+    l30reward_s1 = true;
     l30_reward_n.classList.add("acq");
   }
 }
-
-/*
-if (premium === true) {
-  l30.addEventListener("click", preml30);
-  function preml30() {
-    // プレミアムボーナスの処理
-  }
-}
-*/
