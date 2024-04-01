@@ -40,7 +40,7 @@ const autosave = () => {
     //localStorage.setItem("elapsedhour_s2", counthour_s2);
     localStorage.setItem("allcandyvalue", allcandy);
     localStorage.setItem("allcandyvalue_s1", allcandy_s1);
-    localStorage.setItem("allcandyvalue_s2", allcandy_s2);
+    //localStorage.setItem("allcandyvalue_s2", allcandy_s2);
   }
   setInterval(autosave, 30000);
 
@@ -85,7 +85,7 @@ const autosave = () => {
     //localStorage.setItem("elapsedhour_s2", counthour_s2);
     localStorage.setItem("allcandyvalue", allcandy);
     localStorage.setItem("allcandyvalue_s1", allcandy_s1);
-    localStorage.setItem("allcandyvalue_s2", allcandy_s2);
+    //localStorage.setItem("allcandyvalue_s2", allcandy_s2);
 
     audio.currentTime = 0;
     audio.play();
