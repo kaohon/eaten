@@ -34,13 +34,20 @@ const autosave = () => {
     localStorage.setItem("elapsedsec_s1", countsec_s1);
     localStorage.setItem("elapsedmin_s1", countmin_s1);
     localStorage.setItem("elapsedhour_s1", counthour_s1);
-    //localStorage.setItem("elapsedtime_s2", count_s2);
-    //localStorage.setItem("elapsedsec_s2", countsec_s2);
-    //localStorage.setItem("elapsedmin_s2", countmin_s2);
-    //localStorage.setItem("elapsedhour_s2", counthour_s2);
+    localStorage.setItem("elapsedtime_s2", count_s2);
+    localStorage.setItem("elapsedsec_s2", countsec_s2);
+    localStorage.setItem("elapsedmin_s2", countmin_s2);
+    localStorage.setItem("elapsedhour_s2", counthour_s2);
     localStorage.setItem("allcandyvalue", allcandy);
     localStorage.setItem("allcandyvalue_s1", allcandy_s1);
-    //localStorage.setItem("allcandyvalue_s2", allcandy_s2);
+    localStorage.setItem("allcandyvalue_s2", allcandy_s2);
+    localStorage.setItem("l0reward_s2", l0reward_s2);
+    localStorage.setItem("l5reward_s2", l5reward_s2);
+    localStorage.setItem("l10reward_s2", l10reward_s2);
+    localStorage.setItem("l15reward_s2", l15reward_s2);
+    localStorage.setItem("l20reward_s2", l20reward_s2);
+    localStorage.setItem("l25reward_s2", l25reward_s2);
+    localStorage.setItem("l30reward_s2", l30reward_s2);
   }
   setInterval(autosave, 30000);
 
@@ -79,13 +86,20 @@ const autosave = () => {
     localStorage.setItem("elapsedsec_s1", countsec_s1);
     localStorage.setItem("elapsedmin_s1", countmin_s1);
     localStorage.setItem("elapsedhour_s1", counthour_s1);
-    //localStorage.setItem("elapsedtime_s2", count_s2);
-    //localStorage.setItem("elapsedsec_s2", countsec_s2);
-    //localStorage.setItem("elapsedmin_s2", countmin_s2);
-    //localStorage.setItem("elapsedhour_s2", counthour_s2);
+    localStorage.setItem("elapsedtime_s2", count_s2);
+    localStorage.setItem("elapsedsec_s2", countsec_s2);
+    localStorage.setItem("elapsedmin_s2", countmin_s2);
+    localStorage.setItem("elapsedhour_s2", counthour_s2);
     localStorage.setItem("allcandyvalue", allcandy);
     localStorage.setItem("allcandyvalue_s1", allcandy_s1);
-    //localStorage.setItem("allcandyvalue_s2", allcandy_s2);
+    localStorage.setItem("allcandyvalue_s2", allcandy_s2);
+    localStorage.setItem("l0reward_s2", l0reward_s2);
+    localStorage.setItem("l5reward_s2", l5reward_s2);
+    localStorage.setItem("l10reward_s2", l10reward_s2);
+    localStorage.setItem("l15reward_s2", l15reward_s2);
+    localStorage.setItem("l20reward_s2", l20reward_s2);
+    localStorage.setItem("l25reward_s2", l25reward_s2);
+    localStorage.setItem("l30reward_s2", l30reward_s2);
 
     audio.currentTime = 0;
     audio.play();
@@ -126,13 +140,20 @@ const autosave = () => {
     var sec_str_s1 = localStorage.getItem("elapsedsec_s1");
     var min_str_s1 = localStorage.getItem("elapsedmin_s1");
     var hour_str_s1 = localStorage.getItem("elapsedhour_s1");
-    //var count_str_s2 = localStorage.getItem("elapsedtime_s2");
-    //var sec_str_s2 = localStorage.getItem("elapsedsec_s2");
-    //var min_str_s2 = localStorage.getItem("elapsedmin_s2");
-    //var hour_str_s2 = localStorage.getItem("elapsedhour_s2");
+    var count_str_s2 = localStorage.getItem("elapsedtime_s2");
+    var sec_str_s2 = localStorage.getItem("elapsedsec_s2");
+    var min_str_s2 = localStorage.getItem("elapsedmin_s2");
+    var hour_str_s2 = localStorage.getItem("elapsedhour_s2");
     var allcandy_str = localStorage.getItem("allcandyvalue");
     var allcandy_str_s1 = localStorage.getItem("allcandyvalue_s1");
-    //var allcandy_str_s2 = localStorage.getItem("allcandyvalue_s2");
+    var allcandy_str_s2 = localStorage.getItem("allcandyvalue_s2");
+    var l0reward_s2_str = localStorage.getItem("l0reward_s2");
+    var l5reward_s2_str = localStorage.getItem("l5reward_s2");
+    var l10reward_s2_str = localStorage.getItem("l10reward_s2");
+    var l15reward_s2_str = localStorage.getItem("l15reward_s2");
+    var l20reward_s2_str = localStorage.getItem("l20reward_s2");
+    var l25reward_s2_str = localStorage.getItem("l25reward_s2");
+    var l30reward_s2_str = localStorage.getItem("l30reward_s2");
     candyhtml.innerHTML = candy_str;
     elapsedsec.innerHTML = sec_str;
     elapsedmin.innerHTML = min_str;
@@ -143,7 +164,7 @@ const autosave = () => {
     candy_storage.innerHTML = bank_str;
     allcandyhtml.innerHTML = allcandy_str;
     allcandyhtml_s1.innerHTML = allcandy_str_s1;
-    //allcandyhtml_s2.innerHTML = allcandy_str_s2;
+    allcandyhtml_s2.innerHTML = allcandy_str_s2;
     count = count_str
     countsec = sec_str;
     countmin = min_str;
@@ -154,11 +175,11 @@ const autosave = () => {
     hour_s1 = hour_str_s1;
     allcandy = allcandy_str;
     allcandy_s1 = allcandy_str_s1;
-    //allcandy_s2 = allcandy_str_s2;
-    //count_s2 = count_str_s2;
-    //sec_s2 = sec_str_s2;
-    //min_s2 = min_str_s2;
-    //hour_s2 = hour_str_s2;
+    allcandy_s2 = allcandy_str_s2;
+    count_s2 = count_str_s2;
+    sec_s2 = sec_str_s2;
+    min_s2 = min_str_s2;
+    hour_s2 = hour_str_s2;
     new_invalue = Number(bank_str);
     candy = Number(candy_str);
     if (stick_str === "true") {
@@ -316,7 +337,6 @@ const autosave = () => {
 
       if (l0reward_s1_str === "true") {
         l0reward_s1 = true;
-        l0_reward_n.classList.add("acq");
         s1_play.style.display = "block";
       } else {
 
@@ -324,42 +344,36 @@ const autosave = () => {
 
       if (l5reward_s1_str === "true") {
         l5reward_s1 = true;
-        l5_reward_n.classList.add("acq");
       } else {
 
       }
 
       if (l10reward_s1_str === "true") {
         l10reward_s1 = true;
-        l10_reward_n.classList.add("acq");
       } else {
 
       }
 
       if (l15reward_s1_str === "true") {
         l15reward_s1 = true;
-        l15_reward_n.classList.add("acq");
       } else {
 
       }
 
       if (l20reward_s1_str === "true") {
         l20reward_s1 = true;
-        l20_reward_n.classList.add("acq");
       } else {
 
       }
 
       if (l25reward_s1_str === "true") {
         l25reward_s1 = true;
-        l25_reward_n.classList.add("acq");
       } else {
 
       }
 
       if (l30reward_s1_str === "true") {
         l30reward_s1 = true;
-        l30_reward_n.classList.add("acq");
         s1_complete.style.display = "block";
       } else {
 
@@ -388,6 +402,57 @@ const autosave = () => {
 
       }
 
+      if (l0reward_s2_str === "true") {
+        l0reward_s2 = true;
+        s2_play.style.display = "block";
+        l0_reward_n.classList.add("acq");
+      } else {
+
+      }
+
+      if (l5reward_s2_str === "true") {
+        l5reward_s2 = true;
+        l5_reward_n.classList.add("acq");
+      } else {
+
+      }
+
+      if (l10reward_s2_str === "true") {
+        l10reward_s2 = true;
+        l10_reward_n.classList.add("acq");
+      } else {
+
+      }
+
+      if (l15reward_s2_str === "true") {
+        l15reward_s2 = true;
+        l15_reward_n.classList.add("acq");
+      } else {
+
+      }
+
+      if (l20reward_s2_str === "true") {
+        l20reward_s2 = true;
+        l20_reward_n.classList.add("acq");
+      } else {
+
+      }
+
+      if (l25reward_s2_str === "true") {
+        l25reward_s2 = true;
+        l25_reward_n.classList.add("acq");
+      } else {
+
+      }
+
+      if (l30reward_s2_str === "true") {
+        l30reward_s2 = true;
+        s2_complete.style.display = "block";
+        l30_reward_n.classList.add("acq");
+      } else {
+
+      }
+
       const mediaQuery = window.matchMedia('(max-width:1360px)')
 
       if (mediaQuery.matches) {
@@ -412,6 +477,34 @@ const autosave = () => {
       } else {
       // Set candy to a default value (e.g., 0) if data is invalid
         candy = 0;
+      }
+
+      if (allcandy_str_s1 !== null && !isNaN(allcandy_str_s1)) {
+        allcandy_s1 = Number(allcandy_str_s1);
+      } else {
+      // Set candy to a default value (e.g., 0) if data is invalid
+        allcandy_s1 = 0;
+      }
+
+      if (allcandy_str_s2 !== null && !isNaN(allcandy_str_s2)) {
+        allcandy_s2 = Number(allcandy_str_s2);
+      } else {
+      // Set candy to a default value (e.g., 0) if data is invalid
+        allcandy_s2 = 0;
+      }
+
+      if (count_str_s1 !== null && !isNaN(count_str_s1)) {
+        count_s1 = Number(count_str_s1);
+      } else {
+      // Set candy to a default value (e.g., 0) if data is invalid
+        count_s1 = 0;
+      }
+
+      if (count_str_s2 !== null && !isNaN(count_str_s2)) {
+        count_s2 = Number(count_str_s2);
+      } else {
+      // Set candy to a default value (e.g., 0) if data is invalid
+        count_s2 = 0;
       }
   }
 
@@ -450,13 +543,20 @@ const autosave = () => {
     localStorage.removeItem("elapsedsec_s1");
     localStorage.removeItem("elapsedmin_s1");
     localStorage.removeItem("elapsedhour_s1");
-    //localStorage.removeItem("elapsedtime_s2");
-    //localStorage.removeItem("elapsedsec_s2");
-    //localStorage.removeItem("elapsedmin_s2");
-    //localStorage.removeItem("elapsedhour_s2");
+    localStorage.removeItem("elapsedtime_s2");
+    localStorage.removeItem("elapsedsec_s2");
+    localStorage.removeItem("elapsedmin_s2");
+    localStorage.removeItem("elapsedhour_s2");
     localStorage.removeItem("allcandyvalue");
     localStorage.removeItem("allcandyvalue_s1");
-    //localStorage.removeItem("allcandyvalue_s2");
+    localStorage.removeItem("allcandyvalue_s2");
+    localStorage.removeItem("l0reward_s2");
+    localStorage.removeItem("l5reward_s2");
+    localStorage.removeItem("l10reward_s2");
+    localStorage.removeItem("l15reward_s2");
+    localStorage.removeItem("l20reward_s2");
+    localStorage.removeItem("l25reward_s2");
+    localStorage.removeItem("l30reward_s2");
 
     audio.currentTime = 0;
     audio.play();
@@ -478,7 +578,7 @@ function decryptText(encryptedText) {
 }
 
 function download() {
-    const text = (`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${new_invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}\n${l0reward_s1}\n${l5reward_s1}\n${l10reward_s1}\n${l15reward_s1}\n${l20reward_s1}\n${l25reward_s1}\n${l30reward_s1}\n${premium}\n${ct_02_buy}\n${count_s1}\n${countsec_s1}\n${countmin_s1}\n${counthour_s1}\n${allcandy}\n${allcandy_s1}`);//\n${allcandy_s2}\n${count_s2}\n${countsec_s2}\n${countmin_s2}\n${counthour_s2}
+    const text = (`${candy}\n${count}\n${countsec}\n${countmin}\n${counthour}\n${new_invalue}\n${stick_if}\n${ecube_if}\n${wand_if}\n${dcwand_if}\n${bwand_if}\n${twand_if}\n${lastwand_if}\n${sword_if}\n${dsword_if}\n${tsword_if}\n${lastsword_if}\n${spear_if}\n${bow_if}\n${knife_if}\n${feather_knife_if}\n${l0reward_s1}\n${l5reward_s1}\n${l10reward_s1}\n${l15reward_s1}\n${l20reward_s1}\n${l25reward_s1}\n${l30reward_s1}\n${premium}\n${ct_02_buy}\n${count_s1}\n${countsec_s1}\n${countmin_s1}\n${counthour_s1}\n${allcandy}\n${allcandy_s1}\n${allcandy_s2}\n${count_s2}\n${countsec_s2}\n${countmin_s2}\n${counthour_s2}\n${l0reward_s2}\n${l5reward_s2}\n${l10reward_s2}\n${l15reward_s2}\n${l20reward_s2}\n${l25reward_s2}\n${l30reward_s2}`);
     // テキストデータをAESで暗号化
     var encryptedText = encryptText(text);
 
@@ -543,11 +643,18 @@ document.getElementById('selfile').addEventListener('change', function(evt) {
         counthour_s1 = decryptedData[33];
         allcandy = decryptedData[34];
         allcandy_s1 = decryptedData[35];
-        //allcandy_s2 = decryptedData[36];
-        //count_s2 = decryptedData[34];
-        //countsec_s2 = decryptedData[35];
-        //countmin_s2 = decryptedData[36];
-        //counthour_s2 = decryptedData[37];
+        allcandy_s2 = decryptedData[36];
+        count_s2 = decryptedData[37];
+        countsec_s2 = decryptedData[38];
+        countmin_s2 = decryptedData[39];
+        counthour_s2 = decryptedData[40];
+        l0reward_s2 = decryptedData[41];
+        l5reward_s2 = decryptedData[42];
+        l10reward_s2 = decryptedData[43];
+        l15reward_s2 = decryptedData[44];
+        l20reward_s2 = decryptedData[45];
+        l25reward_s2 = decryptedData[46];
+        l30reward_s2 = decryptedData[47];
     };
     reader.readAsBinaryString(file);
 }, false);

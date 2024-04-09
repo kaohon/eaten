@@ -162,6 +162,35 @@ if (mediaQuery.matches) {
   });
 }
 
+document.addEventListener('contextmenu', (event) => {
+  event.preventDefault();
+});
+
+setInterval(function() {
+  // 検証ツールを開発者向けコンソールを開いているかどうかを確認
+    if (window.outerWidth - window.innerWidth > 150 || window.outerHeight - window.innerHeight > 150) {
+      console.error('!!!!!✖✖データの改ざん✖✖!!!!!');
+      window.location.href = "https://www.google.com/";
+      rank.style.display = "none";
+      rank_open.style.display = "none";
+      items.style.display = "none";
+      items_open.style.display = "none";
+      collection.style.display = "none";
+      collection_open.style.display = "none";
+      setting.style.display = "none";
+      setting_open.style.display = "none";
+      stats.style.display = "none";
+      stats_open.style.display = "none";
+      cards.style.display = "none";
+      cards_open.style.display = "none";
+      bank.style.display = "none";
+      bank_open.style.display = "none";
+      pass.style.display = "none";
+      pass_open.style.display = "none";
+    }
+  }, 500); // 1秒ごとにチェック
+
+
 let ct_01_open = document.getElementById("ct_01_open");
 let ct_02_open = document.getElementById("ct_02_open");
 

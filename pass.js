@@ -1,4 +1,4 @@
-let l0up = true;
+let l0up = false;
 let l1up = false;
 let l2up = false;
 let l3up = false;
@@ -62,8 +62,8 @@ let l28 = document.getElementById("l28");
 let l29 = document.getElementById("l29");
 let l30 = document.getElementById("l30");
 
-counthour = elapsedhour_s1.innerHTML;
-//counthour = elapsedhour_s2.innerHTML;
+//counthour_s1 = elapsedhour_s1.innerHTML;
+counthour_s2 = elapsedhour_s2.innerHTML;
 
 premium = false;
 
@@ -81,7 +81,17 @@ function premium_buy_func() {
 }
 
 const passlv = () => {
-  if (counthour >= 10) {
+    if (counthour_s2 >= 0) {
+    l0_reward_n.addEventListener("click", l0func);
+    l0.classList.add("lup");
+    l0_reward_n.classList.add("lup");
+    l0up = true;
+      if (premium === true) {
+        l0_reward_sp.classList.add("lup");
+      }
+  }
+
+  if (counthour_s2 >= 10) {
     l1.classList.add("lup");
     l1_reward_n.classList.add("lup");
     l1up = true;
@@ -90,7 +100,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 20) {
+  if (counthour_s2 >= 20) {
     l2.classList.add("lup");
     l2_reward_n.classList.add("lup");
     l2up = true;
@@ -99,7 +109,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 30) {
+  if (counthour_s2 >= 30) {
     l3.classList.add("lup");
     l3_reward_n.classList.add("lup");
     l3up = true;
@@ -108,7 +118,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 40) {
+  if (counthour_s2 >= 40) {
     l4.classList.add("lup");
     l4_reward_n.classList.add("lup");
     l4up = true;
@@ -117,7 +127,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 50) {
+  if (counthour_s2 >= 50) {
     l5_reward_n.addEventListener("click", l5func);
     l5.classList.add("lup");
     l5_reward_n.classList.add("lup");
@@ -127,7 +137,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 60) {
+  if (counthour_s2 >= 60) {
     l6.classList.add("lup");
     l6_reward_n.classList.add("lup");
     l6up = true;
@@ -136,7 +146,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 70) {
+  if (counthour_s2 >= 70) {
     l7.classList.add("lup");
     l7_reward_n.classList.add("lup");
     l7up = true;
@@ -145,7 +155,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 80) {
+  if (counthour_s2 >= 80) {
     l8.classList.add("lup");
     l8_reward_n.classList.add("lup");
     l8up = true;
@@ -154,7 +164,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 90) {
+  if (counthour_s2 >= 90) {
     l9.classList.add("lup");
     l9_reward_n.classList.add("lup");
     l9up = true;
@@ -163,7 +173,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 100) {
+  if (counthour_s2 >= 100) {
     l10_reward_n.addEventListener("click", l10func);
     l10.classList.add("lup");
     l10_reward_n.classList.add("lup");
@@ -173,7 +183,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 110) {
+  if (counthour_s2 >= 110) {
     l11.classList.add("lup");
     l11_reward_n.classList.add("lup");
     l11up = true;
@@ -182,7 +192,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 120) {
+  if (counthour_s2 >= 120) {
     l12.classList.add("lup");
     l12_reward_n.classList.add("lup");
     l12up = true;
@@ -191,7 +201,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 130) {
+  if (counthour_s2 >= 130) {
     l13.classList.add("lup");
     l13_reward_n.classList.add("lup");
     l13up = true;
@@ -200,7 +210,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 140) {
+  if (counthour_s2 >= 140) {
     l14.classList.add("lup");
     l14_reward_n.classList.add("lup");
     l14up = true;
@@ -209,7 +219,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 150) {
+  if (counthour_s2 >= 150) {
     l15_reward_n.addEventListener("click", l15func);
     l15.classList.add("lup");
     l15_reward_n.classList.add("lup");
@@ -219,7 +229,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 160) {
+  if (counthour_s2 >= 160) {
     l16.classList.add("lup");
     l16_reward_n.classList.add("lup");
     l16up = true;
@@ -228,7 +238,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 170) {
+  if (counthour_s2 >= 170) {
     l17.classList.add("lup");
     l17_reward_n.classList.add("lup");
     l17up = true;
@@ -237,7 +247,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 180) {
+  if (counthour_s2 >= 180) {
     l18.classList.add("lup");
     l18_reward_n.classList.add("lup");
     l18up = true;
@@ -246,7 +256,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 190) {
+  if (counthour_s2 >= 190) {
     l19.classList.add("lup");
     l19_reward_n.classList.add("lup");
     l19up = true;
@@ -255,7 +265,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 200) {
+  if (counthour_s2 >= 200) {
     l20_reward_n.addEventListener("click", l20func);
     l20.classList.add("lup");
     l20_reward_n.classList.add("lup");
@@ -265,7 +275,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 210) {
+  if (counthour_s2 >= 210) {
     l21.classList.add("lup");
     l21_reward_n.classList.add("lup");
     l21up = true;
@@ -274,7 +284,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 220) {
+  if (counthour_s2 >= 220) {
     l22.classList.add("lup");
     l22_reward_n.classList.add("lup");
     l22up = true;
@@ -283,7 +293,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 230) {
+  if (counthour_s2 >= 230) {
     l23.classList.add("lup");
     l23_reward_n.classList.add("lup");
     l23up = true;
@@ -292,7 +302,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 240) {
+  if (counthour_s2 >= 240) {
     l24.classList.add("lup");
     l24_reward_n.classList.add("lup");
     l24up = true;
@@ -301,7 +311,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 250) {
+  if (counthour_s2 >= 250) {
     l25_reward_n.addEventListener("click", l25func);
     l25.classList.add("lup");
     l25_reward_n.classList.add("lup");
@@ -311,7 +321,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 260) {
+  if (counthour_s2 >= 260) {
     l26.classList.add("lup");
     l26_reward_n.classList.add("lup");
     l26up = true;
@@ -320,7 +330,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 270) {
+  if (counthour_s2 >= 270) {
     l27.classList.add("lup");
     l27_reward_n.classList.add("lup");
     l27up = true;
@@ -329,7 +339,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 280) {
+  if (counthour_s2 >= 280) {
     l28.classList.add("lup");
     l28_reward_n.classList.add("lup");
     l28up = true;
@@ -338,7 +348,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 290) {
+  if (counthour_s2 >= 290) {
     l29.classList.add("lup");
     l29_reward_n.classList.add("lup");
     l29up = true;
@@ -347,7 +357,7 @@ const passlv = () => {
       }
   }
 
-  if (counthour >= 300) {
+  if (counthour_s2 >= 300) {
     l30_reward_n.addEventListener("click", l30func);
     l30.classList.add("lup");
     l30_reward_n.classList.add("lup");
@@ -367,63 +377,69 @@ let l20reward_s1 = false;
 let l25reward_s1 = false;
 let l30reward_s1 = false;
 
-  if (l0up === true) {
-  l0_reward_n.addEventListener("click", l0func);
-  function l0func() {
-      s1_play.style.display = "block";
-      //s2_play.style.display = "block";
-      l0reward_s1 = true;
+let l0reward_s2 = false;
+let l5reward_s2 = false;
+let l10reward_s2 = false;
+let l15reward_s2 = false;
+let l20reward_s2 = false;
+let l25reward_s2 = false;
+let l30reward_s2 = false;
+
+const l0func = () => {
+    if (l0up && !l0reward_s2) {
+      //s1_play.style.display = "block";
+      s2_play.style.display = "block";
+      l0reward_s2 = true;
       l0_reward_n.classList.add("acq");
-  l0_reward_n.removeEventListener("click", l0func);
   }
 }
 
 const l5func = () => {
-if (l5up && !l5reward_s1) {
+if (l5up && !l5reward_s2) {
     candy += 750;
-    l5reward_s1 = true;
+    l5reward_s2 = true;
     l5_reward_n.classList.add("acq");
   }
 }
 
 const l10func = () => {
-if (l10up && !l10reward_s1) {
+if (l10up && !l10reward_s2) {
     candy += 1000;
-    l10reward_s1 = true;
+    l10reward_s2 = true;
     l10_reward_n.classList.add("acq");
   }
 }
 
 const l15func = () => {
-if (l15up && !l15reward_s1) {
+if (l15up && !l15reward_s2) {
     candy += 1250;
-    l15reward_s1 = true;
+    l15reward_s2 = true;
     l15_reward_n.classList.add("acq");
   }
 }
 
 const l20func = () => {
-if (l20up && !l20reward_s1) {
+if (l20up && !l20reward_s2) {
     candy += 1500;
-    l20reward_s1 = true;
+    l20reward_s2 = true;
     l20_reward_n.classList.add("acq");
   }
 }
 
 const l25func = () => {
-if (l25up && !l25reward_s1) {
+if (l25up && !l25reward_s2) {
     candy += 1750;
-    l25reward_s1 = true;
+    l25reward_s2 = true;
     l25_reward_n.classList.add("acq");
   }
 }
 
 const l30func = () => {
-if (l30up && !l30reward_s1) {
+if (l30up && !l30reward_s2) {
     candy += 3000;
     s1_complete.style.display = "block";
     //s2_complete.style.display = "block";
-    l30reward_s1 = true;
+    l30reward_s2 = true;
     l30_reward_n.classList.add("acq");
   }
 }
