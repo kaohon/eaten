@@ -37,22 +37,22 @@ let now_rank_s2 = document.getElementById("now_rank_s2");
 
 const rankup = () => {
     const ranks = [
-        { hour: 15, element: b3, displayElement: reach_b, now: "ブロンズ3" },
+        { hour: 15, element: b3, achive: reach_b, achive_s1: reach_b_s1, achive_s2: reach_b_s2, now: "ブロンズ3" },
         { hour: 30, element: b2, now: "ブロンズ2" },
         { hour: 45, element: b1, now: "ブロンズ1" },
-        { hour: 65, element: s3, displayElement: reach_s, now: "シルバー3" },
+        { hour: 65, element: s3, achive: reach_s, achive_s1: reach_s_s1, achive_s2: reach_s_s2, now: "シルバー3" },
         { hour: 85, element: s2, now: "シルバー2" },
         { hour: 105, element: s1, now: "シルバー1" },
-        { hour: 130, element: g3, displayElement: reach_g, now: "ゴールド3" },
+        { hour: 130, element: g3, achive: reach_g, achive_s1: reach_g_s1, achive_s2: reach_g_s2, now: "ゴールド3" },
         { hour: 155, element: g2, now: "ゴールド2" },
         { hour: 180, element: g1, now: "ゴールド1" },
-        { hour: 210, element: p3, displayElement: reach_p, now: "プラチナ3" },
+        { hour: 210, element: p3, achive: reach_p, achive_s1: reach_p_s1, achive_s2: reach_p_s2, now: "プラチナ3" },
         { hour: 240, element: p2, now: "プラチナ2" },
         { hour: 270, element: p1, now: "プラチナ1" },
-        { hour: 305, element: d3, displayElement: reach_d, now: "ダイアモンド3" },
+        { hour: 305, element: d3, achive: reach_d, achive_s1: reach_d_s1, achive_s2: reach_d_s2, now: "ダイアモンド3" },
         { hour: 340, element: d2, now: "ダイアモンド2" },
         { hour: 375, element: d1, now: "ダイアモンド1" },
-        { hour: 415, element: m3, displayElement: reach_m, now: "マスター3" },
+        { hour: 415, element: m3, achive: reach_m, achive_s1: reach_m_s1, achive_s2: reach_m_s2, now: "マスター3" },
         { hour: 455, element: m2, now: "マスター2" },
         { hour: 495, element: m1, now: "マスター1" }
     ];
@@ -60,19 +60,25 @@ const rankup = () => {
 ranks.forEach(rank => {
     if (rankhour >= rank.hour) {
         rank.element.classList.add("bought");
-        if (rank.displayElement) rank.displayElement.style.display = "block";
+        now_rank.innerHTML = rank.now;
     }
 });
 
 ranks.forEach(rank => {
     if (counthour >= rank.hour) {
-        if (rank.displayElement) rank.displayElement.style.display = "block";
+        if (rank.achive) rank.achive.style.display = "block";
     }
 });
 
 ranks.forEach(rank => {
-    if (rankhour >= rank.hour) {
-        now_rank.innerHTML = rank.now;
+    if (counthour_s1 >= rank.hour) {
+        if (rank.achive_s1) rank.achive_s1.style.display = "block";
+    }
+});
+
+ranks.forEach(rank => {
+    if (counthour_s2 >= rank.hour) {
+        if (rank.achive_s2) rank.achive_s2.style.display = "block";
     }
 });
 

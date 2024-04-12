@@ -72,11 +72,10 @@
         <p>S1 ランク: Circuit <span id="circuit_s1"></span> <span id="now_rank_s1"></span></p>
         <p>S2 ランク: Circuit <span id="circuit_s2"></span> <span id="now_rank_s2"></span></p>
         <hr>実績<hr>
-        <span id="ct_01_complete" class="achivement">ct01</span>
+        <span id="ct_01_complete" class="achivement">CT<br>01</span>
             <span id="ct_01_complete_tt" class="tooltip">コレクションツリー Part1 コンプリート</span>
-        <span id="ct_02_complete" class="achivement">ct02</span>
+        <span id="ct_02_complete" class="achivement">CT<br>02</span>
             <span id="ct_02_complete_tt" class="tooltip">コレクションツリー Part2 コンプリート</span>
-        <span id="a03" class="achivement"></span>
         <!--rank-->
         <span id="reach_b" class="achivement"><img src="img/bronze_a.png"></span>
             <span id="reach_b_tt" class="tooltip">ブロンズランクに到達</span>
@@ -90,6 +89,32 @@
             <span id="reach_d_tt" class="tooltip">ダイアモンドランクに到達</span>
         <span id="reach_m" class="achivement"><img src="img/master_a.png"></span>
             <span id="reach_m_tt" class="tooltip">マスターランクに到達</span>
+
+        <span id="reach_b_s1" class="achivement"><img src="img/bronze_a.png"></span>
+            <span id="reach_b_s1_tt" class="tooltip">シーズン1 ブロンズランクに到達</span>
+        <span id="reach_s_s1" class="achivement"><img src="img/silver_a.png"></span>
+            <span id="reach_s_s1_tt" class="tooltip">シーズン1 シルバーランクに到達</span>
+        <span id="reach_g_s1" class="achivement"><img src="img/gold_a.png"></span>
+            <span id="reach_g_s1_tt" class="tooltip">シーズン1 ゴールドランクに到達</span>
+        <span id="reach_p_s1" class="achivement"><img src="img/platinum_a.png"></span>
+            <span id="reach_p_s1_tt" class="tooltip">シーズン1 プラチナランクに到達</span>
+        <span id="reach_d_s1" class="achivement"><img src="img/diamond_a.png"></span>
+            <span id="reach_d_s1_tt" class="tooltip">シーズン1 ダイアモンドランクに到達</span>
+        <span id="reach_m_s1" class="achivement"><img src="img/master_a.png"></span>
+            <span id="reach_m_s1_tt" class="tooltip">シーズン1 マスターランクに到達</span>
+
+        <span id="reach_b_s2" class="achivement"><img src="img/bronze_a.png"></span>
+            <span id="reach_b_s2_tt" class="tooltip">シーズン2 ブロンズランクに到達</span>
+        <span id="reach_s_s2" class="achivement"><img src="img/silver_a.png"></span>
+            <span id="reach_s_s2_tt" class="tooltip">シーズン2 シルバーランクに到達</span>
+        <span id="reach_g_s2" class="achivement"><img src="img/gold_a.png"></span>
+            <span id="reach_g_s2_tt" class="tooltip">シーズン2 ゴールドランクに到達</span>
+        <span id="reach_p_s2" class="achivement"><img src="img/platinum_a.png"></span>
+            <span id="reach_p_s2_tt" class="tooltip">シーズン2 プラチナランクに到達</span>
+        <span id="reach_d_s2" class="achivement"><img src="img/diamond_a.png"></span>
+            <span id="reach_d_s2_tt" class="tooltip">シーズン2 ダイアモンドランクに到達</span>
+        <span id="reach_m_s2" class="achivement"><img src="img/master_a.png"></span>
+            <span id="reach_m_s2_tt" class="tooltip">シーズン2 マスターランクに到達</span>
         <!--level-->
         <span id="l50" class="achivement">50</span>
             <span id="l50_tt" class="tooltip">レベル50に到達</span>
@@ -130,7 +155,7 @@
     <section id="ct_01">
         <p id="block" class="box"><img src="img/candy.png">
             </p><div id="block_tt" class="tooltip">キャンディ 所持済み
-                <p>何のひねりもないただのアイテム。<img src="img/candy.png"></p></div>
+                <p>何のひねりもないただのアイテム。 マスタリー: レベル グレード:<img src="img/candy.png"></p></div>
         <p id="stick" class="box"><img src="img/stick.png">
             </p><div id="stick_tt" class="tooltip">キャンディスティック 10,000キャンディ
                 <p>キャンディを加工し、研磨をしたもの。<img src="img/stick.png"></p></div>
@@ -271,7 +296,7 @@
     </main>
     <main id="pass">
         残りシーズン日数:<span id="season_rest"></span>
-        <p>[プレシーズン] BETA-Season 1 1/10 開始予定</p>
+        <p>[プレシーズン] BETA-Season 2 4/10 24:00 ～ 6/10 24:00</p>
         <div id="premium_buy" class="standard-button">プレミアムパスを購入
             <p class="button-subtitle">100,000キャンディ</p>
         </div>
@@ -282,7 +307,7 @@
                 <th>レベル</th><th>通常</th><th>プレミアム</th>
             </tr>
             <tr>
-                <td id="l0" class="level">0</td><td id="l0_reward_n" class="reward_n">S1 プレイ者(称号)</td><td id="l0_reward_sp" class="reward_sp">カード1枚選択パック</td>
+                <td id="l0" class="level">0</td><td id="l0_reward_n" class="reward_n">S2 プレイ者(称号)</td><td id="l0_reward_sp" class="reward_sp">カード1枚選択パック</td>
             </tr>
             <tr>
                 <td id="l1" class="level">1</td><td id="l1_reward_n" class="reward_n"></td><td id="l1_reward_sp" class="reward_sp"></td>
@@ -372,7 +397,7 @@
                 <td id="l29" class="level">29</td><td id="l29_reward_n" class="reward_n"></td><td id="l29_reward_sp" class="reward_sp"></td>
             </tr>
             <tr>
-                <td id="l30" class="level">30</td><td id="l30_reward_n" class="reward_n">S1 コンプリート(称号) 3,000キャンディ</td><td id="l30_reward_sp" class="reward_sp"></td>
+                <td id="l30" class="level">30</td><td id="l30_reward_n" class="reward_n">S2 コンプリート(称号) 3,000キャンディ</td><td id="l30_reward_sp" class="reward_sp"></td>
             </tr>
         </table>
     </main>
