@@ -5,24 +5,24 @@ rankhour = counthour % 510;
 rankhour_s1 = counthour_s1 % 510;
 rankhour_s2 = counthour_s2 % 510;
 
-let b3 = document.getElementById("b3");
-let b2 = document.getElementById("b2");
 let b1 = document.getElementById("b1");
-let s3 = document.getElementById("s3");
-let s2 = document.getElementById("s2");
+let b2 = document.getElementById("b2");
+let b3 = document.getElementById("b3");
 let s1 = document.getElementById("s1");
-let g3 = document.getElementById("g3");
-let g2 = document.getElementById("g2");
+let s2 = document.getElementById("s2");
+let s3 = document.getElementById("s3");
 let g1 = document.getElementById("g1");
-let p3 = document.getElementById("p3");
-let p2 = document.getElementById("p2");
+let g2 = document.getElementById("g2");
+let g3 = document.getElementById("g3");
 let p1 = document.getElementById("p1");
-let d3 = document.getElementById("d3");
-let d2 = document.getElementById("d2");
+let p2 = document.getElementById("p2");
+let p3 = document.getElementById("p3");
 let d1 = document.getElementById("d1");
-let m3 = document.getElementById("m3");
-let m2 = document.getElementById("m2");
+let d2 = document.getElementById("d2");
+let d3 = document.getElementById("d3");
 let m1 = document.getElementById("m1");
+let m2 = document.getElementById("m2");
+let m3 = document.getElementById("m3");
 
 let reach_b = document.getElementById("reach_b");
 let reach_s = document.getElementById("reach_s");
@@ -37,24 +37,24 @@ let now_rank_s2 = document.getElementById("now_rank_s2");
 
 const rankup = () => {
     const ranks = [
-        { hour: 15, element: b3, achive: reach_b, achive_s1: reach_b_s1, achive_s2: reach_b_s2, now: "ブロンズ3" },
-        { hour: 30, element: b2, now: "ブロンズ2" },
-        { hour: 45, element: b1, now: "ブロンズ1" },
-        { hour: 65, element: s3, achive: reach_s, achive_s1: reach_s_s1, achive_s2: reach_s_s2, now: "シルバー3" },
-        { hour: 85, element: s2, now: "シルバー2" },
-        { hour: 105, element: s1, now: "シルバー1" },
-        { hour: 130, element: g3, achive: reach_g, achive_s1: reach_g_s1, achive_s2: reach_g_s2, now: "ゴールド3" },
-        { hour: 155, element: g2, now: "ゴールド2" },
-        { hour: 180, element: g1, now: "ゴールド1" },
-        { hour: 210, element: p3, achive: reach_p, achive_s1: reach_p_s1, achive_s2: reach_p_s2, now: "プラチナ3" },
-        { hour: 240, element: p2, now: "プラチナ2" },
-        { hour: 270, element: p1, now: "プラチナ1" },
-        { hour: 305, element: d3, achive: reach_d, achive_s1: reach_d_s1, achive_s2: reach_d_s2, now: "ダイアモンド3" },
-        { hour: 340, element: d2, now: "ダイアモンド2" },
-        { hour: 375, element: d1, now: "ダイアモンド1" },
-        { hour: 415, element: m3, achive: reach_m, achive_s1: reach_m_s1, achive_s2: reach_m_s2, now: "マスター3" },
-        { hour: 455, element: m2, now: "マスター2" },
-        { hour: 495, element: m1, now: "マスター1" }
+        { hour: 15, element: b1, achive: reach_b, achive_s1: reach_b_s1, achive_s2: reach_b_s2, now: "ブロンズⅠ" },
+        { hour: 30, element: b2, now: "ブロンズⅡ" },
+        { hour: 45, element: b3, now: "ブロンズⅢ" },
+        { hour: 65, element: s1, achive: reach_s, achive_s1: reach_s_s1, achive_s2: reach_s_s2, now: "シルバーⅠ" },
+        { hour: 85, element: s2, now: "シルバーⅡ" },
+        { hour: 105, element: s3, now: "シルバⅢ3" },
+        { hour: 130, element: g1, achive: reach_g, achive_s1: reach_g_s1, achive_s2: reach_g_s2, now: "ゴールドⅠ" },
+        { hour: 155, element: g2, now: "ゴールドⅡ" },
+        { hour: 180, element: g3, now: "ゴールドⅢ" },
+        { hour: 210, element: p1, achive: reach_p, achive_s1: reach_p_s1, achive_s2: reach_p_s2, now: "プラチナⅠ" },
+        { hour: 240, element: p2, now: "プラチナⅡ" },
+        { hour: 270, element: p3, now: "プラチナⅢ" },
+        { hour: 305, element: d1, achive: reach_d, achive_s1: reach_d_s1, achive_s2: reach_d_s2, now: "ダイアモンドⅠ" },
+        { hour: 340, element: d2, now: "ダイアモンドⅡ" },
+        { hour: 375, element: d3, now: "ダイアモンドⅢ" },
+        { hour: 415, element: m1, achive: reach_m, achive_s1: reach_m_s1, achive_s2: reach_m_s2, now: "マスターⅠ" },
+        { hour: 455, element: m2, now: "マスターⅡ" },
+        { hour: 495, element: m3, now: "マスターⅢ" }
     ];
 
 ranks.forEach(rank => {
@@ -95,7 +95,7 @@ ranks.forEach(rank => {
 });
 }
 
-setInterval(() => {
+setTimeout(() => {
     counthour = parseInt(elapsedhour.innerHTML);
     counthour_s1 = parseInt(elapsedhour_s1.innerHTML);
     counthour_s2 = parseInt(elapsedhour_s2.innerHTML);

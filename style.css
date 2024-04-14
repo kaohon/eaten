@@ -122,7 +122,7 @@ label > input {
     width: 75px;
     height: 75px;
     background-color: white;
-    border: 2px solid rgb(0, 0, 0);
+    outline: 2px solid rgb(0, 0, 0);
     z-index: 0;
 }
 
@@ -130,6 +130,7 @@ label > input {
     position: absolute;
     top: 200px;
     left: 50%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-50%);
 }
 
@@ -258,7 +259,7 @@ label > input {
     opacity: 1 !important;
 }
 
-#collection-series {
+.collection-series {
     padding: 10px;
     width: 100%;
     border-bottom: solid 1px black;
@@ -560,7 +561,7 @@ label > input {
     border: solid 3px rgb(208, 125, 255);
 }
 
-#b3 {
+#b1 {
     left: 25%;
     transform: translateX(-25%);
     opacity: 0.5;
@@ -572,13 +573,13 @@ label > input {
     opacity: 0.5;
 }
 
-#b1 {
+#b3 {
     left: 75%;
     transform: translateX(-75%);
     opacity: 0.5;
 }
 
-#s3 {
+#s1 {
     left: 25%;
     transform: translateX(-25%);
     opacity: 0.5;
@@ -590,13 +591,13 @@ label > input {
     opacity: 0.5;
 }
 
-#s1 {
+#s3 {
     left: 75%;
     transform: translateX(-75%);
     opacity: 0.5;
 }
 
-#g3 {
+#g1 {
     left: 25%;
     transform: translateX(-25%);
     opacity: 0.5;
@@ -608,13 +609,13 @@ label > input {
     opacity: 0.5;
 }
 
-#g1 {
+#g3 {
     left: 75%;
     transform: translateX(-75%);
     opacity: 0.5;
 }
 
-#p3 {
+#p1 {
     left: 25%;
     transform: translateX(-25%);
     opacity: 0.5;
@@ -626,13 +627,13 @@ label > input {
     opacity: 0.5;
 }
 
-#p1 {
+#p3 {
     left: 75%;
     transform: translateX(-75%);
     opacity: 0.5;
 }
 
-#d3 {
+#d1 {
     left: 25%;
     transform: translateX(-25%);
     opacity: 0.5;
@@ -644,13 +645,13 @@ label > input {
     opacity: 0.5;
 }
 
-#d1 {
+#d3 {
     left: 75%;
     transform: translateX(-75%);
     opacity: 0.5;
 }
 
-#m3 {
+#m1 {
     left: 25%;
     transform: translateX(-25%);
     opacity: 0.5;
@@ -662,7 +663,7 @@ label > input {
     opacity: 0.5;
 }
 
-#m1 {
+#m3 {
     left: 75%;
     transform: translateX(-75%);
     opacity: 0.5;

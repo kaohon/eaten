@@ -14,65 +14,175 @@
         position: absolute;
         margin-top: 100px;
     }
+
     #collection_open {
         display: none;
         position: absolute;
         margin-top: 200px;
     }
+
     #setting_open {
         display: none;
         position: absolute;
         margin-top: 300px;
     }
+
     #stats_open {
         display: none;
         position: absolute;
         margin-top: 400px;
     }
+
     #cards_open {
         display: none;
         position: absolute;
         margin-top: 500px;
     }
+
     #bank_open {
         display: none;
         position: absolute;
         margin-top: 600px;
     }
+
     #pass_open {
         display: none;
         position: absolute;
         margin-top: 700px;
     }
+
     #rank_open {
         display: none;
         position: absolute;
         margin-top: 820px;
     }
+
     #achivement_open {
         display: none;
         position: absolute;
         margin-top: 920px;
     }
-    #collection-series {
+
+    .collection-series {
         white-space: nowrap;
     }
+
     #ct_01_open {
         display: flex;
         text-align: center;
         width: fit-content;
         margin: auto;
     }
+
     #ct_02_open {
         display: none;
         text-align: center;
         width: fit-content;
         margin: auto;
     }
+
     #ct_demo_open {
         display: none;
         text-align: center;
         width: fit-content;
+        margin: auto;
+    }
+
+    #all_s_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #total_s_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #playtime_s_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #candy_s_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #rank_s_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #s1_s_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #s2_s_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #all_a_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #ct_a_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #level_a_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #rank_a_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #season_a_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #s1_a_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    #s2_a_open {
+        display: flex;
+        text-align: center;
+        width: 200px;
         margin: auto;
     }
 
@@ -88,6 +198,220 @@
         background-color: rgb(255, 255, 255);
         transform: translate(-50%, -50%);
         z-index: 1;
+    }
+
+    #reach_b {
+        display: none;
+        margin-left: 15px;
+        line-height: 0em;
+        margin-top: 70px;
+    }
+
+    #reach_s {
+        display: none;
+        margin-left: 70px;
+        line-height: 0em;
+        margin-top: 70px;
+    }
+
+    #reach_g {
+        display: none;
+        margin-left: 125px;
+        line-height: 0em;
+        margin-top: 70px;
+    }
+
+    #reach_p {
+        display: none;
+        margin-left: 180px;
+        line-height: 0em;
+        margin-top: 70px;
+    }
+
+    #reach_d {
+        display: none;
+        margin-left: 235px;
+        line-height: 0em;
+        margin-top: 70px;
+    }
+
+    #reach_m {
+        display: none;
+        margin-left: 290px;
+        line-height: 0em;
+        margin-top: 70px;
+    }
+
+    #reach_b_s1 {
+        display: none;
+        margin-left: 15px;
+        line-height: 0em;
+        margin-top: 125px;
+    }
+
+    #reach_s_s1 {
+        display: none;
+        margin-left: 70px;
+        line-height: 0em;
+        margin-top: 125px;
+    }
+
+    #reach_g_s1 {
+        display: none;
+        margin-left: 125px;
+        line-height: 0em;
+        margin-top: 125px;
+    }
+
+    #reach_p_s1 {
+        display: none;
+        margin-left: 180px;
+        line-height: 0em;
+        margin-top: 125px;
+    }
+
+    #reach_d_s1 {
+        display: none;
+        margin-left: 235px;
+        line-height: 0em;
+        margin-top: 125px;
+    }
+
+    #reach_m_s1 {
+        display: none;
+        margin-left: 290px;
+        line-height: 0em;
+        margin-top: 125px;
+    }
+
+    #reach_b_s2 {
+        display: none;
+        margin-left: 15px;
+        line-height: 0em;
+        margin-top: 180px;
+    }
+
+    #reach_s_s2 {
+        display: none;
+        margin-left: 70px;
+        line-height: 0em;
+        margin-top: 180px;
+    }
+
+    #reach_g_s2 {
+        display: none;
+        margin-left: 125px;
+        line-height: 0em;
+        margin-top: 180px;
+    }
+
+    #reach_p_s2 {
+        display: none;
+        margin-left: 180px;
+        line-height: 0em;
+        margin-top: 180px;
+    }
+
+    #reach_d_s2 {
+        display: none;
+        margin-left: 235px;
+        line-height: 0em;
+        margin-top: 180px;
+    }
+
+    #reach_m_s2 {
+        display: none;
+        margin-left: 290px;
+        line-height: 0em;
+        margin-top: 180px;
+    }
+
+    #l50 {
+        display: none;
+        margin-left: 15px;
+        margin-top: 235px;
+    }
+
+    #l100 {
+        display: none;
+        margin-left: 70px;
+        margin-top: 235px;
+    }
+
+    #l150 {
+        display: none;
+        margin-left: 125px;
+        margin-top: 235px;
+    }
+
+    #l200 {
+        display: none;
+        margin-left: 180x;
+        margin-top: 235px;
+    }
+
+    #l250 {
+        display: none;
+        margin-left: 235px;
+        margin-top: 235px;
+    }
+
+    #l300 {
+        display: none;
+        margin-left: 290px;
+        margin-top: 235px;
+    }
+
+    #l350 {
+        display: none;
+        margin-left: 345px;
+        margin-top: 235px;
+    }
+
+    #l400 {
+        display: none;
+        margin-left: 400px;
+        margin-top: 235px;
+    }
+
+    #l450 {
+        display: none;
+        margin-left: 15px;
+        margin-top: 290px;
+    }
+
+    #l500 {
+        display: none;
+        margin-left: 70px;
+        margin-top: 290px;
+    }
+
+    #s1_play {
+        display: none;
+        background-color: white;
+        margin-left: 15px;
+        margin-top: 345px;
+    }
+
+    #s1_complete {
+        display: none;
+        background-color: yellow;
+        margin-left: 70px;
+        margin-top: 345px;
+    }
+
+    #s2_play {
+        display: none;
+        background-color: white;
+        margin-left: 125px;
+        margin-top: 345px;
+    }
+
+    #s2_complete {
+        display: none;
+        background-color: yellow;
+        margin-left: 180px;
+        margin-top: 345px;
     }
 
     .color_b {
