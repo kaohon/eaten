@@ -54,7 +54,7 @@ const levelup = () => {
     }
 }
 
-setInterval(() => {
+setTimeout(() => {
     counthour = parseInt(elapsedhour.innerHTML);
     levelup();
 }, 1000);

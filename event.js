@@ -162,6 +162,73 @@ if (mediaQuery.matches) {
   });
 }
 
+const stats_detail = document.querySelectorAll("#s_level, #s_playtime, #s_playtime_s1, #s_playtime_s2, #s_allcandy, #s_allcandy_s1, #s_allcandy_s2, #s_cps, #s_now_rank, #s_rank_s1, #s_rank_s2");
+
+function toggleDisplay(elementsToShow) {
+  stats_detail.forEach(element => {
+    if (elementsToShow.includes(element)) {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  });
+}
+
+all_s_open.addEventListener("click", function () {
+  toggleDisplay([s_level, s_playtime, s_playtime_s1, s_playtime_s2, s_allcandy, s_allcandy_s1, s_allcandy_s2, s_cps, s_now_rank, s_rank_s1, s_rank_s2]);
+});
+
+total_s_open.addEventListener("click", function () {
+  toggleDisplay([s_level, s_playtime, s_allcandy, s_cps, s_now_rank]);
+});
+
+playtime_s_open.addEventListener("click", function () {
+  toggleDisplay([s_playtime, s_playtime_s1, s_playtime_s2]);
+});
+
+candy_s_open.addEventListener("click", function () {
+  toggleDisplay([s_allcandy, s_allcandy_s1, s_allcandy_s2]);
+});
+
+rank_s_open.addEventListener("click", function () {
+  toggleDisplay([s_now_rank, s_rank_s1, s_rank_s2]);
+});
+
+s1_s_open.addEventListener("click", function () {
+  toggleDisplay([s_playtime_s1, s_allcandy_s1, s_rank_s1]);
+});
+
+s2_s_open.addEventListener("click", function () {
+  toggleDisplay([s_playtime_s2, s_allcandy_s2, s_rank_s2]);
+});
+
+const achivement_detail = document.querySelectorAll("#ct_01_complete, #ct_02_complete, #reach_b, #reach_s, #reach_g, #reach_p, #reach_d, #reach_m, #reach_b_s1, #reach_s_s1, #reach_g_s1, #reach_p_s1, #reach_d_s1, #reach_m_s1,#reach_b_s2, #reach_s_s2, #reach_g_s2, #reach_p_s2, #reach_d_s2, #reach_m_s2,#l50, #l100, #l150, #l200, #l250, #l300, #l350, #l400, #l450, #l500, #s1_play, #s1_complete, #s2_play, #s2_complete");
+
+function toggleDisplay(elementsToShow) {
+  achivement_detail.forEach(element => {
+    if (elementsToShow.includes(element)) {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  });
+}
+
+all_a_open.addEventListener("click", function () {
+  achivement_detail.forEach(element => {
+      element.style.display = "block";
+  });
+});
+
+ct_a_open.addEventListener("click", function () {
+  achivement_detail.forEach(element => {
+      element.style.display = "none";
+      ct_01_complete.style.display = "block";
+      ct_02_complete.style.display = "block";
+  });
+});
+
+
 document.addEventListener('contextmenu', (event) => {
   event.preventDefault();
 });
@@ -189,7 +256,6 @@ setInterval(function() {
       pass_open.style.display = "none";
     }
   }, 500); // 1秒ごとにチェック
-
 
 let ct_01_open = document.getElementById("ct_01_open");
 let ct_02_open = document.getElementById("ct_02_open");
