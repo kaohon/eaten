@@ -19,6 +19,50 @@ let rank_open = document.getElementById("rank_open");
 const audio = new Audio('audio/button.mp3');
 
 const headerElements = document.querySelectorAll("#collection, #stats, #setting, #cards, #bank, #items, #pass, #rank");
+const menuButtons = document.querySelectorAll(".category");
+
+let currentIndex = 0; // 現在のインデックスを記憶する変数
+let lastButtonPressTime = 0; // 最後にボタンが押された時刻を記憶する変数
+const buttonDelay = 500; // ボタンのディレイ（ミリ秒）
+
+// ゲームパッドの状態を監視する関数
+function checkGamepad() {
+  const gamepad = navigator.getGamepads()[0];
+  if (gamepad) {
+    const currentTime = Date.now();
+    if (gamepad.buttons[5].pressed && currentTime - lastButtonPressTime > buttonDelay) { // Aボタンが押されてディレイを経過したかどうかをチェック
+      // Aボタンが押された場合の処理を記述
+      menuButtons[currentIndex].click(); // 現在のインデックスのボタンをクリックする
+      currentIndex = (currentIndex + 1) % menuButtons.length; // インデックスを更新する
+      lastButtonPressTime = currentTime; // 最後にボタンが押された時刻を更新
+    } else if (gamepad.buttons[4].pressed && currentTime - lastButtonPressTime > buttonDelay) { // Bボタンが押されてディレイを経過したかどうかをチェック
+      // Bボタンが押された場合の処理を記述
+      currentIndex = (currentIndex - 1 + menuButtons.length) % menuButtons.length; // インデックスをデクリメントする
+      menuButtons[currentIndex].click(); // デクリメントされたインデックスのボタンをクリックする
+      lastButtonPressTime = currentTime; // 最後にボタンが押された時刻を更新
+    }
+  }
+}
+
+// 定期的にゲームパッドの状態を確認するためのループを設定
+setInterval(checkGamepad, 100); // 100ミリ秒ごとに確認
+
+// メニューボタンのクリックイベントを設定
+menuButtons.forEach((button, index) => {
+  button.addEventListener("click", function () {
+    headerElements.forEach(element => {
+      element.style.display = "none";
+    });
+    const targetId = button.dataset.target;
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.style.display = "block";
+      audio.currentTime = 0;
+      audio.play();
+    }
+    currentIndex = index; // 現在のインデックスを更新
+  });
+});
 
   stats_open.addEventListener("click", function () {
     headerElements.forEach(element => {
@@ -227,7 +271,6 @@ ct_a_open.addEventListener("click", function () {
       ct_02_complete.style.display = "block";
   });
 });
-
 
 document.addEventListener('contextmenu', (event) => {
   event.preventDefault();

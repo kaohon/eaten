@@ -439,8 +439,8 @@
     }
 
      #b3 {
-        left: 5%;
-        transform: translateX(-5%);
+        left: 95%;
+        transform: translateX(-95%);
         opacity: 0.5;
     }
 
@@ -451,14 +451,14 @@
     }
 
     #b1 {
-        left: 95%;
-        transform: translateX(-95%);
+        left: 5%;
+        transform: translateX(-5%);
         opacity: 0.5;
     }
 
     #s3 {
-        left: 5%;
-        transform: translateX(-5%);
+        left: 95%;
+        transform: translateX(-95%);
         opacity: 0.5;
     }
 
@@ -469,14 +469,14 @@
     }
 
     #s1 {
-        left: 95%;
-        transform: translateX(-95%);
+        left: 5%;
+        transform: translateX(-5%);
         opacity: 0.5;
     }
 
     #g3 {
-        left: 5%;
-        transform: translateX(-5%);
+        left: 95%;
+        transform: translateX(-95%);
         opacity: 0.5;
     }
 
@@ -487,14 +487,14 @@
     }
 
     #g1 {
-        left: 95%;
-        transform: translateX(-95%);
+        left: 5%;
+        transform: translateX(-5%);
         opacity: 0.5;
     }
 
     #p3 {
-        left: 5%;
-        transform: translateX(-5%);
+        left: 95%;
+        transform: translateX(-95%);
         opacity: 0.5;
     }
 
@@ -505,14 +505,14 @@
     }
 
     #p1 {
-        left: 95%;
-        transform: translateX(-95%);
+        left: 5%;
+        transform: translateX(-5%);
         opacity: 0.5;
     }
 
     #d3 {
-        left: 5%;
-        transform: translateX(-5%);
+        left: 95%;
+        transform: translateX(-95%);
         opacity: 0.5;
     }
 
@@ -523,14 +523,14 @@
     }
 
     #d1 {
-        left: 95%;
-        transform: translateX(-95%);
+        left: 5%;
+        transform: translateX(-5%);
         opacity: 0.5;
     }
 
     #m3 {
-        left: 5%;
-        transform: translateX(-5%);
+        left: 95%;
+        transform: translateX(-95%);
         opacity: 0.5;
     }
 
@@ -541,8 +541,8 @@
     }
 
     #m1 {
-        left: 95%;
-        transform: translateX(-95%);
+        left: 5%;
+        transform: translateX(-5%);
         opacity: 0.5;
     }
 }

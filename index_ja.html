@@ -25,6 +25,44 @@
         <span class="category" id="bank_open">銀行</span>
         <span class="category" id="pass_open">シーズンパス</span>
     </main>
+    <div id="custom-cursor"></div>
+<script>
+// カーソルの初期位置を画面中央に設定
+let cursorX = window.innerWidth / 2;
+let cursorY = window.innerHeight / 2;
+
+function mainLoop() {
+    const cursor = document.getElementById("custom-cursor");
+    const gamepad = navigator.getGamepads()[0];
+    if (!gamepad) {
+        cursor.style.display = "block";
+        requestAnimationFrame(mainLoop);
+        return;
+    }
+
+    var leftStickX = gamepad.axes[0];
+    var leftStickY = gamepad.axes[1];
+    var rightStickX = gamepad.axes[2];
+    var rightStickY = gamepad.axes[3];
+
+    // スティックの値を利用してポインターの座標を計算
+    cursorX += rightStickX * 8; // 10はポインターの移動速度を調整するための係数
+    cursorY += rightStickY * 8;
+
+    // カーソルが画面外に出ないように制限
+    cursorX = Math.max(0, Math.min(cursorX, window.innerWidth));
+    cursorY = Math.max(0, Math.min(cursorY, window.innerHeight));
+
+    // カーソル要素にポインターの座標を設定
+    cursor.style.left = cursorX + "px";
+    cursor.style.top = cursorY + "px";
+
+    requestAnimationFrame(mainLoop);
+}
+
+    mainLoop();
+
+</script>
     <main id="bank">
         <progress id="bank_level" value="0" max="7"></progress>
         <span id="progress_word">レベル進行度:0/7</span>
