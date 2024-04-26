@@ -95,7 +95,7 @@ ranks.forEach(rank => {
 });
 }
 
-setTimeout(() => {
+setInterval(() => {
     counthour = parseInt(elapsedhour.innerHTML);
     counthour_s1 = parseInt(elapsedhour_s1.innerHTML);
     counthour_s2 = parseInt(elapsedhour_s2.innerHTML);

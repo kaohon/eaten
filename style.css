@@ -148,6 +148,7 @@ label > input {
     position: absolute;
     top: 400px;
     left: 50%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-50%);
     opacity: 0.5;
 }
@@ -156,6 +157,7 @@ label > input {
     position: absolute;
     top: 600px;
     left: 50%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-50%);
     opacity: 0.5;
 }
@@ -164,6 +166,7 @@ label > input {
     position: absolute;
     top: 600px;
     left: 25%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-25%);
     opacity: 0.5;
 }
@@ -172,6 +175,7 @@ label > input {
     position: absolute;
     top: 600px;
     left: 75%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-75%);
     opacity: 0.5;
 }
@@ -180,6 +184,7 @@ label > input {
     position: absolute;
     top: 800px;
     left: 25%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-25%);
     opacity: 0.5;
 }
@@ -188,6 +193,7 @@ label > input {
     position: absolute;
     top: 800px;
     left: 15%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-15%);
     opacity: 0.5;
 }
@@ -196,6 +202,7 @@ label > input {
     position: absolute;
     top: 1000px;
     left: 25%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-25%);
     opacity: 0.5;
 }
@@ -204,6 +211,7 @@ label > input {
     position: absolute;
     top: 800px;
     left: 75%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-75%);
     opacity: 0.5;
 }
@@ -212,6 +220,7 @@ label > input {
     position: absolute;
     top: 1000px;
     left: 75%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-75%);
     opacity: 0.5;
 }
@@ -220,6 +229,7 @@ label > input {
     position: absolute;
     top: 1200px;
     left: 75%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-75%);
     opacity: 0.5;
 }
@@ -228,6 +238,7 @@ label > input {
     position: absolute;
     top: 1200px;
     left: 25%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-25%);
     opacity: 0.5;
 }
@@ -236,6 +247,7 @@ label > input {
     position: absolute;
     top: 200px;
     left: 75%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-75%);
     opacity: 0.5;
 }
@@ -244,6 +256,7 @@ label > input {
     position: absolute;
     top: 200px;
     left: 50%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-50%);
     opacity: 0.5;
 }
@@ -252,6 +265,7 @@ label > input {
     position: absolute;
     top: 200px;
     left: 25%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-25%);
     opacity: 0.5;
 }
@@ -260,8 +274,13 @@ label > input {
     position: absolute;
     top: 400px;
     left: 75%;
+    border: 3px solid #c1c1c1;
     transform: translateX(-75%);
     opacity: 0.5;
+}
+
+.mastery {
+    position: absolute;
 }
 
 
@@ -442,7 +461,7 @@ label > input {
     left: 50%;
 }
 
-#progress_word {
+.progress_word {
     position: absolute;
     transform: translateX(-50%);
     left: 50%;

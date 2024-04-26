@@ -246,17 +246,8 @@ s2_s_open.addEventListener("click", function () {
   toggleDisplay([s_playtime_s2, s_allcandy_s2, s_rank_s2]);
 });
 
+/*
 const achivement_detail = document.querySelectorAll("#ct_01_complete, #ct_02_complete, #reach_b, #reach_s, #reach_g, #reach_p, #reach_d, #reach_m, #reach_b_s1, #reach_s_s1, #reach_g_s1, #reach_p_s1, #reach_d_s1, #reach_m_s1,#reach_b_s2, #reach_s_s2, #reach_g_s2, #reach_p_s2, #reach_d_s2, #reach_m_s2,#l50, #l100, #l150, #l200, #l250, #l300, #l350, #l400, #l450, #l500, #s1_play, #s1_complete, #s2_play, #s2_complete");
-
-function toggleDisplay(elementsToShow) {
-  achivement_detail.forEach(element => {
-    if (elementsToShow.includes(element)) {
-      element.style.display = "block";
-    } else {
-      element.style.display = "none";
-    }
-  });
-}
 
 all_a_open.addEventListener("click", function () {
   achivement_detail.forEach(element => {
@@ -271,6 +262,7 @@ ct_a_open.addEventListener("click", function () {
       ct_02_complete.style.display = "block";
   });
 });
+*/
 
 document.addEventListener('contextmenu', (event) => {
   event.preventDefault();
