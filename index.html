@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-8745709457878213">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>Eatcandy - 進化は終わらない</title>
+</head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXXJ3C8E7M"></script>
+    <script src="gtag.js"></script>
+<body style="overflow: hidden;">
+<div class="button_solid001"></div>
+
+<img src="img/wand.png" style="position: absolute; bottom: 400px; left: 300px; transform: rotate( 25deg ) scale(8.5);">
+<img src="img/sword.png" style="position: absolute; bottom: 400px; right: 300px; transform: rotate( 55deg ) scale(9.0);">
+
+<span id="version">
+GAME 24.5.6
+<br>NAC 24.4.1
+<br>©2024 Noimzip
+</span>
+
+<style>
+#version {
+    right: 20px;
+    bottom: 20px;
+    position: absolute;
+    margin: 0 auto;
+    padding: 10px 25px;
+    color: #000000;
+    font-size: 24px;
+}
+
+.button_solid001 a {
+    padding: 20px;
+    width: fit-content;
+    text-align: center;
+    cursor: pointer;
+    border: solid 1px black;
+    font-weight: 1000;
+}
+.button_solid001 a:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px -5px rgb(0 0 0 / 15%), 0 0 2px rgb(0 0 0 / 10%);
+}</style>
+
+<div class="popup_wrap">
+<input id="trigger" type="checkbox">
+<div class="popup_overlay">
+<label for="trigger" class="popup_trigger"></label>
+<div class="popup_content">
+<label for="trigger" class="close_btn">×</label>
+<p>
+<div style="position:absolute; top:50px; left:225px;">
+<div class="button_solid001"><a href="index_ja.html"><font face="Yu Gothic UI Semilight" size="+1">日本語</font></a>
+</div><style type="text/css" src="Button.css"></style></div>
+
+<div style="position:absolute; top:50px; left:650px;">
+<div class="button_solid001"><a href="index_en.html"><font face="Yu Gothic UI Semilight" size="+1">English</font></a>
+</div><style type="text/css" src="Button.css"></style></div>
+
+</p>
+</div>
+</div>
+</div><label for="trigger" class="open_btn">プレイ</label>
+<style type="text/css">
+    .popup_wrap input {
+    display: none;
+    }
+
+    .popup_overlay {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0s 0.3s;
+    transform: scale(0);
+    }
+
+    .popup_content {
+    position: relative;
+    align-self: center;
+    width: 90%;
+    height: 90%;
+    max-width: 1000px;
+    max-height: 150px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    background: #fff;
+    line-height: 1.4em;
+    text-align: justify;
+    }
+
+    .close_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    padding:10px;
+    background: #696969;
+    color: #fff;
+    border-radius:0px;
+    line-height:10px;
+    font-weight:bold;
+    }
+
+    .popup_wrap input:checked ~ .popup_overlay {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.2s;
+    }
+
+    .open_btn {
+        position: relative;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        cursor: pointer;
+        border: solid 1px black;
+    top: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    font-weight: 1000;
+    }
+.open_btn a:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px -5px rgb(0 0 0 / 15%), 0 0 2px rgb(0 0 0 / 10%);
+}
+
+</style>
+
+<span id="main-title">Eatcandy</span><span id="sub-title">― 進化は終わらない ―</span><span id="season-title">シーズン 2</span>
+<style type="text/css">
+    #main-title {
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        position: absolute;
+        top: 150px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px 25px;
+        color: #000000;
+        font-weight: 1000;
+        font-size: 104px;
+    }
+
+    #sub-title {
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        position: absolute;
+        top: 300px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px 25px;
+        color: #000000;
+        font-weight: 1000;
+        font-size: 42px;
+    }
+
+    #season-title {
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        position: absolute;
+        top: 400px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px 25px;
+        color: #000000;
+        font-weight: 1000;
+        font-size: 42px;
+    }
+</style>
+</body>
+</html>

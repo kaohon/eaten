@@ -208,73 +208,72 @@ function mainLoop() {
         <section class="collection-series">
             <span id="ct_01_open" class="collection_tree">コレクションツリー Part1</span>
             <span id="ct_02_open" class="collection_tree">コレクションツリー Part2</span>
-            <span id="ct_demo_open" class="collection_tree">ショットガン・マスタリー</span>
         </section>
     <section id="ct_01">
-        <p id="block" class="box"><span id="block_m" class="mastery">0/100</span><img src="img/candy.png">
+        <p id="block" class="box"><span id="block_m" class="mastery">0/100</span><span id="block_r" class="rarity">C</span><span id="block_l" class="w_level">0/100</span><img src="img/candy.png">
             </p><div id="block_tt" class="tooltip">キャンディ 所持済み
                 <p>何のひねりもないただのアイテム。</p><p><progress id="block_m_bar" value="0" max="600"></progress><span class="progress_word">レベル まで:0分 / 600分</span><img src="img/candy.png"></p></div>
-        <p id="stick" class="box"><span id="stick_m" class="mastery">0/100</span><img src="img/stick.png">
+        <p id="stick" class="box"><span id="stick_m" class="mastery">0/100</span><span id="stick_r" class="rarity"></span><span id="stick_l" class="w_level">0/100</span><img src="img/stick.png">
             </p><div id="stick_tt" class="tooltip">キャンディスティック 10,000キャンディ
                 <p>キャンディを加工し、研磨をしたもの。<img src="img/stick.png"></p></div>
-        <p id="ecube" class="box"><span id="ecube_m" class="mastery">0/100</span><img src="img/energycube.png">
-            </p><div id="ecube_tt" class="tooltip">エナジーキューブ 50,000キャンディ
+        <p id="ecube" class="box"><span id="ecube_m" class="mastery">0/100</span><span id="ecube_r" class="rarity"></span><span id="ecube_l" class="w_level">0/100</span><img src="img/energycube.png">
+            </p><div id="ecube_tt" class="tooltip">エナジーキューブ 20,500キャンディ
                 <p>キャンディ秒間生産量が+0.25</p>
                 <p>キャンディを凝縮し、無限のエネルギーを放出できるようにしたアイテム。価値が非常に高い。<img src="img/energycube.png"></p></div>
-        <p id="wand" class="box"><span id="wand_m" class="mastery">0/100</span><img src="img/wand.png">
-            </p><div id="wand_tt" class="tooltip">キャンディワンド 60,000キャンディ
+        <p id="wand" class="box"><span id="wand_m" class="mastery">0/100</span><span id="wand_r" class="rarity"></span><span id="wand_l" class="w_level">0/100</span><img src="img/wand.png">
+            </p><div id="wand_tt" class="tooltip">キャンディワンド 30,000キャンディ
                 <p>キャンディ秒間生産量が+0.25</p>
                 <p>無限のエネルギーで魔法攻撃をしていた武器。<img src="img/wand.png"></p></div>
-        <p id="dcwand" class="box"><span id="dcwand_m" class="mastery">0/100</span><img src="img/doublecubewand.png">
-            </p><div id="dcwand_tt" class="tooltip">ダブルキューブ・キャンディワンド 110,000キャンディ
+        <p id="dcwand" class="box"><span id="dcwand_m" class="mastery">0/100</span><span id="dcwand_r" class="rarity"></span><span id="dcwand_l" class="w_level">0/100</span><img src="img/doublecubewand.png">
+            </p><div id="dcwand_tt" class="tooltip">ダブルキューブ・キャンディワンド 60,000キャンディ
                 <p>キャンディ秒間生産量が+0.5</p>
                 <p>キャンディワンドが進化し、エナジーキューブが2つ搭載されていた武器。<img src="img/doublecubewand.png"></p></div>
-        <p id="bwand" class="box"><span id="bwand_m" class="mastery">0/100</span><img src="img/wandboomerang.png">
-            </p><div id="bwand_tt" class="tooltip">キャンディワンド・ブーメラン 180,000キャンディ
+        <p id="bwand" class="box"><span id="bwand_m" class="mastery">0/100</span><span id="bwand_r" class="rarity"></span><span id="bwand_l" class="w_level">0/100</span><img src="img/wandboomerang.png">
+            </p><div id="bwand_tt" class="tooltip">キャンディワンド・ブーメラン 90,000キャンディ
                 <p>キャンディ秒間生産量が+0.75</p>
                 <p>ダブルキューブ・キャンディワンドが進化し、エナジーキューブが3つ搭載され、魔法攻撃と物理攻撃の両方を可能とした武器。<img src="img/wandboomerang.png"></p></div>
-        <p id="twand" class="box"><span id="twand_m" class="mastery">0/100</span><img src="img/turbowand.png">
+        <p id="twand" class="box"><span id="twand_m" class="mastery">0/100</span><span id="twand_r" class="rarity"></span><span id="twand_l" class="w_level">0/100</span><img src="img/turbowand.png">
             </p><div id="twand_tt" class="tooltip">超絶キャンディワンド改・ターボ 260,000キャンディ
                 <p>キャンディ秒間生産量が+1.0</p>
                 <p>キャンディワンドの頂点。<img src="img/turbowand.png"></p></div>
-        <p id="lastwand" class="box"><span id="lastwand_m" class="mastery">0/100</span><img src="img/worldlastturbowand.png">
+        <p id="lastwand" class="box"><span id="lastwand_m" class="mastery">0/100</span><span id="lastwand_r" class="rarity"></span><span id="lastwand_l" class="w_level">0/100</span><img src="img/worldlastturbowand.png">
             </p><div id="lastwand_tt" class="tooltip">ワールドエンド・キャンディワンド 660,000キャンディ
                 <p>キャンディ秒間生産量が+2.0</p>
                 <p>もう一方の選択肢が解放される。</p>
                 <p>世界の終わりに...<img src="img/worldlastturbowand.png"></p></div>
-        <p id="sword" class="box"><span id="sword_m" class="mastery">0/100</span><img src="img/sword.png">
-            </p><div id="sword_tt" class="tooltip">キャンディソード 60,000キャンディ
+        <p id="sword" class="box"><span id="sword_m" class="mastery">0/100</span><span id="sword_r" class="rarity"></span><span id="sword_l" class="w_level">0/100</span><img src="img/sword.png">
+            </p><div id="sword_tt" class="tooltip">キャンディソード 3,000キャンディ
                 <p>キャンディ秒間生産量が+0.25</p>
                 <p>無限のエネルギーで物理攻撃をしていた武器。<img src="img/sword.png"></p></div>
-        <p id="dsword" class="box"><span id="dsword_m" class="mastery">0/100</span><img src="img/dualsword.png">
-            </p><div id="dsword_tt" class="tooltip">デュアル・キャンディソード 120,000キャンディ
+        <p id="dsword" class="box"><span id="dsword_m" class="mastery">0/100</span><span id="dsword_r" class="rarity"></span><span id="dsword_l" class="w_level">0/100</span><img src="img/dualsword.png">
+            </p><div id="dsword_tt" class="tooltip">デュアル・キャンディソード 10,000キャンディ
                 <p>キャンディ秒間生産量が+0.5</p>
                 <p>キャンディソードが進化し、二刀流となった武器。<img src="img/dualsword.png"></p></div>
-        <p id="tsword" class="box"><span id="tsword_m" class="mastery">0/100</span><img src="img/turbosword.png">
+        <p id="tsword" class="box"><span id="tsword_m" class="mastery">0/100</span><span id="tsword_r" class="rarity"></span><span id="tsword_l" class="w_level">0/100</span><img src="img/turbosword.png">
             </p><div id="tsword_tt" class="tooltip">超絶キャンディソード改・ターボ 220,000キャンディ
                 <p>キャンディ秒間生産量が+1.0</p>
                 <p>キャンディソードの頂点。<img src="img/turbosword.png"></p></div>
-        <p id="lastsword" class="box"><span id="lastsword_m" class="mastery">0/100</span><img src="img/worldlastturbosword.png">
+        <p id="lastsword" class="box"><span id="lastsword_m" class="mastery">0/100</span><span id="lastsword_r" class="rarity"></span><span id="lastsword_l" class="w_level">0/100</span><img src="img/worldlastturbosword.png">
             </p><div id="lastsword_tt" class="tooltip">ワールドエンド・キャンディソード 860,000キャンディ
                 <p>キャンディ秒間生産量が+4.0</p>
                 <p>もう一方の選択肢が解放される。</p>
                 <p>世界の終わりに...<img src="img/worldlastturbosword.png"></p></div>
     </section>
     <section id="ct_02">
-        <p id="spear" class="box"><span id="spear_m" class="mastery">0/100</span><img src="img/spear.png">
+        <p id="spear" class="box"><span id="spear_m" class="mastery">0/100</span><span id="spear_r" class="rarity"></span><span id="spear_l" class="w_level">0/100</span><img src="img/spear.png">
             </p><div id="spear_tt" class="tooltip">キャンディ・ボウ 180,000キャンディ
                 <p>キャンディ秒間生産量が+0.5</p>
                 <p><img src="img/bow.png"></p></div>
-        <p id="bow" class="box"><span id="bow_m" class="mastery">0/100</span><img src="img/bow.png">
+        <p id="bow" class="box"><span id="bow_m" class="mastery">0/100</span><span id="bow_r" class="rarity"></span><span id="bow_l" class="w_level">0/100</span><img src="img/bow.png">
             </p><div id="bow_tt" class="tooltip">キャンディ・ボウ 300,000キャンディ
                 <p>キャンディ秒間生産量が+0.5</p>
                 <p><img src="img/bow.png"></p></div>
-        <p id="knife" class="box"><span id="knife_m" class="mastery">0/100</span><img src="img/knife.png">
+        <p id="knife" class="box"><span id="knife_m" class="mastery">0/100</span><span id="knife_r" class="rarity"></span><span id="knife_l" class="w_level">0/100</span><img src="img/knife.png">
             </p><div id="knife_tt" class="tooltip">キャンディ・ナイフ 180,000キャンディ
                 <p>キャンディ秒間生産量が+0.5</p>
                 <p><img src="img/knife.png"></p></div>
 
-        <p id="feather_knife" class="box"><span id="feather_knife_m" class="mastery">0/100</span><img src="img/feather_knife.png">
+        <p id="feather_knife" class="box"><span id="feather_knife_m" class="mastery">0/100</span><span id="feather_knife_r" class="rarity"></span><span id="feather_knife_l" class="w_level">0/100</span><img src="img/feather_knife.png">
             </p><div id="feather_knife_tt" class="tooltip">キャンディ・ファザーナイフ 360,000キャンディ
                 <p>キャンディ秒間生産量が+1.0</p>
                 <p><img src="img/feather_knife.png"></p></div>
@@ -293,7 +292,10 @@ function mainLoop() {
                 <span id="arcana_2_tt" class="tooltip">II 延長<br>カードの効果を1.5倍延長</span>
             <!--03-->
             <img id="arcana_3" src="img/arcana_3.png">
-                <span id="arcana_3_tt" class="tooltip">Ⅲ 錬成<br>1000キャンディを無から生成</span>
+                <span id="arcana_3_tt" class="tooltip">Ⅲ 錬成<br>現在のキャンディーを無から生成</span>
+            <!--04-->
+            <img id="arcana_4" src="img/arcana_4.png">
+                <span id="arcana_4_tt" class="tooltip">Ⅳ <br>コレクションマスタリーの進行をブースト</span>
             <!--
             <img id="arcana_4" src="img/arcana_4.png">
                 <span id="arcana_4_tt" class="tooltip">Ⅳ 抑制解放 Part1<br>キャンディの生産量が3分間1.5倍<br>(クールタイム:10分)</span>
@@ -332,7 +334,8 @@ function mainLoop() {
         <p class="standard-button setting-button" onclick="save()">保存</p>
         <a href="#" id="link1" download="savedata.txt"><p class="standard-button setting-button" onclick="download()">セーブデータ書き出し</p></a>
         <label class="standard-button setting-button" for="selfile">セーブデータ読み込み<input type="file" id="selfile"></label>
-        <p class="standard-button setting-button" onclick="reset()">リセット</p>
+        <p class="standard-button setting-button"><a href="index.html">スタート画面に戻る</a></p>
+        <p id="reset-button" class="standard-button setting-button" onclick="reset()">リセット</p>
         <!--<span id="alert">自動セーブしました。(30秒毎)</span>-->
     </main>
     <main id="items">
@@ -534,6 +537,7 @@ function mainLoop() {
 
     <script src="level.js"></script>
     <script src="shop.js"></script>
+    <script src="card.js"></script>
     <script src="rank.js"></script>
     <script src="pass.js"></script>
     <script src="data.js"></script>

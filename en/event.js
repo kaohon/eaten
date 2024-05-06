@@ -162,6 +162,47 @@ if (mediaQuery.matches) {
   });
 }
 
+const stats_detail = document.querySelectorAll("#s_level, #s_playtime, #s_playtime_s1, #s_playtime_s2, #s_allcandy, #s_allcandy_s1, #s_allcandy_s2, #s_cps, #s_now_rank, #s_rank_s1, #s_rank_s2");
+
+function toggleDisplay(elementsToShow) {
+  stats_detail.forEach(element => {
+    if (elementsToShow.includes(element)) {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  });
+}
+
+all_s_open.addEventListener("click", function () {
+  toggleDisplay([s_level, s_playtime, s_playtime_s1, s_playtime_s2, s_allcandy, s_allcandy_s1, s_allcandy_s2, s_cps, s_now_rank, s_rank_s1, s_rank_s2]);
+});
+
+total_s_open.addEventListener("click", function () {
+  toggleDisplay([s_level, s_playtime, s_allcandy, s_cps, s_now_rank]);
+});
+
+playtime_s_open.addEventListener("click", function () {
+  toggleDisplay([s_playtime, s_playtime_s1, s_playtime_s2]);
+});
+
+candy_s_open.addEventListener("click", function () {
+  toggleDisplay([s_allcandy, s_allcandy_s1, s_allcandy_s2]);
+});
+
+rank_s_open.addEventListener("click", function () {
+  toggleDisplay([s_now_rank, s_rank_s1, s_rank_s2]);
+});
+
+s1_s_open.addEventListener("click", function () {
+  toggleDisplay([s_playtime_s1, s_allcandy_s1, s_rank_s1]);
+});
+
+s2_s_open.addEventListener("click", function () {
+  toggleDisplay([s_playtime_s2, s_allcandy_s2, s_rank_s2]);
+});
+
+/*
 document.addEventListener('contextmenu', (event) => {
   event.preventDefault();
 });
@@ -189,7 +230,7 @@ setInterval(function() {
       pass_open.style.display = "none";
     }
   }, 500); // 1秒ごとにチェック
-
+*/
 
 let ct_01_open = document.getElementById("ct_01_open");
 let ct_02_open = document.getElementById("ct_02_open");

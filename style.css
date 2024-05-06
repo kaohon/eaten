@@ -66,6 +66,11 @@ label > input {
     text-align: center;
 }
 
+#reset-button {
+    color: red;
+    border: solid 2px red;
+}
+
 #alert {
     display: none;
 }
@@ -283,6 +288,16 @@ label > input {
     position: absolute;
 }
 
+.rarity {
+    position: absolute;
+    right: 0;
+}
+
+.w_level {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 
 .bought {
     opacity: 1 !important;

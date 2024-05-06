@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,9 +25,47 @@
         <span class="category" id="bank_open">Bank</span>
         <span class="category" id="pass_open">Season Pass</span>
     </main>
+    <div id="custom-cursor"></div>
+<script>
+// カーソルの初期位置を画面中央に設定
+let cursorX = window.innerWidth / 2;
+let cursorY = window.innerHeight / 2;
+
+function mainLoop() {
+    const cursor = document.getElementById("custom-cursor");
+    const gamepad = navigator.getGamepads()[0];
+    if (!gamepad) {
+        cursor.style.display = "block";
+        requestAnimationFrame(mainLoop);
+        return;
+    }
+
+    var leftStickX = gamepad.axes[0];
+    var leftStickY = gamepad.axes[1];
+    var rightStickX = gamepad.axes[2];
+    var rightStickY = gamepad.axes[3];
+
+    // スティックの値を利用してポインターの座標を計算
+    cursorX += rightStickX * 8; // 10はポインターの移動速度を調整するための係数
+    cursorY += rightStickY * 8;
+
+    // カーソルが画面外に出ないように制限
+    cursorX = Math.max(0, Math.min(cursorX, window.innerWidth));
+    cursorY = Math.max(0, Math.min(cursorY, window.innerHeight));
+
+    // カーソル要素にポインターの座標を設定
+    cursor.style.left = cursorX + "px";
+    cursor.style.top = cursorY + "px";
+
+    requestAnimationFrame(mainLoop);
+}
+
+    mainLoop();
+
+</script>
     <main id="bank">
         <progress id="bank_level" value="0" max="7"></progress>
-        <span id="progress_word">Level Progression:0/7</span>
+        <span class="progress_word">Level Progression:0/7</span>
         <br>Save candy(ies) Current storage:<span id="candy_storage"></span><br>
         <span class="standard-button bank-button" id="in_storage">Deposit</span>
         <span class="standard-button bank-button" id="out_storage">Payment</span>
@@ -59,19 +97,28 @@
         </table>
     </main>
     <main id="stats">
-        Current level:<span id="levelhtml">0</span>
-        <p>Current playing time:<span id="elapsedhour"></span> Hour(s) <span id="elapsedmin"></span> minute(s) <span id="elapsedsec"></span> second(s)</p>
-        <p>S1 played time:<span id="elapsedhour_s1"></span> Hour(s) <span id="elapsedmin_s1"></span> minute(s) <span id="elapsedsec_s1"></span> second(s)</p>
-        <p>S2 playing time:<span id="elapsedhour_s2"></span> Hour(s) <span id="elapsedmin_s2"></span> minute(s) <span id="elapsedsec_s2"></span> second(s)</p>
+        <section class="collection-series">
+            <span id="all_s_open" class="collection_tree">All Statistics</span>
+            <span id="total_s_open" class="collection_tree">Cumulative total</span>
+            <span id="playtime_s_open" class="collection_tree">Play time</span>
+            <span id="candy_s_open" class="collection_tree">Candy</span>
+            <span id="rank_s_open" class="collection_tree">Rank</span>
+            <span id="s1_s_open" class="collection_tree">S1</span>
+            <span id="s2_s_open" class="collection_tree">S2</span>
+        </section>
+        <span id="s_level">Current level:<span id="levelhtml">0</span></span>
+        <p id="s_playtime">Current playing time:<span id="elapsedhour"></span> Hour(s) <span id="elapsedmin"></span> minute(s) <span id="elapsedsec"></span> second(s)</p>
+        <p id="s_playtime_s1">S1 played time:<span id="elapsedhour_s1"></span> Hour(s) <span id="elapsedmin_s1"></span> minute(s) <span id="elapsedsec_s1"></span> second(s)</p>
+        <p id="s_playtime_s2">S2 playing time:<span id="elapsedhour_s2"></span> Hour(s) <span id="elapsedmin_s2"></span> minute(s) <span id="elapsedsec_s2"></span> second(s)</p>
+        <p id="s_allcandy">Total production candy(ies):<span id="allcandyhtml"></span></p>
+        <p id="s_allcandy_s1">S1 total production candy(ies):<span id="allcandyhtml_s1"></span></p>
+        <p id="s_allcandy_s2">S2 total production candy(ies):<span id="allcandyhtml_s2"></span></p>
+        <p id="s_cps">Candy seconds production:<span id="cps"></span></p>
+        <p id="s_now_rank">Current rank: Circuit <span id="circuit"></span> <span id="now_rank"></span></p>
+        <p id="s_rank_s1">S1 rank: Circuit <span id="circuit_s1"></span> <span id="now_rank_s1"></span></p>
+        <p id="s_rank_s2">S2 rank: Circuit <span id="circuit_s2"></span> <span id="now_rank_s2"></span></p>
         <p>Share play time <a id="lineshare" target="_blank" rel="nofollow noopener noreferrer">Share on line</a></p>
-        <p>Total production candy(ies):<span id="allcandyhtml"></span></p>
-        <p>S1 total production candy(ies):<span id="allcandyhtml_s1"></span></p>
-        <p>S2 total production candy(ies):<span id="allcandyhtml_s2"></span></p>
-        <p>Candy seconds production:<span id="cps"></span></p>
-        <p>Current rank: Circuit <span id="circuit"></span> <span id="now_rank"></span></p>
-        <p>S1 rank: Circuit <span id="circuit_s1"></span> <span id="now_rank_s1"></span></p>
-        <p>S2 rank: Circuit <span id="circuit_s2"></span> <span id="now_rank_s2"></span></p>
-        <hr>実績<hr>
+        <hr>Achievement<hr>
         <span id="ct_01_complete" class="achivement">CT<br>01</span>
             <span id="ct_01_complete_tt" class="tooltip">Collection tree Part1 Complete.</span>
         <span id="ct_02_complete" class="achivement">CT<br>02</span>
@@ -150,7 +197,6 @@
         <section id="collection-series">
             <span id="ct_01_open" class="collection_tree">Collection tree Part1</span>
             <span id="ct_02_open" class="collection_tree">Collection tree Part2</span>
-            <span id="ct_demo_open" class="collection_tree">ショットガン・マスタリー</span>
         </section>
     <section id="ct_01">
         <p id="block" class="box"><span style="position: absolute;">0/100</span><img src="img/candy.png">
@@ -274,6 +320,7 @@
         <p class="standard-button setting-button" onclick="save()">Save</p>
         <a href="#" id="link1" download="savedata.txt"><p class="standard-button setting-button" onclick="download()">Save data export</p></a>
         <label class="standard-button setting-button" for="selfile">Save data loading<input type="file" id="selfile"></label>
+        <p class="standard-button setting-button"><a href="index.html">Return to Start Screen</a></p>
         <p class="standard-button setting-button" onclick="reset()">Reset</p>
         <!--<span id="alert">自動セーブしました。(30秒毎)</span>-->
     </main>
@@ -454,24 +501,24 @@
                 <td>Master</td><td>415 - 455</td><td>455 - 495</td><td>495 - 510</td>
             </tr>
         </table>
-        <span id="b3" class="color_b"><img src="img/bronze1.png"></span>
+        <span id="b1" class="color_b"><img src="img/bronze1.png"></span>
         <span id="b2" class="color_b"><img src="img/bronze2.png"></span>
-        <span id="b1" class="color_b"><img src="img/bronze3.png"></span>
-        <span id="s3" class="color_s"><img src="img/silver1.png"></span>
+        <span id="b3" class="color_b"><img src="img/bronze3.png"></span>
+        <span id="s1" class="color_s"><img src="img/silver1.png"></span>
         <span id="s2" class="color_s"><img src="img/silver2.png"></span>
-        <span id="s1" class="color_s"><img src="img/silver3.png"></span>
-        <span id="g3" class="color_g"><img src="img/gold1.png"></span>
+        <span id="s3" class="color_s"><img src="img/silver3.png"></span>
+        <span id="g1" class="color_g"><img src="img/gold1.png"></span>
         <span id="g2" class="color_g"><img src="img/gold2.png"></span>
-        <span id="g1" class="color_g"><img src="img/gold3.png"></span>
-        <span id="p3" class="color_p"><img src="img/platinum1.png"></span>
+        <span id="g3" class="color_g"><img src="img/gold3.png"></span>
+        <span id="p1" class="color_p"><img src="img/platinum1.png"></span>
         <span id="p2" class="color_p"><img src="img/platinum2.png"></span>
-        <span id="p1" class="color_p"><img src="img/platinum3.png"></span>
-        <span id="d3" class="color_d"><img src="img/diamond1.png"></span>
+        <span id="p3" class="color_p"><img src="img/platinum3.png"></span>
+        <span id="d1" class="color_d"><img src="img/diamond1.png"></span>
         <span id="d2" class="color_d"><img src="img/diamond2.png"></span>
-        <span id="d1" class="color_d"><img src="img/diamond3.png"></span>
-        <span id="m3" class="color_m"><img src="img/master1.png"></span>
+        <span id="d3" class="color_d"><img src="img/diamond3.png"></span>
+        <span id="m1" class="color_m"><img src="img/master1.png"></span>
         <span id="m2" class="color_m"><img src="img/master2.png"></span>
-        <span id="m1" class="color_m"><img src="img/master3.png"></span>
+        <span id="m3" class="color_m"><img src="img/master3.png"></span>
     </main>
 
     <script src="level.js"></script>

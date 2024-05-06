@@ -509,6 +509,11 @@ const autosave = () => {
   }
 
   function reset() {
+    if (window.confirm("本当にデータを消去したいですか?")) {
+      if (window.confirm("本当に本当にデータを消去したいですか??????")) {
+        let sign = prompt("消去したい場合は、 ALLCLEAR と入力してください。");
+        if (sign === "ALLCLEAR") {
+          alert("再読み込みすると、完全にデータが削除されます。引き返したい場合は、今の状態でデータの書き出し/セーブを行ってください。")
     localStorage.removeItem("candyvalue");
     localStorage.removeItem("elapsedtime");
     localStorage.removeItem("elapsedsec");
@@ -560,6 +565,9 @@ const autosave = () => {
 
     audio.currentTime = 0;
     audio.play();
+        }
+      }
+    }
   }
 // 暗号化キー
 const encryptionKey = 'E6&mFz9x#s@Lq2Dv';
