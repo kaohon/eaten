@@ -264,7 +264,7 @@ ct_a_open.addEventListener("click", function () {
 });
 */
 
-/*
+
 document.addEventListener('contextmenu', (event) => {
   event.preventDefault();
 });
@@ -292,7 +292,6 @@ setInterval(function() {
       pass_open.style.display = "none";
     }
   }, 500); // 1秒ごとにチェック
-  */
 
 let ct_01_open = document.getElementById("ct_01_open");
 let ct_02_open = document.getElementById("ct_02_open");

@@ -202,7 +202,6 @@ s2_s_open.addEventListener("click", function () {
   toggleDisplay([s_playtime_s2, s_allcandy_s2, s_rank_s2]);
 });
 
-/*
 document.addEventListener('contextmenu', (event) => {
   event.preventDefault();
 });
@@ -230,7 +229,6 @@ setInterval(function() {
       pass_open.style.display = "none";
     }
   }, 500); // 1秒ごとにチェック
-*/
 
 let ct_01_open = document.getElementById("ct_01_open");
 let ct_02_open = document.getElementById("ct_02_open");
